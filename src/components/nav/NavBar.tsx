@@ -6,7 +6,10 @@ const NavBar = () => {
       <div className="flex items-center justify-between">
         <div className="text-xl font-bold text-gray-800 ">
           <Link to="/">
-            <p className="text-3xl text-primary-500"> Dashboard</p>
+            <p className="text-3xl text-primary-500">
+              {" "}
+              Dashboard<span className="text-slate-900">Zool</span>
+            </p>
           </Link>
         </div>
 

@@ -1,8 +1,9 @@
+import "react-calendar/dist/Calendar.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import SignUp from "../components/auth/SignUp";
-import SignIn from "../components/auth/SignIn";
-import Home from "../components/home/Home";
-import NavBar from "../components/nav/NavBar";
+import SignIn from "./components/auth/SignIn";
+import SignUp from "./components/auth/SignUp";
+import Home from "./components/home/Home";
+import NavBar from "./components/nav/NavBar";
 
 function App() {
   return (

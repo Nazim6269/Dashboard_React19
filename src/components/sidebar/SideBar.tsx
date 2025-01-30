@@ -1,17 +1,17 @@
-import { useState } from "react";
 import {
-  Home,
   BarChart,
-  Settings,
-  Moon,
-  Sun,
-  LogOut,
   ChevronLeft,
   ChevronRight,
-  User,
   FileText,
+  Home,
+  LogOut,
+  Moon,
+  Settings,
   ShoppingCart,
+  Sun,
+  User,
 } from "lucide-react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Sidebar = () => {
@@ -58,7 +58,7 @@ const Sidebar = () => {
         </div>
         {!isCollapsed && (
           <div>
-            <p className="text-gray-800   font-semibold">John Doe</p>
+            <p className="text-gray-800   font-semibold">Nazim</p>
             <p className="text-sm text-gray-500 dark:text-gray-400">Admin</p>
           </div>
         )}
@@ -81,7 +81,7 @@ const Sidebar = () => {
           >
             <div className="flex items-center space-x-3">
               <FileText size={20} />
-              {!isCollapsed && <span>Reports</span>}
+              {!isCollapsed && <span>Results</span>}
             </div>
             {!isCollapsed && <ChevronRight size={20} />}
           </div>
@@ -91,12 +91,12 @@ const Sidebar = () => {
             <div className="ml-6 space-y-2">
               <Link to="/reports/sales">
                 <p className="p-2 text-gray-600 dark:text-gray-300 hover:text-blue-500 cursor-pointer">
-                  Sales Report
+                  First Year
                 </p>
               </Link>
               <Link to="#">
                 <p className="p-2 text-gray-600 dark:text-gray-300 hover:text-blue-500 cursor-pointer">
-                  Customer Report
+                  Second Year
                 </p>
               </Link>
             </div>
@@ -106,14 +106,14 @@ const Sidebar = () => {
         <Link to="#">
           <div className="flex items-center space-x-3 p-3 rounded-lg text-gray-800 hover:text-white  hover:bg-primary-500  cursor-pointer">
             <BarChart size={20} />
-            {!isCollapsed && <span>Analytics</span>}
+            {!isCollapsed && <span>Exams</span>}
           </div>
         </Link>
 
         <Link to="/orders">
           <div className="flex items-center space-x-3 p-3 rounded-lg text-gray-800 hover:text-white  hover:bg-primary-500  cursor-pointer">
             <ShoppingCart size={20} />
-            {!isCollapsed && <span>Orders</span>}
+            {!isCollapsed && <span>Sports</span>}
           </div>
         </Link>
 
