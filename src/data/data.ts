@@ -42,6 +42,7 @@ export const dataMin = [
     amt: 2100,
   },
 ];
+
 export const dataTiny = [
   {
     name: "Page A",
@@ -89,46 +90,40 @@ export const dataTiny = [
 
 export const simpleLineCharData = [
   {
-    name: "Page A",
-    uv: 4000,
-    pv: 2400,
+    name: "2000y",
+    Teachers: 5,
+    Students: 400,
     amt: 2400,
   },
   {
-    name: "Page B",
-    uv: 3000,
-    pv: 1398,
+    name: "2005y",
+    Teachers: 8,
+    Students: 410,
     amt: 2210,
   },
   {
-    name: "Page C",
-    uv: 2000,
-    pv: 9800,
+    name: "2010y",
+    Teachers: 9,
+    Students: 320,
     amt: 2290,
   },
   {
-    name: "Page D",
-    uv: 2780,
-    pv: 3908,
+    name: "2015y",
+    Teachers: 11,
+    Students: 508,
     amt: 2000,
   },
   {
-    name: "Page E",
-    uv: 1890,
-    pv: 4800,
+    name: "2020y",
+    Teachers: 10,
+    Students: 590,
     amt: 2181,
   },
   {
-    name: "Page F",
-    uv: 2390,
-    pv: 3800,
+    name: "2025y",
+    Teachers: 13,
+    Students: 600,
     amt: 2500,
-  },
-  {
-    name: "Page G",
-    uv: 3490,
-    pv: 4300,
-    amt: 2100,
   },
 ];
 

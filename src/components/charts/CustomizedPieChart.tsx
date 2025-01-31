@@ -38,7 +38,7 @@ const renderCustomizedLabel = ({
 
 const CustomizedPieChart = () => {
   return (
-    <ResponsiveContainer width={550} height={400}>
+    <ResponsiveContainer width={550} height={300}>
       <PieChart width={400} height={400}>
         <Pie
           data={data}

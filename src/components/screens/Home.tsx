@@ -12,7 +12,7 @@ const Home = () => {
     <div className="flex select-none ">
       <SideBar />
       <div className="flex ">
-        <div className="px-6 py-8 w-full bg-secondary">
+        <div className="px-4 py-6 w-full bg-secondary">
           {/* top bar cards */}
           <div className="flex justify-start gap-3">
             <div className="grid grid-cols-2 space-x-4">
@@ -48,7 +48,8 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col space-y-2">
+        {/* Calendar Div starts from here */}
+        <div className="flex flex-col px-4 py-6 bg-secondary space-y-2">
           <ReactCalendar />
           <div className="flex flex-col space-y-2">
             <EventsCard

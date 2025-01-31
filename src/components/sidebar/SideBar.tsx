@@ -90,12 +90,12 @@ const Sidebar = () => {
           {openSubMenu === "reports" && !isCollapsed && (
             <div className="ml-6 space-y-2">
               <Link to="/reports/sales">
-                <p className="p-2 text-gray-600 dark:text-gray-300 hover:text-blue-500 cursor-pointer">
+                <p className="p-2 text-gray-800  hover:text-blue-500 cursor-pointer">
                   First Year
                 </p>
               </Link>
               <Link to="#">
-                <p className="p-2 text-gray-600 dark:text-gray-300 hover:text-blue-500 cursor-pointer">
+                <p className="p-2 text-gray-800  hover:text-blue-500 cursor-pointer">
                   Second Year
                 </p>
               </Link>

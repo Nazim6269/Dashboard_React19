@@ -31,11 +31,11 @@ const SimpleLineChart = () => {
         <Legend />
         <Line
           type="monotone"
-          dataKey="pv"
+          dataKey="Students"
           stroke="#8884d8"
           activeDot={{ r: 8 }}
         />
-        <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+        <Line type="monotone" dataKey="Teachers" stroke="#FF69B4" />
       </LineChart>
     </ResponsiveContainer>
   );

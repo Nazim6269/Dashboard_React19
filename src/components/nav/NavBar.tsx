@@ -8,7 +8,7 @@ const NavBar = () => {
           <Link to="/">
             <p className="text-3xl text-primary-500">
               {" "}
-              Dashboard<span className="text-slate-900">Zool</span>
+              Dashboard<span className="text-gray-500">Zool</span>
             </p>
           </Link>
         </div>
