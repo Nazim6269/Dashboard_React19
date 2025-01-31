@@ -9,12 +9,11 @@ import {
   Settings,
   ShoppingCart,
   Sun,
-  User,
 } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Sidebar = () => {
+const LeftSideBar = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [openSubMenu, setOpenSubMenu] = useState<string | null>(null);
@@ -24,7 +23,7 @@ const Sidebar = () => {
     document.body.classList.toggle("dark", !isDarkMode);
   };
 
-  const toggleSidebar = () => {
+  const toggleLeftSideBar = () => {
     setIsCollapsed(!isCollapsed);
   };
 
@@ -34,39 +33,26 @@ const Sidebar = () => {
 
   return (
     <div
-      className={`h-screen  bg-white p-5 shadow-md flex flex-col transition-all duration-300 ${
+      className={`h-screen select-none bg-white p-5 shadow-md flex flex-col transition-all duration-300 ${
         isCollapsed ? "w-20" : "w-64"
       }`}
     >
       {/* Logo & Collapse Button */}
       <div className="flex items-center justify-between mb-6">
         {!isCollapsed && (
-          <h1 className="text-xl font-bold text-primary-500 ">Dashboard</h1>
+          <h1 className="text-xl font-bold text-primary-500 ">Zoology</h1>
         )}
         <button
-          onClick={toggleSidebar}
+          onClick={toggleLeftSideBar}
           className="p-2 rounded-full bg-primary-500  text-white "
         >
           {isCollapsed ? <ChevronRight size={20} /> : <ChevronLeft size={20} />}
         </button>
       </div>
 
-      {/* User Profile */}
-      <div className="flex items-center space-x-3 mb-6">
-        <div className="w-12 h-12 bg-primary-500 rounded-full flex items-center justify-center">
-          <User size={24} className="text-white " />
-        </div>
-        {!isCollapsed && (
-          <div>
-            <p className="text-gray-800   font-semibold">Nazim</p>
-            <p className="text-sm text-gray-500 dark:text-gray-400">Admin</p>
-          </div>
-        )}
-      </div>
-
       {/* Navigation Links */}
       <nav className="flex flex-col space-y-4 flex-grow">
-        <Link to="/dashboard">
+        <Link to="/">
           <div className="flex items-center space-x-3 p-3 rounded-lg text-gray-800 hover:text-white  hover:bg-primary-500  cursor-pointer">
             <Home size={20} />
             {!isCollapsed && <span>Home</span>}
@@ -103,14 +89,14 @@ const Sidebar = () => {
           )}
         </div>
 
-        <Link to="#">
+        <Link to="/teachers">
           <div className="flex items-center space-x-3 p-3 rounded-lg text-gray-800 hover:text-white  hover:bg-primary-500  cursor-pointer">
             <BarChart size={20} />
             {!isCollapsed && <span>Teachers</span>}
           </div>
         </Link>
 
-        <Link to="/orders">
+        <Link to="/students">
           <div className="flex items-center space-x-3 p-3 rounded-lg text-gray-800 hover:text-white  hover:bg-primary-500  cursor-pointer">
             <ShoppingCart size={20} />
             {!isCollapsed && <span>Students</span>}
@@ -148,4 +134,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default LeftSideBar;

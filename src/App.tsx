@@ -5,17 +5,23 @@ import SignUp from "./components/auth/SignUp";
 import NavBar from "./components/nav/NavBar";
 import Home from "./components/screens/Home";
 import Students from "./components/screens/Students";
+import Teachers from "./components/screens/Teachers";
+import LeftSideBar from "./components/sidebar/LeftSideBar";
 
 function App() {
   return (
     <BrowserRouter>
       <NavBar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/sign-up" element={<SignUp />} />
-        <Route path="/sign-in" element={<SignIn />} />
-        <Route path="/students" element={<Students />} />
-      </Routes>
+      <div className="flex">
+        <LeftSideBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/sign-up" element={<SignUp />} />
+          <Route path="/sign-in" element={<SignIn />} />
+          <Route path="/students" element={<Students />} />
+          <Route path="/teachers" element={<Teachers />} />
+        </Routes>
+      </div>
     </BrowserRouter>
   );
 }

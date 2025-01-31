@@ -5,3 +5,7 @@
   --color-primary-500: #762bff;
   --color-secondary: #eceefd;
 }
+
+@theme {
+  --breakpoint-xsm: 19rem;
+}

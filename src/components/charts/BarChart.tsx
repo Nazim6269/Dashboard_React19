@@ -34,52 +34,56 @@ const renderCustomizedLabelMin = (props: any) => {
 
 export const BarChartWithMinHeight = () => {
   return (
-    <ResponsiveContainer width={600} height={350}>
-      <BarChart
-        width={500}
-        height={300}
-        data={dataMin}
-        margin={{
-          top: 5,
-          right: 30,
-          left: 20,
-          bottom: 5,
-        }}
-      >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name">
-          <Label value="Years" offset={0} position="insideBottom" />{" "}
-        </XAxis>
-        <YAxis
-          label={{ value: "Amount", angle: -90, position: "insideLeft" }}
-        />
-        <Tooltip />
-        <Legend />
-        <Bar dataKey="Pass" fill="#8554d8" minPointSize={5}>
-          <LabelList dataKey="name" content={renderCustomizedLabelMin} />
-        </Bar>
-        <Bar dataKey="Fail" fill="#34eb5e" minPointSize={10} />
-      </BarChart>
-    </ResponsiveContainer>
+    <div className="w-full h-[75%]">
+      <ResponsiveContainer>
+        <BarChart
+          width={500}
+          height={300}
+          data={dataMin}
+          margin={{
+            top: 5,
+            right: 30,
+            left: 20,
+            bottom: 5,
+          }}
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="name">
+            <Label value="Years" offset={0} position="insideBottom" />{" "}
+          </XAxis>
+          <YAxis
+            label={{ value: "Amount", angle: -90, position: "insideLeft" }}
+          />
+          <Tooltip />
+          <Legend />
+          <Bar dataKey="Pass" fill="#8554d8" minPointSize={5}>
+            <LabelList dataKey="name" content={renderCustomizedLabelMin} />
+          </Bar>
+          <Bar dataKey="Fail" fill="#34eb5e" minPointSize={10} />
+        </BarChart>
+      </ResponsiveContainer>
+    </div>
   );
 };
 
 export const TinyBarChart = () => {
   return (
-    <ResponsiveContainer width={600} height={350}>
-      <BarChart width={150} height={40} data={dataTiny}>
-        <CartesianGrid strokeDasharray="2 2" />
-        <XAxis dataKey="name">
-          <Label value="Years" offset={0} position="insideBottom" />{" "}
-        </XAxis>
-        <YAxis
-          label={{ value: "Rate", angle: -90, position: "insideLeft" }}
-          tickFormatter={(value) => `${value}%`}
-        />
-        <Tooltip formatter={(value) => `${value}%`} />
-        <Legend />
-        <Bar dataKey="Progress" fill="#eb3467" />
-      </BarChart>
-    </ResponsiveContainer>
+    <div className="w-full h-[75%]">
+      <ResponsiveContainer>
+        <BarChart width={150} height={40} data={dataTiny}>
+          <CartesianGrid strokeDasharray="2 2" />
+          <XAxis dataKey="name">
+            <Label value="Years" offset={0} position="insideBottom" />{" "}
+          </XAxis>
+          <YAxis
+            label={{ value: "Rate", angle: -90, position: "insideLeft" }}
+            tickFormatter={(value) => `${value}%`}
+          />
+          <Tooltip formatter={(value) => `${value}%`} />
+          <Legend />
+          <Bar dataKey="Progress" fill="#eb3467" />
+        </BarChart>
+      </ResponsiveContainer>
+    </div>
   );
 };
