@@ -1,90 +1,83 @@
+export const pieChartMale = [
+  { name: "Pass", value: 200 },
+  { name: "Fail", value: 40 },
+  { name: "Improvement", value: 36 },
+  { name: "Supplement", value: 12 },
+  { name: "Special", value: 12 },
+  { name: "Dropout", value: 2 },
+];
+
+export const pieChartFemale = [
+  { name: "Pass", value: 100 },
+  { name: "Fail", value: 50 },
+  { name: "Improvement", value: 23 },
+  { name: "Supplement", value: 34 },
+  { name: "Special", value: 5 },
+  { name: "Dropout", value: 7 },
+];
+
 export const dataMin = [
   {
-    name: "Page A",
-    uv: 4000,
-    pv: 2400,
-    amt: 2400,
+    name: "2015y",
+    Pass: 400,
+    Fail: 20,
   },
   {
-    name: "Page B",
-    uv: 3000,
-    pv: 1398,
-    amt: 2210,
+    name: "2016y",
+    Pass: 300,
+    Fail: 120,
   },
   {
-    name: "Page C",
-    uv: 2000,
-    pv: 8,
-    amt: 2290,
+    name: "2017y",
+    Pass: 399,
+    Fail: 8,
   },
   {
-    name: "Page D",
-    uv: 2780,
-    pv: 3908,
-    amt: 2000,
+    name: "2108y",
+    Pass: 380,
+    Fail: 39,
   },
   {
-    name: "Page E",
-    uv: 18,
-    pv: 4800,
-    amt: 2181,
+    name: "2019y",
+    Pass: 418,
+    Fail: 14,
   },
   {
-    name: "Page F",
-    uv: 2390,
-    pv: 3800,
-    amt: 2500,
+    name: "2020y",
+    Pass: 690,
+    Fail: 3,
   },
   {
-    name: "Page G",
-    uv: 3490,
-    pv: 4300,
-    amt: 2100,
+    name: "2021",
+    Pass: 490,
+    Fail: 43,
   },
 ];
 
 export const dataTiny = [
   {
-    name: "Page A",
-    uv: 4000,
-    pv: 2400,
-    amt: 2400,
+    name: "2000y",
+    Progress: 40,
   },
   {
-    name: "Page B",
-    uv: 3000,
-    pv: 1398,
-    amt: 2210,
+    name: "2005y",
+    Progress: 30,
   },
   {
-    name: "Page C",
-    uv: 2000,
-    pv: 9800,
-    amt: 2290,
+    name: "2010y",
+    Progress: 90,
   },
   {
-    name: "Page D",
-    uv: 2780,
-    pv: 3908,
-    amt: 2000,
+    name: "2015y",
+    Progress: 28,
   },
   {
-    name: "Page E",
-    uv: 1890,
-    pv: 4800,
-    amt: 2181,
+    name: "2020y",
+    Progress: 80,
   },
   {
-    name: "Page F",
-    uv: 2390,
-    pv: 3800,
-    amt: 2500,
-  },
-  {
-    name: "Page G",
-    uv: 3490,
-    pv: 4300,
-    amt: 2100,
+    name: "2025y",
+    Progress: 50, //this will show column
   },
 ];
 

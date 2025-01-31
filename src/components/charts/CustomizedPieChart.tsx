@@ -1,59 +1,59 @@
-import { Cell, Pie, PieChart, ResponsiveContainer } from "recharts";
+import { Label, Pie, PieChart, ResponsiveContainer, Tooltip } from "recharts";
+import { pieChartFemale, pieChartMale } from "../../data/data";
 
-const data = [
-  { name: "Group A", value: 400 },
-  { name: "Group B", value: 300 },
-  { name: "Group C", value: 300 },
-  { name: "Group D", value: 200 },
-];
-
-const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
-
-const RADIAN = Math.PI / 180;
-const renderCustomizedLabel = ({
-  cx,
-  cy,
-  midAngle,
-  innerRadius,
-  outerRadius,
-  percent,
-  index,
-}) => {
-  const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
-  const x = cx + radius * Math.cos(-midAngle * RADIAN);
-  const y = cy + radius * Math.sin(-midAngle * RADIAN);
-
+const renderCenteredText = (props) => {
+  const { cx, cy } = props;
   return (
     <text
-      x={x}
-      y={y}
-      fill="white"
-      textAnchor={x > cx ? "start" : "end"}
+      x={cx}
+      y={cy}
+      fill="black"
+      textAnchor="middle"
       dominantBaseline="central"
+      fontSize="16"
+      fontWeight="bold"
     >
-      {`${(percent * 100).toFixed(0)}%`}
+      {props.text}
     </text>
   );
 };
 
 const CustomizedPieChart = () => {
   return (
-    <ResponsiveContainer width={550} height={300}>
+    <ResponsiveContainer width={900} height={300}>
       <PieChart width={400} height={400}>
         <Pie
-          data={data}
-          cx="50%"
-          cy="50%"
-          labelLine={false}
-          label={renderCustomizedLabel}
-          outerRadius={80}
-          fill="#8884d8"
           dataKey="value"
+          data={pieChartMale}
+          cx={200}
+          cy={130}
+          label
+          innerRadius={50}
+          outerRadius={90}
+          fill="#4F46E5"
+          stroke="#ffffff"
+          strokeWidth={3}
+          isAnimationActive={true}
+          animationDuration={800}
+          animationBegin={100}
         >
-          {data.map((entry, index) => (
-            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-          ))}
+          <Label value="Male" offset={0} position="center" />
         </Pie>
+        <Pie
+          dataKey="value"
+          data={pieChartFemale}
+          cx={450}
+          cy={130}
+          strokeWidth={3}
+          innerRadius={50}
+          outerRadius={90}
+          fill="#F43F5E"
+          label
+          name="Female"
+        >
+          <Label value="Female" offset={0} position="center" />
+        </Pie>
+        <Tooltip />
       </PieChart>
     </ResponsiveContainer>
   );

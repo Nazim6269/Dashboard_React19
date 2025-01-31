@@ -106,14 +106,14 @@ const Sidebar = () => {
         <Link to="#">
           <div className="flex items-center space-x-3 p-3 rounded-lg text-gray-800 hover:text-white  hover:bg-primary-500  cursor-pointer">
             <BarChart size={20} />
-            {!isCollapsed && <span>Exams</span>}
+            {!isCollapsed && <span>Teachers</span>}
           </div>
         </Link>
 
         <Link to="/orders">
           <div className="flex items-center space-x-3 p-3 rounded-lg text-gray-800 hover:text-white  hover:bg-primary-500  cursor-pointer">
             <ShoppingCart size={20} />
-            {!isCollapsed && <span>Sports</span>}
+            {!isCollapsed && <span>Students</span>}
           </div>
         </Link>
 

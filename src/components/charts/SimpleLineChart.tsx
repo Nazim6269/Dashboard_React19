@@ -1,5 +1,6 @@
 import {
   CartesianGrid,
+  Label,
   Legend,
   Line,
   LineChart,
@@ -25,8 +26,13 @@ const SimpleLineChart = () => {
         }}
       >
         <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis />
+        <XAxis dataKey="name">
+          <Label value="Years" offset={0} position="insideBottom" />{" "}
+        </XAxis>
+        <YAxis
+          label={{ value: "Amount", angle: -90, position: "insideLeft" }}
+        />
+
         <Tooltip />
         <Legend />
         <Line
