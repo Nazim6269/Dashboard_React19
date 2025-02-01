@@ -26,8 +26,8 @@ const CustomizedPieChart = () => {
           <Pie
             dataKey="value"
             data={pieChartMale}
-            cx={200}
-            cy={130}
+            cx="16%"
+            cy="50%"
             label
             innerRadius={50}
             outerRadius={90}
@@ -43,8 +43,8 @@ const CustomizedPieChart = () => {
           <Pie
             dataKey="value"
             data={pieChartFemale}
-            cx={450}
-            cy={130}
+            cx="40%"
+            cy="50%"
             strokeWidth={3}
             innerRadius={50}
             outerRadius={90}

@@ -33,7 +33,7 @@ const LeftSideBar = () => {
 
   return (
     <div
-      className={`h-screen select-none bg-white p-5 shadow-md flex flex-col transition-all duration-300 ${
+      className={`hidden min-h-screen select-none  p-5 shadow-md sm:flex sm:flex-col transition-all duration-300 ${
         isCollapsed ? "w-20" : "w-64"
       }`}
     >

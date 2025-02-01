@@ -7,12 +7,13 @@ import RightBar from "../sidebar/ RightBar";
 
 const Home = () => {
   return (
-    <div className="flex flex-col 2xl:flex 2xl:justify-between w-full select-none bg-secondary">
+    <div className="flex flex-col 2xl:flex 2xl:flex-row 2xl:justify-between w-full select-none bg-secondary">
       {/* Data Portinon */}
       <div className="flex w-full 2xl:w-[80%] 2xl:flex">
         <div className="px-4 py-6 w-full">
           {/* top bar cards */}
-          <div className="flex flex-col xl:flex  xl:justify-between gap-3">
+          <div className="flex flex-col xl:flex xl:flex-row  xl:justify-between gap-3">
+            {/* small card div */}
             <div className="grid grid-cols-2 md:grid md:grid-cols-4 xl:grid w-full xl:grid-cols-2 gap-3">
               <CustomCard name="Teachers" amount={14} />
               <CustomCard name="Stuffs" amount={5} />
@@ -22,18 +23,18 @@ const Home = () => {
               </Link>
             </div>
 
-            <div className="shadow-lg border-2 w-full h-[400px] bg-white rounded-md flex justify-center items-center">
+            <div className="shadow-lg w-full h-[400px] bg-white rounded-md flex justify-center items-center">
               <SimpleLineChart />
             </div>
           </div>
 
           {/* mid bar cards */}
           <div className="flex flex-col space-y-3 py-2">
-            <div className="flex gap-2">
-              <div className="py-4 shadow-lg w-full h-[300px] bg-white rounded-md flex justify-center items-center">
+            <div className="flex flex-col xl:flex xl:flex-row gap-2">
+              <div className="py-4 shadow-lg w-full h-[400px] xl:h-[300px] bg-white rounded-md flex justify-center items-center">
                 <BarChartWithMinHeight />
               </div>
-              <div className="shadow-lg px-2 w-full h-[300px] bg-white rounded-md flex justify-center items-center">
+              <div className="shadow-lg px-2 w-full h-[400px] xl:h-[300px] bg-white rounded-md flex justify-center items-center">
                 <TinyBarChart />
               </div>
             </div>
