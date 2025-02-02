@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import CustomCard from "../ card/CustomCard";
 import { BarChartWithMinHeight, TinyBarChart } from "../charts/BarChart";
-import CustomizedPieChart from "../charts/CustomizedPieChart";
+import { CustomizedPieChart } from "../charts/CustomizedPieChart";
 import SimpleLineChart from "../charts/SimpleLineChart";
 import RightBar from "../sidebar/ RightBar";
 

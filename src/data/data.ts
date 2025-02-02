@@ -300,3 +300,99 @@ export const students = [
     email: "emilyjohnson@gmail.com",
   },
 ];
+
+export const teachers = [
+  {
+    id: "T001",
+    name: "Md.Ikram Ansar Tuhin",
+    email: "tuhin2511@cu.ac.bd",
+    subject: "Human Ecology",
+    experience: "10 years",
+  },
+  {
+    id: "T002",
+    name: "Dr. Syeda Ismat Ara",
+    email: "syedaismat@cu.ac.bd",
+    subject: "Fishereis",
+    experience: "8 years",
+  },
+
+  {
+    id: "T004",
+    name: "Dr. Mst. Rasheda Chowdhury",
+    email: "mrashedachowdhury@yahoo.com",
+    subject: "Fisheries",
+    experience: "7 years",
+  },
+  {
+    id: "T005",
+    name: "Ibrahim Khalil Al Haidar",
+    email: "ibrahimalhaidar88@gmail.com",
+    subject: "Wildlife",
+    experience: "15 years",
+  },
+  {
+    id: "T006",
+    name: "Mohammad Shamsil Arafeen",
+    email: "shamsilarafeen@cu.ac.bd,",
+    subject: "Fishereis",
+    experience: "9 years",
+  },
+  {
+    id: "T007",
+    name: "Dr. Jadab Kumar Biswas",
+    email: "jkbiswas@cu.ac.bd",
+    subject: "Wildlife",
+    experience: "5 years",
+  },
+  {
+    id: "T008",
+    name: "Dr. Md. Manzoorul Kibria",
+    email: "mnzoorul@yahoo.com",
+    subject: "Fisheries",
+    experience: "6 years",
+  },
+
+  {
+    id: "T010",
+    name: "Mohammad Abdul Wahed Chowdhury",
+    email: "piloctg@yahoo.com",
+    subject: "Wildlife",
+    experience: "4 years",
+  },
+  {
+    id: "T011",
+    name: "Mumtahena Akter",
+    email: "example@gmail.com",
+    subject: "Fisheries",
+    experience: "4 years",
+  },
+  {
+    id: "T012",
+    name: "Zannatul Nayem",
+    email: "zannatul.nayem1022@cu.ac.bd",
+    subject: "Entomology",
+    experience: "4 years",
+  },
+  {
+    id: "T013",
+    name: "Mahabuba Hasnath",
+    email: "mahabuba@cu.ac.bd",
+    subject: "Fisheries",
+    experience: "4 years",
+  },
+  {
+    id: "T014",
+    name: "Humayra Hoque",
+    email: "humayrazoology@cu.ac.bd",
+    subject: "Entomology",
+    experience: "4 years",
+  },
+  {
+    id: "T014",
+    name: "Sanjida Sharmin Reema",
+    email: "sanjidasharminreema1013@cu.ac.bd",
+    subject: "Parasitology",
+    experience: "4 years",
+  },
+];

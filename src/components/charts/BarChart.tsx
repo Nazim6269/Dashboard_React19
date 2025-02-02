@@ -87,3 +87,18 @@ export const TinyBarChart = () => {
     </div>
   );
 };
+
+export const TeacherBarChart = ({ stats }) => {
+  return (
+    <div className="w-full h-[75%]">
+      <ResponsiveContainer>
+        <BarChart data={stats}>
+          <XAxis dataKey="month" />
+          <YAxis />
+          <Tooltip />
+          <Bar dataKey="students" fill="#3B82F6" radius={[5, 5, 0, 0]} />
+        </BarChart>
+      </ResponsiveContainer>
+    </div>
+  );
+};

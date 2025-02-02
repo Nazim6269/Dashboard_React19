@@ -7,6 +7,7 @@ import Home from "./components/screens/Home";
 import Students from "./components/screens/Students";
 import Teachers from "./components/screens/Teachers";
 import LeftSideBar from "./components/sidebar/LeftSideBar";
+import SingleTeacher from "./components/SingleTeacher";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/sign-in" element={<SignIn />} />
           <Route path="/students" element={<Students />} />
           <Route path="/teachers" element={<Teachers />} />
+          <Route path="/teachers/:id" element={<SingleTeacher />} />
         </Routes>
       </div>
     </BrowserRouter>
