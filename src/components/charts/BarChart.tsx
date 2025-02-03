@@ -96,7 +96,7 @@ export const TeacherBarChart = ({ stats }) => {
           <XAxis dataKey="month" />
           <YAxis />
           <Tooltip />
-          <Bar dataKey="students" fill="#3B82F6" radius={[5, 5, 0, 0]} />
+          <Bar dataKey="students" fill="#762bdf" radius={[5, 5, 0, 0]} />
         </BarChart>
       </ResponsiveContainer>
     </div>

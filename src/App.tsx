@@ -4,10 +4,10 @@ import SignIn from "./components/auth/SignIn";
 import SignUp from "./components/auth/SignUp";
 import NavBar from "./components/nav/NavBar";
 import Home from "./components/screens/Home";
+import SingleTeacher from "./components/screens/SingleTeacher";
 import Students from "./components/screens/Students";
 import Teachers from "./components/screens/Teachers";
 import LeftSideBar from "./components/sidebar/LeftSideBar";
-import SingleTeacher from "./components/SingleTeacher";
 
 function App() {
   return (

@@ -396,3 +396,81 @@ export const teachers = [
     experience: "4 years",
   },
 ];
+
+export const subjectOfInt = [
+  "Arthropda",
+  "Applied Zoology",
+  "Zoogeography",
+  "Paleotology",
+  "Human Ecology",
+  "Insect Morphology",
+  "Insect Physiology",
+  "Insect Embryology",
+  "Integrated Pest Management",
+];
+
+export const educationData = [
+  {
+    degree: "M.S.",
+    institution: "Department of Zoology, University of Chittagong, Chattogram",
+    year: "2015 - 2016",
+  },
+  {
+    degree: "B.Sc.",
+    institution: "Department of Zoology, University of Chittagong, Chattogram",
+    year: "2012 - 2015",
+  },
+  {
+    degree: "H.S.C.",
+    institution:
+      "Science, Bangladesh Nou Bahini School and College, Chattogram",
+    year: "2008 - 2010",
+  },
+  {
+    degree: "S.S.C.",
+    institution:
+      "Science, Bangladesh Nou Bahini School and College, Chattogram",
+    year: "2006 - 2008",
+  },
+];
+
+export const awardsData = [
+  {
+    title: "Best Research Paper Award",
+    organization: "University of Chittagong",
+    year: "2020",
+  },
+  {
+    title: "National Science Talent Award",
+    organization: "Bangladesh Science Foundation",
+    year: "2018",
+  },
+  {
+    title: "Academic Excellence Award",
+    organization: "Bangladesh Nou Bahini School and College",
+    year: "2010",
+  },
+];
+
+export const publicationsData = [
+  {
+    title: "Biodiversity of Arthropods in Coastal Ecosystems",
+    authors: "John Doe, Jane Smith",
+    journal: "Journal of Zoology Research",
+    year: "2022",
+    link: "https://example.com/publication1",
+  },
+  {
+    title: "Impact of Climate Change on Insect Morphology",
+    authors: "Alice Brown, Bob Johnson",
+    journal: "International Journal of Entomology",
+    year: "2021",
+  },
+  {
+    title: "Zoogeographical Distribution of Endangered Species",
+    authors: "Michael Lee, Sarah White",
+    journal: "Nature Conservation Journal",
+    year: "2020",
+    link: "https://example.com/publication2",
+  },
+];
