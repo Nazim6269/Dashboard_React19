@@ -7,6 +7,8 @@ import {
   subjectOfInt,
 } from "../../data/data";
 import { TeacherBarChart } from "../charts/BarChart";
+import TeacherExpenditure from "../charts/TeacherExpenditure";
+import TeacherRatingChart from "../charts/TeacherRatingChart";
 import Education from "../Education";
 import HonorsAwards from "../HonsAwards";
 import Publications from "../Publications";
@@ -55,16 +57,17 @@ const SingleTeacher = () => {
     return <div className="text-center text-gray-500">Loading...</div>;
 
   return (
-    <div className="w-full px-4 py-4 bg-secondary ">
+    <section className="w-full grid grid-cols-1 lg:grid-cols-2 gap-4 2xl:grid-cols-1 px-4 py-4 bg-secondary ">
       {/* Teacher Profile */}
-      <div className="flex h-[223px] gap-6">
-        <div className="bg-white px-4 flex items-center justify-center gap-3 rounded-xl">
+      <section className="grid grid-cols-1 2xl:grid-cols-3 gap-2">
+        {/*user  info div  */}
+        <div className="bg-white min-h-[160px] py-3 px-4 flex flex-col sm:flex-row  items-start sm:items-center justify-center gap-3 rounded-xl">
           <img
             src={teacher.image}
             alt={teacher.name}
             className="w-28 h-28 rounded-full shadow-md"
           />
-          <div>
+          <div className="flex flex-col justify-start">
             <h2 className="text-2xl font-semibold text-gray-800">
               {teacher.name}
             </h2>
@@ -74,7 +77,7 @@ const SingleTeacher = () => {
         </div>
 
         {/* Contact Information */}
-        <div className="w-2xl  bg-gray-50 p-4 rounded-lg">
+        <div className=" bg-gray-50 p-4 rounded-lg">
           <h3 className="text-lg mb-2 font-semibold text-gray-800">
             Contact Information
           </h3>
@@ -82,11 +85,19 @@ const SingleTeacher = () => {
           <p className="text-gray-600"> 01672409040</p>
           <p className="text-gray-600">tuhin2511@cu.ac.bd</p>
         </div>
-      </div>
+
+        {/* monthly expenditure div */}
+        <div className="  bg-gray-50 p-4 rounded-lg">
+          <h3 className="text-lg mb-2 text-center font-semibold text-gray-800">
+            Monthly Expenditure
+          </h3>
+          <TeacherExpenditure />
+        </div>
+      </section>
 
       {/* Performance Chart */}
-      <div className=" mt-8 flex gap-4 justify-between">
-        <div className="flex gap-4 w-full">
+      <section className="mt-8 flex gap-4 justify-between">
+        <div className="flex flex-col 2xl:flex-row  gap-4 w-full">
           <div className=" w-full">
             <h3 className="px-4 text-xl font-semibold text-gray-800">
               Student Engagement
@@ -102,11 +113,11 @@ const SingleTeacher = () => {
             </h3>
             <div className="rounded-xl flex items-center px-4 mt-3 bg-white h-[400px]">
               {" "}
-              <TeacherBarChart stats={teacher.stats} />
+              <TeacherRatingChart />
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* subject of interest */}
       <section className="w-full mt-8">
@@ -137,7 +148,7 @@ const SingleTeacher = () => {
           <Publications publications={publicationsData} />
         </div>
       </section>
-    </div>
+    </section>
   );
 };
 
