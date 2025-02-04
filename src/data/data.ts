@@ -16,51 +16,6 @@ export const pieChartFemale = [
   { name: "Dropout", value: 7 },
 ];
 
-export const teacherRatingData = [
-  {
-    name: "Page A",
-    uv: 4000,
-    pv: 2400,
-    amt: 2400,
-  },
-  {
-    name: "Page B",
-    uv: 3000,
-    pv: 1398,
-    amt: 2210,
-  },
-  {
-    name: "Page C",
-    uv: 2000,
-    pv: 9800,
-    amt: 2290,
-  },
-  {
-    name: "Page D",
-    uv: 2780,
-    pv: 3908,
-    amt: 2000,
-  },
-  {
-    name: "Page E",
-    uv: 1890,
-    pv: 4800,
-    amt: 2181,
-  },
-  {
-    name: "Page F",
-    uv: 2390,
-    pv: 3800,
-    amt: 2500,
-  },
-  {
-    name: "Page G",
-    uv: 3490,
-    pv: 4300,
-    amt: 2100,
-  },
-];
-
 export const dataMin = [
   {
     name: "2015y",
@@ -353,6 +308,131 @@ export const teachers = [
     email: "tuhin2511@cu.ac.bd",
     subject: "Human Ecology",
     experience: "10 years",
+    bio: "Experienced Math Teacher with over 4 years of teaching.",
+    image:
+      "https://cu.ac.bd/assets/image/faculty_staff_users/1158_W5W7YMPO3B.jpg",
+    phone: "+123 456 7890",
+    data: {
+      subjectOfInt: [
+        "Arthropda",
+        "Applied Zoology",
+        "Zoogeography",
+        "Paleotology",
+        "Human Ecology",
+        "Insect Morphology",
+        "Insect Physiology",
+        "Insect Embryology",
+        "Integrated Pest Management",
+      ],
+
+      educationData: [
+        {
+          degree: "M.S.",
+          institution:
+            "Department of Zoology, University of Chittagong, Chattogram",
+          year: "2015 - 2016",
+        },
+        {
+          degree: "B.Sc.",
+          institution:
+            "Department of Zoology, University of Chittagong, Chattogram",
+          year: "2012 - 2015",
+        },
+        {
+          degree: "H.S.C.",
+          institution:
+            "Science, Bangladesh Nou Bahini School and College, Chattogram",
+          year: "2008 - 2010",
+        },
+        {
+          degree: "S.S.C.",
+          institution:
+            "Science, Bangladesh Nou Bahini School and College, Chattogram",
+          year: "2006 - 2008",
+        },
+      ],
+
+      awardsData: [
+        {
+          title: "Best Research Paper Award",
+          organization: "University of Chittagong",
+          year: "2020",
+        },
+        {
+          title: "National Science Talent Award",
+          organization: "Bangladesh Science Foundation",
+          year: "2018",
+        },
+        {
+          title: "Academic Excellence Award",
+          organization: "Bangladesh Nou Bahini School and College",
+          year: "2010",
+        },
+      ],
+
+      publicationsData: [
+        {
+          title: "Biodiversity of Arthropods in Coastal Ecosystems",
+          authors: "John Doe, Jane Smith",
+          journal: "Journal of Zoology Research",
+          year: "2022",
+          link: "https://example.com/publication1",
+        },
+        {
+          title: "Impact of Climate Change on Insect Morphology",
+          authors: "Alice Brown, Bob Johnson",
+          journal: "International Journal of Entomology",
+          year: "2021",
+        },
+        {
+          title: "Zoogeographical Distribution of Endangered Species",
+          authors: "Michael Lee, Sarah White",
+          journal: "Nature Conservation Journal",
+          year: "2020",
+          link: "https://example.com/publication2",
+        },
+      ],
+
+      teacherRatingData: [
+        {
+          name: "2021",
+          uv: 40,
+          pv: 24,
+          amt: 2400,
+        },
+        {
+          name: "2022",
+          uv: 30,
+          pv: 98,
+          amt: 2210,
+        },
+        {
+          name: "2023",
+          uv: 20,
+          pv: 98,
+          amt: 2290,
+        },
+        {
+          name: "2024",
+          uv: 80,
+          pv: 39,
+          amt: 2000,
+        },
+        {
+          name: "2025",
+          uv: 90,
+          pv: 80,
+          amt: 2181,
+        },
+      ],
+
+      engagementData: [
+        { month: "Jan", students: 40 },
+        { month: "Feb", students: 50 },
+        { month: "Mar", students: 45 },
+        { month: "Apr", students: 60 },
+      ],
+    },
   },
   {
     id: "T002",
@@ -360,6 +440,131 @@ export const teachers = [
     email: "syedaismat@cu.ac.bd",
     subject: "Fishereis",
     experience: "8 years",
+    bio: "Experienced Math Teacher with over 4 years of teaching.",
+    image:
+      "https://cu.ac.bd/assets/image/faculty_staff_users/446_NKU12M4QBG.jpg",
+    phone: "+123 456 7890",
+    data: {
+      subjectOfInt: [
+        "Arthropda",
+        "Applied Zoology",
+        "Zoogeography",
+        "Paleotology",
+        "Human Ecology",
+        "Insect Morphology",
+        "Insect Physiology",
+        "Insect Embryology",
+        "Integrated Pest Management",
+      ],
+
+      educationData: [
+        {
+          degree: "M.S.",
+          institution:
+            "Department of Zoology, University of Chittagong, Chattogram",
+          year: "2015 - 2016",
+        },
+        {
+          degree: "B.Sc.",
+          institution:
+            "Department of Zoology, University of Chittagong, Chattogram",
+          year: "2012 - 2015",
+        },
+        {
+          degree: "H.S.C.",
+          institution:
+            "Science, Bangladesh Nou Bahini School and College, Chattogram",
+          year: "2008 - 2010",
+        },
+        {
+          degree: "S.S.C.",
+          institution:
+            "Science, Bangladesh Nou Bahini School and College, Chattogram",
+          year: "2006 - 2008",
+        },
+      ],
+
+      awardsData: [
+        {
+          title: "Best Research Paper Award",
+          organization: "University of Chittagong",
+          year: "2020",
+        },
+        {
+          title: "National Science Talent Award",
+          organization: "Bangladesh Science Foundation",
+          year: "2018",
+        },
+        {
+          title: "Academic Excellence Award",
+          organization: "Bangladesh Nou Bahini School and College",
+          year: "2010",
+        },
+      ],
+
+      publicationsData: [
+        {
+          title: "Biodiversity of Arthropods in Coastal Ecosystems",
+          authors: "John Doe, Jane Smith",
+          journal: "Journal of Zoology Research",
+          year: "2022",
+          link: "https://example.com/publication1",
+        },
+        {
+          title: "Impact of Climate Change on Insect Morphology",
+          authors: "Alice Brown, Bob Johnson",
+          journal: "International Journal of Entomology",
+          year: "2021",
+        },
+        {
+          title: "Zoogeographical Distribution of Endangered Species",
+          authors: "Michael Lee, Sarah White",
+          journal: "Nature Conservation Journal",
+          year: "2020",
+          link: "https://example.com/publication2",
+        },
+      ],
+
+      teacherRatingData: [
+        {
+          name: "2021",
+          uv: 40,
+          pv: 24,
+          amt: 2400,
+        },
+        {
+          name: "2022",
+          uv: 30,
+          pv: 98,
+          amt: 2210,
+        },
+        {
+          name: "2023",
+          uv: 20,
+          pv: 98,
+          amt: 2290,
+        },
+        {
+          name: "2024",
+          uv: 80,
+          pv: 39,
+          amt: 2000,
+        },
+        {
+          name: "2025",
+          uv: 90,
+          pv: 80,
+          amt: 2181,
+        },
+      ],
+
+      engagementData: [
+        { month: "Jan", students: 40 },
+        { month: "Feb", students: 50 },
+        { month: "Mar", students: 45 },
+        { month: "Apr", students: 60 },
+      ],
+    },
   },
 
   {
@@ -368,6 +573,131 @@ export const teachers = [
     email: "mrashedachowdhury@yahoo.com",
     subject: "Fisheries",
     experience: "7 years",
+    bio: "Experienced Math Teacher with over 4 years of teaching.",
+    image:
+      "https://cu.ac.bd/assets/image/faculty_staff_users/442_GGRMO0THH7.jpg",
+    phone: "+123 456 7890",
+    data: {
+      subjectOfInt: [
+        "Arthropda",
+        "Applied Zoology",
+        "Zoogeography",
+        "Paleotology",
+        "Human Ecology",
+        "Insect Morphology",
+        "Insect Physiology",
+        "Insect Embryology",
+        "Integrated Pest Management",
+      ],
+
+      educationData: [
+        {
+          degree: "M.S.",
+          institution:
+            "Department of Zoology, University of Chittagong, Chattogram",
+          year: "2015 - 2016",
+        },
+        {
+          degree: "B.Sc.",
+          institution:
+            "Department of Zoology, University of Chittagong, Chattogram",
+          year: "2012 - 2015",
+        },
+        {
+          degree: "H.S.C.",
+          institution:
+            "Science, Bangladesh Nou Bahini School and College, Chattogram",
+          year: "2008 - 2010",
+        },
+        {
+          degree: "S.S.C.",
+          institution:
+            "Science, Bangladesh Nou Bahini School and College, Chattogram",
+          year: "2006 - 2008",
+        },
+      ],
+
+      awardsData: [
+        {
+          title: "Best Research Paper Award",
+          organization: "University of Chittagong",
+          year: "2020",
+        },
+        {
+          title: "National Science Talent Award",
+          organization: "Bangladesh Science Foundation",
+          year: "2018",
+        },
+        {
+          title: "Academic Excellence Award",
+          organization: "Bangladesh Nou Bahini School and College",
+          year: "2010",
+        },
+      ],
+
+      publicationsData: [
+        {
+          title: "Biodiversity of Arthropods in Coastal Ecosystems",
+          authors: "John Doe, Jane Smith",
+          journal: "Journal of Zoology Research",
+          year: "2022",
+          link: "https://example.com/publication1",
+        },
+        {
+          title: "Impact of Climate Change on Insect Morphology",
+          authors: "Alice Brown, Bob Johnson",
+          journal: "International Journal of Entomology",
+          year: "2021",
+        },
+        {
+          title: "Zoogeographical Distribution of Endangered Species",
+          authors: "Michael Lee, Sarah White",
+          journal: "Nature Conservation Journal",
+          year: "2020",
+          link: "https://example.com/publication2",
+        },
+      ],
+
+      teacherRatingData: [
+        {
+          name: "2021",
+          uv: 40,
+          pv: 24,
+          amt: 2400,
+        },
+        {
+          name: "2022",
+          uv: 30,
+          pv: 98,
+          amt: 2210,
+        },
+        {
+          name: "2023",
+          uv: 20,
+          pv: 98,
+          amt: 2290,
+        },
+        {
+          name: "2024",
+          uv: 80,
+          pv: 39,
+          amt: 2000,
+        },
+        {
+          name: "2025",
+          uv: 90,
+          pv: 80,
+          amt: 2181,
+        },
+      ],
+
+      engagementData: [
+        { month: "Jan", students: 40 },
+        { month: "Feb", students: 50 },
+        { month: "Mar", students: 45 },
+        { month: "Apr", students: 60 },
+      ],
+    },
   },
   {
     id: "T005",
@@ -375,6 +705,131 @@ export const teachers = [
     email: "ibrahimalhaidar88@gmail.com",
     subject: "Wildlife",
     experience: "15 years",
+    bio: "Experienced Math Teacher with over 4 years of teaching.",
+    image:
+      "https://cu.ac.bd/assets/image/faculty_staff_users/1176_S9EKHPYZ7T.jpg",
+    phone: "+123 456 7890",
+    data: {
+      subjectOfInt: [
+        "Arthropda",
+        "Applied Zoology",
+        "Zoogeography",
+        "Paleotology",
+        "Human Ecology",
+        "Insect Morphology",
+        "Insect Physiology",
+        "Insect Embryology",
+        "Integrated Pest Management",
+      ],
+
+      educationData: [
+        {
+          degree: "M.S.",
+          institution:
+            "Department of Zoology, University of Chittagong, Chattogram",
+          year: "2015 - 2016",
+        },
+        {
+          degree: "B.Sc.",
+          institution:
+            "Department of Zoology, University of Chittagong, Chattogram",
+          year: "2012 - 2015",
+        },
+        {
+          degree: "H.S.C.",
+          institution:
+            "Science, Bangladesh Nou Bahini School and College, Chattogram",
+          year: "2008 - 2010",
+        },
+        {
+          degree: "S.S.C.",
+          institution:
+            "Science, Bangladesh Nou Bahini School and College, Chattogram",
+          year: "2006 - 2008",
+        },
+      ],
+
+      awardsData: [
+        {
+          title: "Best Research Paper Award",
+          organization: "University of Chittagong",
+          year: "2020",
+        },
+        {
+          title: "National Science Talent Award",
+          organization: "Bangladesh Science Foundation",
+          year: "2018",
+        },
+        {
+          title: "Academic Excellence Award",
+          organization: "Bangladesh Nou Bahini School and College",
+          year: "2010",
+        },
+      ],
+
+      publicationsData: [
+        {
+          title: "Biodiversity of Arthropods in Coastal Ecosystems",
+          authors: "John Doe, Jane Smith",
+          journal: "Journal of Zoology Research",
+          year: "2022",
+          link: "https://example.com/publication1",
+        },
+        {
+          title: "Impact of Climate Change on Insect Morphology",
+          authors: "Alice Brown, Bob Johnson",
+          journal: "International Journal of Entomology",
+          year: "2021",
+        },
+        {
+          title: "Zoogeographical Distribution of Endangered Species",
+          authors: "Michael Lee, Sarah White",
+          journal: "Nature Conservation Journal",
+          year: "2020",
+          link: "https://example.com/publication2",
+        },
+      ],
+
+      teacherRatingData: [
+        {
+          name: "2021",
+          uv: 40,
+          pv: 24,
+          amt: 2400,
+        },
+        {
+          name: "2022",
+          uv: 30,
+          pv: 98,
+          amt: 2210,
+        },
+        {
+          name: "2023",
+          uv: 20,
+          pv: 98,
+          amt: 2290,
+        },
+        {
+          name: "2024",
+          uv: 80,
+          pv: 39,
+          amt: 2000,
+        },
+        {
+          name: "2025",
+          uv: 90,
+          pv: 80,
+          amt: 2181,
+        },
+      ],
+
+      engagementData: [
+        { month: "Jan", students: 40 },
+        { month: "Feb", students: 50 },
+        { month: "Mar", students: 45 },
+        { month: "Apr", students: 60 },
+      ],
+    },
   },
   {
     id: "T006",
@@ -382,6 +837,131 @@ export const teachers = [
     email: "shamsilarafeen@cu.ac.bd,",
     subject: "Fishereis",
     experience: "9 years",
+    bio: "Experienced Math Teacher with over 4 years of teaching.",
+    image:
+      "https://cu.ac.bd/assets/image/faculty_staff_users/1159_NKN7SE3SWQ.jpg",
+    phone: "+123 456 7890",
+    data: {
+      subjectOfInt: [
+        "Arthropda",
+        "Applied Zoology",
+        "Zoogeography",
+        "Paleotology",
+        "Human Ecology",
+        "Insect Morphology",
+        "Insect Physiology",
+        "Insect Embryology",
+        "Integrated Pest Management",
+      ],
+
+      educationData: [
+        {
+          degree: "M.S.",
+          institution:
+            "Department of Zoology, University of Chittagong, Chattogram",
+          year: "2015 - 2016",
+        },
+        {
+          degree: "B.Sc.",
+          institution:
+            "Department of Zoology, University of Chittagong, Chattogram",
+          year: "2012 - 2015",
+        },
+        {
+          degree: "H.S.C.",
+          institution:
+            "Science, Bangladesh Nou Bahini School and College, Chattogram",
+          year: "2008 - 2010",
+        },
+        {
+          degree: "S.S.C.",
+          institution:
+            "Science, Bangladesh Nou Bahini School and College, Chattogram",
+          year: "2006 - 2008",
+        },
+      ],
+
+      awardsData: [
+        {
+          title: "Best Research Paper Award",
+          organization: "University of Chittagong",
+          year: "2020",
+        },
+        {
+          title: "National Science Talent Award",
+          organization: "Bangladesh Science Foundation",
+          year: "2018",
+        },
+        {
+          title: "Academic Excellence Award",
+          organization: "Bangladesh Nou Bahini School and College",
+          year: "2010",
+        },
+      ],
+
+      publicationsData: [
+        {
+          title: "Biodiversity of Arthropods in Coastal Ecosystems",
+          authors: "John Doe, Jane Smith",
+          journal: "Journal of Zoology Research",
+          year: "2022",
+          link: "https://example.com/publication1",
+        },
+        {
+          title: "Impact of Climate Change on Insect Morphology",
+          authors: "Alice Brown, Bob Johnson",
+          journal: "International Journal of Entomology",
+          year: "2021",
+        },
+        {
+          title: "Zoogeographical Distribution of Endangered Species",
+          authors: "Michael Lee, Sarah White",
+          journal: "Nature Conservation Journal",
+          year: "2020",
+          link: "https://example.com/publication2",
+        },
+      ],
+
+      teacherRatingData: [
+        {
+          name: "2021",
+          uv: 40,
+          pv: 24,
+          amt: 2400,
+        },
+        {
+          name: "2022",
+          uv: 30,
+          pv: 98,
+          amt: 2210,
+        },
+        {
+          name: "2023",
+          uv: 20,
+          pv: 98,
+          amt: 2290,
+        },
+        {
+          name: "2024",
+          uv: 80,
+          pv: 39,
+          amt: 2000,
+        },
+        {
+          name: "2025",
+          uv: 90,
+          pv: 80,
+          amt: 2181,
+        },
+      ],
+
+      engagementData: [
+        { month: "Jan", students: 40 },
+        { month: "Feb", students: 50 },
+        { month: "Mar", students: 45 },
+        { month: "Apr", students: 60 },
+      ],
+    },
   },
   {
     id: "T007",
@@ -389,6 +969,131 @@ export const teachers = [
     email: "jkbiswas@cu.ac.bd",
     subject: "Wildlife",
     experience: "5 years",
+    bio: "Experienced Math Teacher with over 4 years of teaching.",
+    image:
+      "https://cu.ac.bd/assets/image/faculty_staff_users/444_I609V0A188.jpg",
+    phone: "+123 456 7890",
+    data: {
+      subjectOfInt: [
+        "Arthropda",
+        "Applied Zoology",
+        "Zoogeography",
+        "Paleotology",
+        "Human Ecology",
+        "Insect Morphology",
+        "Insect Physiology",
+        "Insect Embryology",
+        "Integrated Pest Management",
+      ],
+
+      educationData: [
+        {
+          degree: "M.S.",
+          institution:
+            "Department of Zoology, University of Chittagong, Chattogram",
+          year: "2015 - 2016",
+        },
+        {
+          degree: "B.Sc.",
+          institution:
+            "Department of Zoology, University of Chittagong, Chattogram",
+          year: "2012 - 2015",
+        },
+        {
+          degree: "H.S.C.",
+          institution:
+            "Science, Bangladesh Nou Bahini School and College, Chattogram",
+          year: "2008 - 2010",
+        },
+        {
+          degree: "S.S.C.",
+          institution:
+            "Science, Bangladesh Nou Bahini School and College, Chattogram",
+          year: "2006 - 2008",
+        },
+      ],
+
+      awardsData: [
+        {
+          title: "Best Research Paper Award",
+          organization: "University of Chittagong",
+          year: "2020",
+        },
+        {
+          title: "National Science Talent Award",
+          organization: "Bangladesh Science Foundation",
+          year: "2018",
+        },
+        {
+          title: "Academic Excellence Award",
+          organization: "Bangladesh Nou Bahini School and College",
+          year: "2010",
+        },
+      ],
+
+      publicationsData: [
+        {
+          title: "Biodiversity of Arthropods in Coastal Ecosystems",
+          authors: "John Doe, Jane Smith",
+          journal: "Journal of Zoology Research",
+          year: "2022",
+          link: "https://example.com/publication1",
+        },
+        {
+          title: "Impact of Climate Change on Insect Morphology",
+          authors: "Alice Brown, Bob Johnson",
+          journal: "International Journal of Entomology",
+          year: "2021",
+        },
+        {
+          title: "Zoogeographical Distribution of Endangered Species",
+          authors: "Michael Lee, Sarah White",
+          journal: "Nature Conservation Journal",
+          year: "2020",
+          link: "https://example.com/publication2",
+        },
+      ],
+
+      teacherRatingData: [
+        {
+          name: "2021",
+          uv: 40,
+          pv: 24,
+          amt: 2400,
+        },
+        {
+          name: "2022",
+          uv: 30,
+          pv: 98,
+          amt: 2210,
+        },
+        {
+          name: "2023",
+          uv: 20,
+          pv: 98,
+          amt: 2290,
+        },
+        {
+          name: "2024",
+          uv: 80,
+          pv: 39,
+          amt: 2000,
+        },
+        {
+          name: "2025",
+          uv: 90,
+          pv: 80,
+          amt: 2181,
+        },
+      ],
+
+      engagementData: [
+        { month: "Jan", students: 40 },
+        { month: "Feb", students: 50 },
+        { month: "Mar", students: 45 },
+        { month: "Apr", students: 60 },
+      ],
+    },
   },
   {
     id: "T008",
@@ -396,6 +1101,131 @@ export const teachers = [
     email: "mnzoorul@yahoo.com",
     subject: "Fisheries",
     experience: "6 years",
+    bio: "Experienced Math Teacher with over 4 years of teaching.",
+    image:
+      "https://cu.ac.bd/assets/image/faculty_staff_users/441_MCW8TO5NPU.jpg",
+    phone: "+123 456 7890",
+    data: {
+      subjectOfInt: [
+        "Arthropda",
+        "Applied Zoology",
+        "Zoogeography",
+        "Paleotology",
+        "Human Ecology",
+        "Insect Morphology",
+        "Insect Physiology",
+        "Insect Embryology",
+        "Integrated Pest Management",
+      ],
+
+      educationData: [
+        {
+          degree: "M.S.",
+          institution:
+            "Department of Zoology, University of Chittagong, Chattogram",
+          year: "2015 - 2016",
+        },
+        {
+          degree: "B.Sc.",
+          institution:
+            "Department of Zoology, University of Chittagong, Chattogram",
+          year: "2012 - 2015",
+        },
+        {
+          degree: "H.S.C.",
+          institution:
+            "Science, Bangladesh Nou Bahini School and College, Chattogram",
+          year: "2008 - 2010",
+        },
+        {
+          degree: "S.S.C.",
+          institution:
+            "Science, Bangladesh Nou Bahini School and College, Chattogram",
+          year: "2006 - 2008",
+        },
+      ],
+
+      awardsData: [
+        {
+          title: "Best Research Paper Award",
+          organization: "University of Chittagong",
+          year: "2020",
+        },
+        {
+          title: "National Science Talent Award",
+          organization: "Bangladesh Science Foundation",
+          year: "2018",
+        },
+        {
+          title: "Academic Excellence Award",
+          organization: "Bangladesh Nou Bahini School and College",
+          year: "2010",
+        },
+      ],
+
+      publicationsData: [
+        {
+          title: "Biodiversity of Arthropods in Coastal Ecosystems",
+          authors: "John Doe, Jane Smith",
+          journal: "Journal of Zoology Research",
+          year: "2022",
+          link: "https://example.com/publication1",
+        },
+        {
+          title: "Impact of Climate Change on Insect Morphology",
+          authors: "Alice Brown, Bob Johnson",
+          journal: "International Journal of Entomology",
+          year: "2021",
+        },
+        {
+          title: "Zoogeographical Distribution of Endangered Species",
+          authors: "Michael Lee, Sarah White",
+          journal: "Nature Conservation Journal",
+          year: "2020",
+          link: "https://example.com/publication2",
+        },
+      ],
+
+      teacherRatingData: [
+        {
+          name: "2021",
+          uv: 40,
+          pv: 24,
+          amt: 2400,
+        },
+        {
+          name: "2022",
+          uv: 30,
+          pv: 98,
+          amt: 2210,
+        },
+        {
+          name: "2023",
+          uv: 20,
+          pv: 98,
+          amt: 2290,
+        },
+        {
+          name: "2024",
+          uv: 80,
+          pv: 39,
+          amt: 2000,
+        },
+        {
+          name: "2025",
+          uv: 90,
+          pv: 80,
+          amt: 2181,
+        },
+      ],
+
+      engagementData: [
+        { month: "Jan", students: 40 },
+        { month: "Feb", students: 50 },
+        { month: "Mar", students: 45 },
+        { month: "Apr", students: 60 },
+      ],
+    },
   },
 
   {
@@ -404,6 +1234,131 @@ export const teachers = [
     email: "piloctg@yahoo.com",
     subject: "Wildlife",
     experience: "4 years",
+    bio: "Experienced Math Teacher with over 4 years of teaching.",
+    image:
+      "https://cu.ac.bd/assets/image/faculty_staff_users/445_HDIX5WZ92J.jpg",
+    phone: "+123 456 7890",
+    data: {
+      subjectOfInt: [
+        "Arthropda",
+        "Applied Zoology",
+        "Zoogeography",
+        "Paleotology",
+        "Human Ecology",
+        "Insect Morphology",
+        "Insect Physiology",
+        "Insect Embryology",
+        "Integrated Pest Management",
+      ],
+
+      educationData: [
+        {
+          degree: "M.S.",
+          institution:
+            "Department of Zoology, University of Chittagong, Chattogram",
+          year: "2015 - 2016",
+        },
+        {
+          degree: "B.Sc.",
+          institution:
+            "Department of Zoology, University of Chittagong, Chattogram",
+          year: "2012 - 2015",
+        },
+        {
+          degree: "H.S.C.",
+          institution:
+            "Science, Bangladesh Nou Bahini School and College, Chattogram",
+          year: "2008 - 2010",
+        },
+        {
+          degree: "S.S.C.",
+          institution:
+            "Science, Bangladesh Nou Bahini School and College, Chattogram",
+          year: "2006 - 2008",
+        },
+      ],
+
+      awardsData: [
+        {
+          title: "Best Research Paper Award",
+          organization: "University of Chittagong",
+          year: "2020",
+        },
+        {
+          title: "National Science Talent Award",
+          organization: "Bangladesh Science Foundation",
+          year: "2018",
+        },
+        {
+          title: "Academic Excellence Award",
+          organization: "Bangladesh Nou Bahini School and College",
+          year: "2010",
+        },
+      ],
+
+      publicationsData: [
+        {
+          title: "Biodiversity of Arthropods in Coastal Ecosystems",
+          authors: "John Doe, Jane Smith",
+          journal: "Journal of Zoology Research",
+          year: "2022",
+          link: "https://example.com/publication1",
+        },
+        {
+          title: "Impact of Climate Change on Insect Morphology",
+          authors: "Alice Brown, Bob Johnson",
+          journal: "International Journal of Entomology",
+          year: "2021",
+        },
+        {
+          title: "Zoogeographical Distribution of Endangered Species",
+          authors: "Michael Lee, Sarah White",
+          journal: "Nature Conservation Journal",
+          year: "2020",
+          link: "https://example.com/publication2",
+        },
+      ],
+
+      teacherRatingData: [
+        {
+          name: "2021",
+          uv: 40,
+          pv: 24,
+          amt: 2400,
+        },
+        {
+          name: "2022",
+          uv: 30,
+          pv: 98,
+          amt: 2210,
+        },
+        {
+          name: "2023",
+          uv: 20,
+          pv: 98,
+          amt: 2290,
+        },
+        {
+          name: "2024",
+          uv: 80,
+          pv: 39,
+          amt: 2000,
+        },
+        {
+          name: "2025",
+          uv: 90,
+          pv: 80,
+          amt: 2181,
+        },
+      ],
+
+      engagementData: [
+        { month: "Jan", students: 40 },
+        { month: "Feb", students: 50 },
+        { month: "Mar", students: 45 },
+        { month: "Apr", students: 60 },
+      ],
+    },
   },
   {
     id: "T011",
@@ -411,6 +1366,130 @@ export const teachers = [
     email: "example@gmail.com",
     subject: "Fisheries",
     experience: "4 years",
+    bio: "Experienced Math Teacher with over 4 years of teaching.",
+    image: "",
+    phone: "+123 456 7890",
+    data: {
+      subjectOfInt: [
+        "Arthropda",
+        "Applied Zoology",
+        "Zoogeography",
+        "Paleotology",
+        "Human Ecology",
+        "Insect Morphology",
+        "Insect Physiology",
+        "Insect Embryology",
+        "Integrated Pest Management",
+      ],
+
+      educationData: [
+        {
+          degree: "M.S.",
+          institution:
+            "Department of Zoology, University of Chittagong, Chattogram",
+          year: "2015 - 2016",
+        },
+        {
+          degree: "B.Sc.",
+          institution:
+            "Department of Zoology, University of Chittagong, Chattogram",
+          year: "2012 - 2015",
+        },
+        {
+          degree: "H.S.C.",
+          institution:
+            "Science, Bangladesh Nou Bahini School and College, Chattogram",
+          year: "2008 - 2010",
+        },
+        {
+          degree: "S.S.C.",
+          institution:
+            "Science, Bangladesh Nou Bahini School and College, Chattogram",
+          year: "2006 - 2008",
+        },
+      ],
+
+      awardsData: [
+        {
+          title: "Best Research Paper Award",
+          organization: "University of Chittagong",
+          year: "2020",
+        },
+        {
+          title: "National Science Talent Award",
+          organization: "Bangladesh Science Foundation",
+          year: "2018",
+        },
+        {
+          title: "Academic Excellence Award",
+          organization: "Bangladesh Nou Bahini School and College",
+          year: "2010",
+        },
+      ],
+
+      publicationsData: [
+        {
+          title: "Biodiversity of Arthropods in Coastal Ecosystems",
+          authors: "John Doe, Jane Smith",
+          journal: "Journal of Zoology Research",
+          year: "2022",
+          link: "https://example.com/publication1",
+        },
+        {
+          title: "Impact of Climate Change on Insect Morphology",
+          authors: "Alice Brown, Bob Johnson",
+          journal: "International Journal of Entomology",
+          year: "2021",
+        },
+        {
+          title: "Zoogeographical Distribution of Endangered Species",
+          authors: "Michael Lee, Sarah White",
+          journal: "Nature Conservation Journal",
+          year: "2020",
+          link: "https://example.com/publication2",
+        },
+      ],
+
+      teacherRatingData: [
+        {
+          name: "2021",
+          uv: 40,
+          pv: 24,
+          amt: 2400,
+        },
+        {
+          name: "2022",
+          uv: 30,
+          pv: 98,
+          amt: 2210,
+        },
+        {
+          name: "2023",
+          uv: 20,
+          pv: 98,
+          amt: 2290,
+        },
+        {
+          name: "2024",
+          uv: 80,
+          pv: 39,
+          amt: 2000,
+        },
+        {
+          name: "2025",
+          uv: 90,
+          pv: 80,
+          amt: 2181,
+        },
+      ],
+
+      engagementData: [
+        { month: "Jan", students: 40 },
+        { month: "Feb", students: 50 },
+        { month: "Mar", students: 45 },
+        { month: "Apr", students: 60 },
+      ],
+    },
   },
   {
     id: "T012",
@@ -418,6 +1497,131 @@ export const teachers = [
     email: "zannatul.nayem1022@cu.ac.bd",
     subject: "Entomology",
     experience: "4 years",
+    bio: "Experienced Math Teacher with over 4 years of teaching.",
+    image:
+      "https://cu.ac.bd/assets/image/faculty_staff_users/1153_GGVBH2C698.jpg",
+    phone: "+123 456 7890",
+    data: {
+      subjectOfInt: [
+        "Arthropda",
+        "Applied Zoology",
+        "Zoogeography",
+        "Paleotology",
+        "Human Ecology",
+        "Insect Morphology",
+        "Insect Physiology",
+        "Insect Embryology",
+        "Integrated Pest Management",
+      ],
+
+      educationData: [
+        {
+          degree: "M.S.",
+          institution:
+            "Department of Zoology, University of Chittagong, Chattogram",
+          year: "2015 - 2016",
+        },
+        {
+          degree: "B.Sc.",
+          institution:
+            "Department of Zoology, University of Chittagong, Chattogram",
+          year: "2012 - 2015",
+        },
+        {
+          degree: "H.S.C.",
+          institution:
+            "Science, Bangladesh Nou Bahini School and College, Chattogram",
+          year: "2008 - 2010",
+        },
+        {
+          degree: "S.S.C.",
+          institution:
+            "Science, Bangladesh Nou Bahini School and College, Chattogram",
+          year: "2006 - 2008",
+        },
+      ],
+
+      awardsData: [
+        {
+          title: "Best Research Paper Award",
+          organization: "University of Chittagong",
+          year: "2020",
+        },
+        {
+          title: "National Science Talent Award",
+          organization: "Bangladesh Science Foundation",
+          year: "2018",
+        },
+        {
+          title: "Academic Excellence Award",
+          organization: "Bangladesh Nou Bahini School and College",
+          year: "2010",
+        },
+      ],
+
+      publicationsData: [
+        {
+          title: "Biodiversity of Arthropods in Coastal Ecosystems",
+          authors: "John Doe, Jane Smith",
+          journal: "Journal of Zoology Research",
+          year: "2022",
+          link: "https://example.com/publication1",
+        },
+        {
+          title: "Impact of Climate Change on Insect Morphology",
+          authors: "Alice Brown, Bob Johnson",
+          journal: "International Journal of Entomology",
+          year: "2021",
+        },
+        {
+          title: "Zoogeographical Distribution of Endangered Species",
+          authors: "Michael Lee, Sarah White",
+          journal: "Nature Conservation Journal",
+          year: "2020",
+          link: "https://example.com/publication2",
+        },
+      ],
+
+      teacherRatingData: [
+        {
+          name: "2021",
+          uv: 40,
+          pv: 24,
+          amt: 2400,
+        },
+        {
+          name: "2022",
+          uv: 30,
+          pv: 98,
+          amt: 2210,
+        },
+        {
+          name: "2023",
+          uv: 20,
+          pv: 98,
+          amt: 2290,
+        },
+        {
+          name: "2024",
+          uv: 80,
+          pv: 39,
+          amt: 2000,
+        },
+        {
+          name: "2025",
+          uv: 90,
+          pv: 80,
+          amt: 2181,
+        },
+      ],
+
+      engagementData: [
+        { month: "Jan", students: 40 },
+        { month: "Feb", students: 50 },
+        { month: "Mar", students: 45 },
+        { month: "Apr", students: 60 },
+      ],
+    },
   },
   {
     id: "T013",
@@ -425,6 +1629,131 @@ export const teachers = [
     email: "mahabuba@cu.ac.bd",
     subject: "Fisheries",
     experience: "4 years",
+    bio: "Experienced Math Teacher with over 4 years of teaching.",
+    image:
+      "https://cu.ac.bd/assets/image/faculty_staff_users/447_WI50LVJ7LD.jpg",
+    phone: "+123 456 7890",
+    data: {
+      subjectOfInt: [
+        "Arthropda",
+        "Applied Zoology",
+        "Zoogeography",
+        "Paleotology",
+        "Human Ecology",
+        "Insect Morphology",
+        "Insect Physiology",
+        "Insect Embryology",
+        "Integrated Pest Management",
+      ],
+
+      educationData: [
+        {
+          degree: "M.S.",
+          institution:
+            "Department of Zoology, University of Chittagong, Chattogram",
+          year: "2015 - 2016",
+        },
+        {
+          degree: "B.Sc.",
+          institution:
+            "Department of Zoology, University of Chittagong, Chattogram",
+          year: "2012 - 2015",
+        },
+        {
+          degree: "H.S.C.",
+          institution:
+            "Science, Bangladesh Nou Bahini School and College, Chattogram",
+          year: "2008 - 2010",
+        },
+        {
+          degree: "S.S.C.",
+          institution:
+            "Science, Bangladesh Nou Bahini School and College, Chattogram",
+          year: "2006 - 2008",
+        },
+      ],
+
+      awardsData: [
+        {
+          title: "Best Research Paper Award",
+          organization: "University of Chittagong",
+          year: "2020",
+        },
+        {
+          title: "National Science Talent Award",
+          organization: "Bangladesh Science Foundation",
+          year: "2018",
+        },
+        {
+          title: "Academic Excellence Award",
+          organization: "Bangladesh Nou Bahini School and College",
+          year: "2010",
+        },
+      ],
+
+      publicationsData: [
+        {
+          title: "Biodiversity of Arthropods in Coastal Ecosystems",
+          authors: "John Doe, Jane Smith",
+          journal: "Journal of Zoology Research",
+          year: "2022",
+          link: "https://example.com/publication1",
+        },
+        {
+          title: "Impact of Climate Change on Insect Morphology",
+          authors: "Alice Brown, Bob Johnson",
+          journal: "International Journal of Entomology",
+          year: "2021",
+        },
+        {
+          title: "Zoogeographical Distribution of Endangered Species",
+          authors: "Michael Lee, Sarah White",
+          journal: "Nature Conservation Journal",
+          year: "2020",
+          link: "https://example.com/publication2",
+        },
+      ],
+
+      teacherRatingData: [
+        {
+          name: "2021",
+          uv: 40,
+          pv: 24,
+          amt: 2400,
+        },
+        {
+          name: "2022",
+          uv: 30,
+          pv: 98,
+          amt: 2210,
+        },
+        {
+          name: "2023",
+          uv: 20,
+          pv: 98,
+          amt: 2290,
+        },
+        {
+          name: "2024",
+          uv: 80,
+          pv: 39,
+          amt: 2000,
+        },
+        {
+          name: "2025",
+          uv: 90,
+          pv: 80,
+          amt: 2181,
+        },
+      ],
+
+      engagementData: [
+        { month: "Jan", students: 40 },
+        { month: "Feb", students: 50 },
+        { month: "Mar", students: 45 },
+        { month: "Apr", students: 60 },
+      ],
+    },
   },
   {
     id: "T014",
@@ -432,6 +1761,131 @@ export const teachers = [
     email: "humayrazoology@cu.ac.bd",
     subject: "Entomology",
     experience: "4 years",
+    bio: "Experienced Math Teacher with over 4 years of teaching.",
+    image:
+      "https://cu.ac.bd/assets/image/faculty_staff_users/1166_KXWUWQ3L69.jpg",
+    phone: "+123 456 7890",
+    data: {
+      subjectOfInt: [
+        "Arthropda",
+        "Applied Zoology",
+        "Zoogeography",
+        "Paleotology",
+        "Human Ecology",
+        "Insect Morphology",
+        "Insect Physiology",
+        "Insect Embryology",
+        "Integrated Pest Management",
+      ],
+
+      educationData: [
+        {
+          degree: "M.S.",
+          institution:
+            "Department of Zoology, University of Chittagong, Chattogram",
+          year: "2015 - 2016",
+        },
+        {
+          degree: "B.Sc.",
+          institution:
+            "Department of Zoology, University of Chittagong, Chattogram",
+          year: "2012 - 2015",
+        },
+        {
+          degree: "H.S.C.",
+          institution:
+            "Science, Bangladesh Nou Bahini School and College, Chattogram",
+          year: "2008 - 2010",
+        },
+        {
+          degree: "S.S.C.",
+          institution:
+            "Science, Bangladesh Nou Bahini School and College, Chattogram",
+          year: "2006 - 2008",
+        },
+      ],
+
+      awardsData: [
+        {
+          title: "Best Research Paper Award",
+          organization: "University of Chittagong",
+          year: "2020",
+        },
+        {
+          title: "National Science Talent Award",
+          organization: "Bangladesh Science Foundation",
+          year: "2018",
+        },
+        {
+          title: "Academic Excellence Award",
+          organization: "Bangladesh Nou Bahini School and College",
+          year: "2010",
+        },
+      ],
+
+      publicationsData: [
+        {
+          title: "Biodiversity of Arthropods in Coastal Ecosystems",
+          authors: "John Doe, Jane Smith",
+          journal: "Journal of Zoology Research",
+          year: "2022",
+          link: "https://example.com/publication1",
+        },
+        {
+          title: "Impact of Climate Change on Insect Morphology",
+          authors: "Alice Brown, Bob Johnson",
+          journal: "International Journal of Entomology",
+          year: "2021",
+        },
+        {
+          title: "Zoogeographical Distribution of Endangered Species",
+          authors: "Michael Lee, Sarah White",
+          journal: "Nature Conservation Journal",
+          year: "2020",
+          link: "https://example.com/publication2",
+        },
+      ],
+
+      teacherRatingData: [
+        {
+          name: "2021",
+          uv: 40,
+          pv: 24,
+          amt: 2400,
+        },
+        {
+          name: "2022",
+          uv: 30,
+          pv: 98,
+          amt: 2210,
+        },
+        {
+          name: "2023",
+          uv: 20,
+          pv: 98,
+          amt: 2290,
+        },
+        {
+          name: "2024",
+          uv: 80,
+          pv: 39,
+          amt: 2000,
+        },
+        {
+          name: "2025",
+          uv: 90,
+          pv: 80,
+          amt: 2181,
+        },
+      ],
+
+      engagementData: [
+        { month: "Jan", students: 40 },
+        { month: "Feb", students: 50 },
+        { month: "Mar", students: 45 },
+        { month: "Apr", students: 60 },
+      ],
+    },
   },
   {
     id: "T014",
@@ -439,83 +1893,130 @@ export const teachers = [
     email: "sanjidasharminreema1013@cu.ac.bd",
     subject: "Parasitology",
     experience: "4 years",
-  },
-];
+    bio: "Experienced Math Teacher with over 4 years of teaching.",
+    image:
+      "https://cu.ac.bd/assets/image/faculty_staff_users/1164_7SKEVIBAXR.jpg",
+    phone: "+123 456 7890",
+    data: {
+      subjectOfInt: [
+        "Arthropda",
+        "Applied Zoology",
+        "Zoogeography",
+        "Paleotology",
+        "Human Ecology",
+        "Insect Morphology",
+        "Insect Physiology",
+        "Insect Embryology",
+        "Integrated Pest Management",
+      ],
 
-export const subjectOfInt = [
-  "Arthropda",
-  "Applied Zoology",
-  "Zoogeography",
-  "Paleotology",
-  "Human Ecology",
-  "Insect Morphology",
-  "Insect Physiology",
-  "Insect Embryology",
-  "Integrated Pest Management",
-];
+      educationData: [
+        {
+          degree: "M.S.",
+          institution:
+            "Department of Zoology, University of Chittagong, Chattogram",
+          year: "2015 - 2016",
+        },
+        {
+          degree: "B.Sc.",
+          institution:
+            "Department of Zoology, University of Chittagong, Chattogram",
+          year: "2012 - 2015",
+        },
+        {
+          degree: "H.S.C.",
+          institution:
+            "Science, Bangladesh Nou Bahini School and College, Chattogram",
+          year: "2008 - 2010",
+        },
+        {
+          degree: "S.S.C.",
+          institution:
+            "Science, Bangladesh Nou Bahini School and College, Chattogram",
+          year: "2006 - 2008",
+        },
+      ],
 
-export const educationData = [
-  {
-    degree: "M.S.",
-    institution: "Department of Zoology, University of Chittagong, Chattogram",
-    year: "2015 - 2016",
-  },
-  {
-    degree: "B.Sc.",
-    institution: "Department of Zoology, University of Chittagong, Chattogram",
-    year: "2012 - 2015",
-  },
-  {
-    degree: "H.S.C.",
-    institution:
-      "Science, Bangladesh Nou Bahini School and College, Chattogram",
-    year: "2008 - 2010",
-  },
-  {
-    degree: "S.S.C.",
-    institution:
-      "Science, Bangladesh Nou Bahini School and College, Chattogram",
-    year: "2006 - 2008",
-  },
-];
+      awardsData: [
+        {
+          title: "Best Research Paper Award",
+          organization: "University of Chittagong",
+          year: "2020",
+        },
+        {
+          title: "National Science Talent Award",
+          organization: "Bangladesh Science Foundation",
+          year: "2018",
+        },
+        {
+          title: "Academic Excellence Award",
+          organization: "Bangladesh Nou Bahini School and College",
+          year: "2010",
+        },
+      ],
 
-export const awardsData = [
-  {
-    title: "Best Research Paper Award",
-    organization: "University of Chittagong",
-    year: "2020",
-  },
-  {
-    title: "National Science Talent Award",
-    organization: "Bangladesh Science Foundation",
-    year: "2018",
-  },
-  {
-    title: "Academic Excellence Award",
-    organization: "Bangladesh Nou Bahini School and College",
-    year: "2010",
-  },
-];
+      publicationsData: [
+        {
+          title: "Biodiversity of Arthropods in Coastal Ecosystems",
+          authors: "John Doe, Jane Smith",
+          journal: "Journal of Zoology Research",
+          year: "2022",
+          link: "https://example.com/publication1",
+        },
+        {
+          title: "Impact of Climate Change on Insect Morphology",
+          authors: "Alice Brown, Bob Johnson",
+          journal: "International Journal of Entomology",
+          year: "2021",
+        },
+        {
+          title: "Zoogeographical Distribution of Endangered Species",
+          authors: "Michael Lee, Sarah White",
+          journal: "Nature Conservation Journal",
+          year: "2020",
+          link: "https://example.com/publication2",
+        },
+      ],
 
-export const publicationsData = [
-  {
-    title: "Biodiversity of Arthropods in Coastal Ecosystems",
-    authors: "John Doe, Jane Smith",
-    journal: "Journal of Zoology Research",
-    year: "2022",
-    link: "https://example.com/publication1",
-  },
-  {
-    title: "Impact of Climate Change on Insect Morphology",
-    authors: "Alice Brown, Bob Johnson",
-    journal: "International Journal of Entomology",
-    year: "2021",
-  },
-  {
-    title: "Zoogeographical Distribution of Endangered Species",
-    authors: "Michael Lee, Sarah White",
-    journal: "Nature Conservation Journal",
-    year: "2020",
-    link: "https://example.com/publication2",
+      teacherRatingData: [
+        {
+          name: "2021",
+          uv: 40,
+          pv: 24,
+          amt: 2400,
+        },
+        {
+          name: "2022",
+          uv: 30,
+          pv: 98,
+          amt: 2210,
+        },
+        {
+          name: "2023",
+          uv: 20,
+          pv: 98,
+          amt: 2290,
+        },
+        {
+          name: "2024",
+          uv: 80,
+          pv: 39,
+          amt: 2000,
+        },
+        {
+          name: "2025",
+          uv: 90,
+          pv: 80,
+          amt: 2181,
+        },
+      ],
+
+      engagementData: [
+        { month: "Jan", students: 40 },
+        { month: "Feb", students: 50 },
+        { month: "Mar", students: 45 },
+        { month: "Apr", students: 60 },
+      ],
+    },
   },
 ];

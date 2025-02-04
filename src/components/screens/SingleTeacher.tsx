@@ -1,12 +1,7 @@
-import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import {
-  awardsData,
-  educationData,
-  publicationsData,
-  subjectOfInt,
-} from "../../data/data";
-import { TeacherBarChart } from "../charts/BarChart";
+import { teachers } from "../../data/data";
+
+import TeacherEngageMent from "../charts/TeacherEngageMentChart";
 import TeacherExpenditure from "../charts/TeacherExpenditure";
 import TeacherRatingChart from "../charts/TeacherRatingChart";
 import Education from "../Education";
@@ -23,38 +18,21 @@ interface Teacher {
   email: string;
   phone: string;
   stats: { month: string; students: number };
+  data: {
+    subjectOfInt: string[];
+    engagementData: object[];
+    publicationsData: object[];
+    awardsData: object[];
+    teacherRatingData: object[];
+    educationData: object[];
+  };
 }
 
 const SingleTeacher = () => {
   const { id } = useParams();
-  const [teacher, setTeacher] = useState<Teacher | null>(null);
 
-  useEffect(() => {
-    // Mock API Fetch (Replace with real API call)
-    const fetchTeacher = async () => {
-      const data: Teacher = {
-        id: "1",
-        name: "Md. Ikram Ansar Tuhin",
-        subject: "Entomology",
-        bio: "Experienced Math Teacher with over 4 years of teaching.",
-        image:
-          "https://cu.ac.bd/assets/image/faculty_staff_users/1158_W5W7YMPO3B.jpg",
-        email: "john.doe@example.com",
-        phone: "+123 456 7890",
-        stats: [
-          { month: "Jan", students: 40 },
-          { month: "Feb", students: 50 },
-          { month: "Mar", students: 45 },
-          { month: "Apr", students: 60 },
-        ],
-      };
-      setTeacher(data);
-    };
-    fetchTeacher();
-  }, [id]);
-
-  if (!teacher)
-    return <div className="text-center text-gray-500">Loading...</div>;
+  const data = teachers;
+  const filteredData: Teacher = teachers.find((teacher) => teacher.id === id);
 
   return (
     <section className="w-full grid grid-cols-1 lg:grid-cols-2 gap-4 2xl:grid-cols-1 px-4 py-4 bg-secondary ">
@@ -63,16 +41,16 @@ const SingleTeacher = () => {
         {/*user  info div  */}
         <div className="bg-white min-h-[160px] py-3 px-4 flex flex-col sm:flex-row  items-start sm:items-center justify-center gap-3 rounded-xl">
           <img
-            src={teacher.image}
-            alt={teacher.name}
+            src={filteredData?.image}
+            alt={filteredData?.name}
             className="w-28 h-28 rounded-full shadow-md"
           />
           <div className="flex flex-col justify-start">
             <h2 className="text-2xl font-semibold text-gray-800">
-              {teacher.name}
+              {filteredData?.name}
             </h2>
-            <p className="text-lg text-primary-500">{teacher.subject}</p>
-            <p className="text-gray-600">{teacher.bio}</p>
+            <p className="text-lg text-primary-500">{filteredData?.subject}</p>
+            <p className="text-gray-600">{filteredData?.bio}</p>
           </div>
         </div>
 
@@ -81,9 +59,9 @@ const SingleTeacher = () => {
           <h3 className="text-lg mb-2 font-semibold text-gray-800">
             Contact Information
           </h3>
-          <p className="text-gray-600">tuhin2511@gmail.com</p>
-          <p className="text-gray-600"> 01672409040</p>
-          <p className="text-gray-600">tuhin2511@cu.ac.bd</p>
+          <p className="text-gray-600">{filteredData?.email}</p>
+          <p className="text-gray-600"> {filteredData?.phone}</p>
+          <p className="text-gray-600">{filteredData?.email || ""}</p>
         </div>
 
         {/* monthly expenditure div */}
@@ -104,7 +82,7 @@ const SingleTeacher = () => {
             </h3>
             <div className="rounded-xl flex items-center px-4 mt-3 bg-white h-[400px]">
               {" "}
-              <TeacherBarChart stats={teacher.stats} />
+              <TeacherEngageMent stats={filteredData?.data?.engagementData} />
             </div>
           </div>
           <div className=" w-full">
@@ -113,7 +91,9 @@ const SingleTeacher = () => {
             </h3>
             <div className="rounded-xl flex items-center px-4 mt-3 bg-white h-[400px]">
               {" "}
-              <TeacherRatingChart />
+              <TeacherRatingChart
+                teacherRatingData={filteredData?.data?.teacherRatingData}
+              />
             </div>
           </div>
         </div>
@@ -124,28 +104,28 @@ const SingleTeacher = () => {
         <h3 className="px-4 text-xl font-semibold text-gray-800">
           Subjects of Interest
         </h3>
-        <SubOfInterest subjectOfInt={subjectOfInt} />
+        <SubOfInterest subjectOfInt={filteredData?.data?.subjectOfInt} />
       </section>
 
       {/* Education and awards Section */}
-      <section className="grid grid-cols-2  gap-6 mt-8">
+      <section className="grid grid-cols-1 md:grid-cols-2  gap-6 mt-8">
         <div>
           <h3 className="px-4 mb-3 text-xl font-semibold text-gray-800>Education">
             Education{" "}
           </h3>
-          <Education educationList={educationData} />
+          <Education educationList={filteredData?.data?.educationData} />
         </div>
         <div>
           <h3 className="px-4 mb-3 text-xl font-semibold text-gray-800>Education">
             Hon's and Awards{" "}
           </h3>
-          <HonorsAwards awards={awardsData} />
+          <HonorsAwards awards={filteredData?.data?.awardsData} />
         </div>
         <div>
           <h3 className="px-4 mb-3 text-xl font-semibold text-gray-800>Education">
             Publications
           </h3>
-          <Publications publications={publicationsData} />
+          <Publications publications={filteredData?.data?.publicationsData} />
         </div>
       </section>
     </section>

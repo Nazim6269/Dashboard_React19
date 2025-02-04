@@ -7,9 +7,8 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import { teacherRatingData } from "../../data/data";
 
-const TeacherRatingChart = () => {
+const TeacherRatingChart = ({ teacherRatingData }) => {
   return (
     <div className="w-full h-[75%]">
       <ResponsiveContainer width="100%" height={300}>
