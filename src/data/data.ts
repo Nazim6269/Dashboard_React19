@@ -446,61 +446,34 @@ export const teachers = [
     phone: "+123 456 7890",
     data: {
       subjectOfInt: [
-        "Arthropda",
-        "Applied Zoology",
-        "Zoogeography",
-        "Paleotology",
-        "Human Ecology",
-        "Insect Morphology",
-        "Insect Physiology",
-        "Insect Embryology",
-        "Integrated Pest Management",
+        "Limnology & Fisheries",
+        "Coastal Oceanography",
+        "Biodiversity conservation and management",
+        "Ecotoxicology",
       ],
 
       educationData: [
         {
+          degree: "Ph.D.",
+          institution:
+            "Department of Zoology, University of Chittagong, Chattogram",
+          year: "2015 - 2020",
+        },
+        {
           degree: "M.S.",
           institution:
             "Department of Zoology, University of Chittagong, Chattogram",
-          year: "2015 - 2016",
+          year: "2008 - 2009",
         },
         {
           degree: "B.Sc.",
           institution:
             "Department of Zoology, University of Chittagong, Chattogram",
-          year: "2012 - 2015",
-        },
-        {
-          degree: "H.S.C.",
-          institution:
-            "Science, Bangladesh Nou Bahini School and College, Chattogram",
-          year: "2008 - 2010",
-        },
-        {
-          degree: "S.S.C.",
-          institution:
-            "Science, Bangladesh Nou Bahini School and College, Chattogram",
-          year: "2006 - 2008",
+          year: "2002 - 2007",
         },
       ],
 
-      awardsData: [
-        {
-          title: "Best Research Paper Award",
-          organization: "University of Chittagong",
-          year: "2020",
-        },
-        {
-          title: "National Science Talent Award",
-          organization: "Bangladesh Science Foundation",
-          year: "2018",
-        },
-        {
-          title: "Academic Excellence Award",
-          organization: "Bangladesh Nou Bahini School and College",
-          year: "2010",
-        },
-      ],
+      awardsData: [],
 
       publicationsData: [
         {
@@ -579,84 +552,85 @@ export const teachers = [
     phone: "+123 456 7890",
     data: {
       subjectOfInt: [
-        "Arthropda",
-        "Applied Zoology",
-        "Zoogeography",
-        "Paleotology",
-        "Human Ecology",
-        "Insect Morphology",
-        "Insect Physiology",
-        "Insect Embryology",
-        "Integrated Pest Management",
+        "Fish Toxicology",
+        "Hematology",
+        "Histology",
+        "Fish Nutritional values",
+        "Fish Marketing System",
+        "Bioassay",
+        "Limnology",
+        "Fish Biology",
       ],
 
       educationData: [
         {
-          degree: "M.S.",
+          degree: "Ph.D.",
           institution:
             "Department of Zoology, University of Chittagong, Chattogram",
-          year: "2015 - 2016",
+          year: "2019 - 2023",
+        },
+        {
+          degree: "M.Phil.",
+          institution:
+            "Department of Zoology, University of Chittagong, Chattogram",
+          year: "2000 - 2003",
+        },
+        {
+          degree: "M.Sc.",
+          institution:
+            "Department of Zoology, University of Chittagong, Chattogram",
+          year: "1992 - 1993",
         },
         {
           degree: "B.Sc.",
           institution:
             "Department of Zoology, University of Chittagong, Chattogram",
-          year: "2012 - 2015",
+          year: "1989 - 1991",
         },
         {
           degree: "H.S.C.",
           institution:
-            "Science, Bangladesh Nou Bahini School and College, Chattogram",
-          year: "2008 - 2010",
+            "Science, Govt. Hazi Mohammad Mohsin College, Chittagong, Bangladesh",
+          year: "1987 - 1988",
         },
         {
           degree: "S.S.C.",
           institution:
-            "Science, Bangladesh Nou Bahini School and College, Chattogram",
-          year: "2006 - 2008",
+            "Science, Faujdarhat Collegiate School, Chittagong, Bangladesh",
+          year: "1985 - 1986",
         },
       ],
 
       awardsData: [
         {
-          title: "Best Research Paper Award",
+          title: "H.S.C. Board Scholarship,Comilla",
+          organization: "Comilla Board",
+          year: "1989",
+        },
+        {
+          title: "Chittagong University Scholarship (B.Sc.)",
           organization: "University of Chittagong",
-          year: "2020",
+          year: "1993",
         },
         {
-          title: "National Science Talent Award",
-          organization: "Bangladesh Science Foundation",
-          year: "2018",
+          title: "Chittagong District Scholarship",
+          organization: "District Commissioner Office, Chittagong",
+          year: "1993",
         },
         {
-          title: "Academic Excellence Award",
-          organization: "Bangladesh Nou Bahini School and College",
-          year: "2010",
+          title: "BSC(Bangladesh Scholarship Council) Scholarship",
+          organization:
+            "Bangladesh Scholarship Council & The Nippon Foundation, Japan",
+          year: "1994",
+        },
+        {
+          title: "Chittagong University Scholarship (M.Sc.)",
+          organization: "University of Chittagong",
+          year: "1995",
         },
       ],
 
-      publicationsData: [
-        {
-          title: "Biodiversity of Arthropods in Coastal Ecosystems",
-          authors: "John Doe, Jane Smith",
-          journal: "Journal of Zoology Research",
-          year: "2022",
-          link: "https://example.com/publication1",
-        },
-        {
-          title: "Impact of Climate Change on Insect Morphology",
-          authors: "Alice Brown, Bob Johnson",
-          journal: "International Journal of Entomology",
-          year: "2021",
-        },
-        {
-          title: "Zoogeographical Distribution of Endangered Species",
-          authors: "Michael Lee, Sarah White",
-          journal: "Nature Conservation Journal",
-          year: "2020",
-          link: "https://example.com/publication2",
-        },
-      ],
+      publicationsData: [],
 
       teacherRatingData: [
         {
@@ -711,82 +685,115 @@ export const teachers = [
     phone: "+123 456 7890",
     data: {
       subjectOfInt: [
-        "Arthropda",
-        "Applied Zoology",
-        "Zoogeography",
-        "Paleotology",
-        "Human Ecology",
-        "Insect Morphology",
-        "Insect Physiology",
-        "Insect Embryology",
-        "Integrated Pest Management",
+        "Wildlife ecology, conservation and management",
+        "Herpetology",
+        "Species Diversity",
+        "Taxonomy",
+        "Venomics and antivenomics",
+        "Pharmacology",
+        "Public health",
+        "Ornithology",
+        "Lepidopterology",
       ],
 
       educationData: [
         {
-          degree: "M.S.",
+          degree: "M.S. (WildLife and Conservation Biology)",
           institution:
             "Department of Zoology, University of Chittagong, Chattogram",
-          year: "2015 - 2016",
-        },
-        {
-          degree: "B.Sc.",
-          institution:
-            "Department of Zoology, University of Chittagong, Chattogram",
-          year: "2012 - 2015",
-        },
-        {
-          degree: "H.S.C.",
-          institution:
-            "Science, Bangladesh Nou Bahini School and College, Chattogram",
-          year: "2008 - 2010",
-        },
-        {
-          degree: "S.S.C.",
-          institution:
-            "Science, Bangladesh Nou Bahini School and College, Chattogram",
-          year: "2006 - 2008",
+          year: "2012 - 2013",
         },
       ],
 
       awardsData: [
         {
-          title: "Best Research Paper Award",
-          organization: "University of Chittagong",
-          year: "2020",
-        },
-        {
-          title: "National Science Talent Award",
-          organization: "Bangladesh Science Foundation",
-          year: "2018",
-        },
-        {
-          title: "Academic Excellence Award",
-          organization: "Bangladesh Nou Bahini School and College",
-          year: "2010",
+          title: "Butterfly Young Enthusiast Award",
+          organization: "Department of Zoology, Jahangirnagar University",
+          year: "2015",
         },
       ],
 
       publicationsData: [
         {
-          title: "Biodiversity of Arthropods in Coastal Ecosystems",
-          authors: "John Doe, Jane Smith",
-          journal: "Journal of Zoology Research",
-          year: "2022",
-          link: "https://example.com/publication1",
+          title:
+            "Venom-spit ophthalmia: A novel envenomation of Monocled Cobra (Naja kaouthia)",
+          authors:
+            "Md. Mizanur Rahman, Md. Asir Uddin, Abdullah Abu Sayeed, Mohammed Noman, Abdul Auawal, Md. Rafiqul Islam, Sajib Rudra, Ibrahim Khalil Al Haidar, Aniruddha Ghose, Mohammad Abdul Wahed Chowdhury",
+          journal: "Toxicon; Elsevier",
+          year: 2024,
+          link: "https://doi.org/10.1016/j.toxicon.2024.108221",
         },
         {
-          title: "Impact of Climate Change on Insect Morphology",
-          authors: "Alice Brown, Bob Johnson",
-          journal: "International Journal of Entomology",
-          year: "2021",
+          title:
+            "Conservation Priorities for Threatened Fish to Withstand Climate Crisis: Sustainable Capture and Protection of Inland Hydrographic Ecosystems",
+          authors:
+            "Joya Dutta, Ibrahim Khalil Al Haidar, Mohammed Noman, Mohammad Abdul Wahed Chowdhury",
+          journal: "Ecologies; MDPI",
+          year: 2024,
+          link: "https://www.mdpi.com/ecologies/2024/155-169",
         },
         {
-          title: "Zoogeographical Distribution of Endangered Species",
-          authors: "Michael Lee, Sarah White",
-          journal: "Nature Conservation Journal",
-          year: "2020",
-          link: "https://example.com/publication2",
+          title:
+            "Toxins profiles, toxicological properties, and histological alteration potentiality of Trimeresurus erythrurus venom: In vitro and in vivo experiments",
+          authors:
+            "Ibrahim Khalil Al Haidar, Mohammad Abdul Wahed Chowdhury, Masum Miah, Mahedi Hasan, Md Sohanur Rohman Sohan, Mohammed Noman, Md. Mizanur Rahman, Abdul Auawal, Sajib Rudra, Md. Rafiqul Islam, Md. Asir Uddin, Abdullah Abu Sayeed, Aniruddha Ghose, M. Monirul Islam, Md Abu Reza",
+          journal: "Journal of King Saud University - Science; Elsevier",
+          year: 2024,
+          link: "https://doi.org/10.1016/j.jksus.2024.1-8",
+        },
+        {
+          title:
+            "Neuropharmacological and antiproliferative activity of Tetrastigma leucostaphyllum (Dennst.) Alston: Evidence from in-vivo, in-vitro and in-silico approaches",
+          authors:
+            "Sajib Rudra, Mohammad Omar Faruque, Afroza Tahamina, Nazim Uddin Emon, Ibrahim Khalil Al Haidar, Shaikh Bokhtear Uddin",
+          journal: "Saudi Pharmaceutical Journal; Elsevier",
+          year: 2023,
+          link: "https://doi.org/10.1016/j.spj.2023.929-941",
+        },
+        {
+          title:
+            "Implementation of Ecological Distribution of Venomous Snakes for Clinical Management of Snakebite in Bangladesh",
+          authors:
+            "Ibrahim Khalil Al Haidar, Aniruddha Ghose, Mohammed Noman, Md. Mizanur Rahman, Sajib Rudra, Abdul Auawal, Md. Rafiqul Islam, Md. Asir Uddin, Rabiul Alam Md. Erfan Uddin, Abdullah Abu Sayeed, Md. Robed Amin, Md. Farid Ahsan, Md. Abul Faiz, Mohammad Abdul Wahed Chowdhury",
+          journal: "Journal of Medicine; Bangladesh Journal of Medicine",
+          year: 2023,
+          link: "https://bjmjournal.com/2023/139-151",
+        },
+        {
+          title:
+            "Favourable climatic niche in low elevations outside the flood zone characterises the distribution pattern of venomous snakes in Bangladesh",
+          authors:
+            "Mohammad Abdul Wahed Chowdhury, Sara Varela, Sanjoy Roy, Md. Mizanur Rahman, Mohammed Noman, Ibrahim Khalil Al Haidar, Johannes Müller",
+          journal: "Journal of Tropical Ecology; Cambridge University Press",
+          year: 2022,
+          link: "https://doi.org/10.1017/jte.2022.1-14",
+        },
+        {
+          title:
+            "Chemical, biological and protein-receptor binding profiling of Bauhinia scandens L. stems provide new insights into the management of pain, inflammation, pyrexia and thrombosis",
+          authors:
+            "Susmita Paul, Fahmida Tasnim Richi, Saimon Shahriar, Mohammed Aktar Sayeed, Nadia Islam Tumpa, Amlan Ganguly",
+          journal: "Biomedicine & Pharmacotherapy; Elsevier Masson SAS",
+          year: 2021,
+          link: "https://doi.org/10.1016/j.biopha.2021.e112185",
+        },
+        {
+          title:
+            "On the occurrence of Persian Gulf Sea Snake, Hydrophis lapemoides (Gray, 1849) (Reptilia, Squamata, Elapidae, Hydrophiinae), along the coast of Bangladesh",
+          authors:
+            "Mohammad Abdul Wahed Chowdhury, Md. Rafiqul Islam, Abdul Auawal, Harij Uddin, Najmul Hasan, Ibrahim Khalil Al Haidar",
+          journal: "Check List; Pensoft",
+          year: 2021,
+          link: "https://doi.org/10.15560/17.4.1075",
+        },
+        {
+          title:
+            "Antipyretic activity of Caesalpinia digyna (Rottl.) leaves extract along with phytoconstituents binding affinity to COX-1, COX-2, and mPGES-1 receptors: In vivo and in silico approaches",
+          authors:
+            "Nazim Uddin Emon, Safaet Alam, Sajib Rudra, Ibrahim Khalil Al Haidar, Mohammed Farhad, Md. Ezazul Hoque Rana, Amlan Ganguly",
+          journal: "Saudi Journal of Biological Sciences; Elsevier B.V.",
+          year: 2021,
+          link: "https://doi.org/10.1016/j.sjbs.2021.5302-5309",
         },
       ],
 
@@ -843,82 +850,87 @@ export const teachers = [
     phone: "+123 456 7890",
     data: {
       subjectOfInt: [
-        "Arthropda",
-        "Applied Zoology",
-        "Zoogeography",
-        "Paleotology",
-        "Human Ecology",
-        "Insect Morphology",
-        "Insect Physiology",
-        "Insect Embryology",
-        "Integrated Pest Management",
+        "Limnology and Fisheries Biology",
+        "River conservation and management,fishereis and icthyoprotozoology",
       ],
 
       educationData: [
         {
-          degree: "M.S.",
+          degree: "Ph.D",
           institution:
             "Department of Zoology, University of Chittagong, Chattogram",
-          year: "2015 - 2016",
+          year: "2020 - present",
+        },
+        {
+          degree: "M.S.(Limnology and Fishereies Biology)",
+          institution:
+            "Department of Zoology, University of Chittagong, Chattogram",
+          year: "2002 - 2003",
         },
         {
           degree: "B.Sc.",
           institution:
             "Department of Zoology, University of Chittagong, Chattogram",
-          year: "2012 - 2015",
+          year: "1998 - 2002",
         },
         {
           degree: "H.S.C.",
-          institution:
-            "Science, Bangladesh Nou Bahini School and College, Chattogram",
-          year: "2008 - 2010",
+          institution: "Science, Chittagong College, Chattogram",
+          year: "1996 - 1998",
         },
         {
           degree: "S.S.C.",
-          institution:
-            "Science, Bangladesh Nou Bahini School and College, Chattogram",
-          year: "2006 - 2008",
+          institution: "Science, Collegiate School, Chattogram",
+          year: "1994 - 1996",
         },
       ],
 
       awardsData: [
         {
-          title: "Best Research Paper Award",
-          organization: "University of Chittagong",
-          year: "2020",
+          title: "Outstanding Acdemic Achievements",
+          organization:
+            "Bangladesh Scholarship Council & The Nippon Foundation, Japan",
+          year: "2002",
         },
         {
-          title: "National Science Talent Award",
-          organization: "Bangladesh Science Foundation",
-          year: "2018",
-        },
-        {
-          title: "Academic Excellence Award",
-          organization: "Bangladesh Nou Bahini School and College",
-          year: "2010",
+          title: "Outstanding Acdemic Achievements",
+          organization:
+            "Bangladesh Scholarship Council & The Nippon Foundation, Japan",
+          year: "2003",
         },
       ],
 
       publicationsData: [
         {
-          title: "Biodiversity of Arthropods in Coastal Ecosystems",
-          authors: "John Doe, Jane Smith",
-          journal: "Journal of Zoology Research",
-          year: "2022",
-          link: "https://example.com/publication1",
+          title:
+            "Analysis of Kums depth: Impacts on the natural carp spawning habitat of the Halda River of Bangladesh",
+          authors:
+            "Arafeen M. S., Al Asek A., Siam M. A. H., Owaresat J. K., Suhag M. B., Saha M., Newaj A. S., Kibria M. M.",
+          journal:
+            "Chittagong University Journal of Biological Science (CUJBS); Faculty of Biological Sciences",
+          year: 2024,
+
+          link: "https://www.banglajol.info/index.php/CUJBS/article/view/78248",
         },
         {
-          title: "Impact of Climate Change on Insect Morphology",
-          authors: "Alice Brown, Bob Johnson",
-          journal: "International Journal of Entomology",
-          year: "2021",
+          title:
+            "A Comparative Study on the Growth and Mortality of Rohu fish, Labeo rohita of the Halda River (Wild) and Induced Hatchery (Artificial) Sources",
+          authors:
+            "Kibria M. M., Sara S. A., Newaj A. S., Santo M. K. H., Kawsar Ibn Ansar C., Al Asek A., Suhag M. B., Siam M. A. H., Arafeen M. S.",
+          journal:
+            "Chittagong University Journal of Biological Science (CUJBS); Faculty of Biological Sciences",
+          year: 2024,
+
+          link: "https://www.banglajol.info/index.php/CUJBS/article/view/78245",
         },
         {
-          title: "Zoogeographical Distribution of Endangered Species",
-          authors: "Michael Lee, Sarah White",
-          journal: "Nature Conservation Journal",
-          year: "2020",
-          link: "https://example.com/publication2",
+          title: "Present Status of Fish Diversity of the Kaptai Lake",
+          authors:
+            "Arafeen M. S., Siam M. A. H., Tasnim J., Owaresat J. K., Asek A. A., Shihar Newaj A. H. M., Kibria M. M., Haidar M. I.",
+          journal: "Journal of the Bangladesh Agricultural University",
+          year: 2024,
+
+          link: "https://www.banglajol.info/index.php/JBAU/article/view/78869",
         },
       ],
 
@@ -975,15 +987,16 @@ export const teachers = [
     phone: "+123 456 7890",
     data: {
       subjectOfInt: [
-        "Arthropda",
-        "Applied Zoology",
-        "Zoogeography",
-        "Paleotology",
-        "Human Ecology",
-        "Insect Morphology",
-        "Insect Physiology",
-        "Insect Embryology",
-        "Integrated Pest Management",
+        "Wildlife Ecology",
+        "Behavioural Ecology",
+        "Ecology and Evolutionary Biology",
+        "Morphometrics",
+        "Geometric Morphometrics",
+        "Functional Morphology",
+        "Comparative Morphology",
+        "Allometry",
+        "Small Mammal Ecology",
+        "Variation",
       ],
 
       educationData: [
@@ -1107,15 +1120,10 @@ export const teachers = [
     phone: "+123 456 7890",
     data: {
       subjectOfInt: [
-        "Arthropda",
-        "Applied Zoology",
-        "Zoogeography",
-        "Paleotology",
-        "Human Ecology",
-        "Insect Morphology",
-        "Insect Physiology",
-        "Insect Embryology",
-        "Integrated Pest Management",
+        "River Biology, Conservation and Management",
+        "Limnology and Fisheries Biology",
+        "Ichthyoprotozoology",
+        "Ganges River Dolphin Conservation",
       ],
 
       educationData: [
@@ -1240,15 +1248,9 @@ export const teachers = [
     phone: "+123 456 7890",
     data: {
       subjectOfInt: [
-        "Arthropda",
-        "Applied Zoology",
-        "Zoogeography",
-        "Paleotology",
-        "Human Ecology",
-        "Insect Morphology",
-        "Insect Physiology",
-        "Insect Embryology",
-        "Integrated Pest Management",
+        "Ecology and Evolutionary Biology",
+        "Snake Genomics and Venomics",
+        "Snakebite Management",
       ],
 
       educationData: [
@@ -1360,6 +1362,7 @@ export const teachers = [
       ],
     },
   },
+
   {
     id: "T011",
     name: "Mumtahena Akter",
@@ -1503,15 +1506,10 @@ export const teachers = [
     phone: "+123 456 7890",
     data: {
       subjectOfInt: [
-        "Arthropda",
-        "Applied Zoology",
-        "Zoogeography",
-        "Paleotology",
-        "Human Ecology",
-        "Insect Morphology",
-        "Insect Physiology",
-        "Insect Embryology",
-        "Integrated Pest Management",
+        "Entomology",
+        "Aquatic Ecosystem",
+        "Medical Entomology",
+        "Women Development",
       ],
 
       educationData: [
@@ -1635,15 +1633,12 @@ export const teachers = [
     phone: "+123 456 7890",
     data: {
       subjectOfInt: [
-        "Arthropda",
-        "Applied Zoology",
-        "Zoogeography",
-        "Paleotology",
-        "Human Ecology",
-        "Insect Morphology",
-        "Insect Physiology",
-        "Insect Embryology",
-        "Integrated Pest Management",
+        "Parasitology",
+        "Parasite Ecology",
+        "Molecular Parasitology",
+        "Parasite Immunology",
+        "Epidemiology",
+        "Histopathology",
       ],
 
       educationData: [
@@ -1766,17 +1761,7 @@ export const teachers = [
       "https://cu.ac.bd/assets/image/faculty_staff_users/1166_KXWUWQ3L69.jpg",
     phone: "+123 456 7890",
     data: {
-      subjectOfInt: [
-        "Arthropda",
-        "Applied Zoology",
-        "Zoogeography",
-        "Paleotology",
-        "Human Ecology",
-        "Insect Morphology",
-        "Insect Physiology",
-        "Insect Embryology",
-        "Integrated Pest Management",
-      ],
+      subjectOfInt: ["Entomology"],
 
       educationData: [
         {
@@ -1898,17 +1883,7 @@ export const teachers = [
       "https://cu.ac.bd/assets/image/faculty_staff_users/1164_7SKEVIBAXR.jpg",
     phone: "+123 456 7890",
     data: {
-      subjectOfInt: [
-        "Arthropda",
-        "Applied Zoology",
-        "Zoogeography",
-        "Paleotology",
-        "Human Ecology",
-        "Insect Morphology",
-        "Insect Physiology",
-        "Insect Embryology",
-        "Integrated Pest Management",
-      ],
+      subjectOfInt: ["Parasitology", "Freshwater Zooplankton", "Soil Nematode"],
 
       educationData: [
         {
