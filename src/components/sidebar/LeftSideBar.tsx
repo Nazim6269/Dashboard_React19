@@ -1,12 +1,12 @@
 import {
   ChevronLeft,
   ChevronRight,
+  Code,
   ContactRound,
   FileText,
   Home,
   LogOut,
   Moon,
-  Settings,
   Sun,
   Users,
 } from "lucide-react";
@@ -103,10 +103,10 @@ const LeftSideBar = () => {
           </div>
         </Link>
 
-        <Link to="/settings">
+        <Link to="/developer">
           <div className="flex items-center space-x-3 p-3 rounded-lg text-gray-800 hover:text-white  hover:bg-primary-500  cursor-pointer">
-            <Settings size={20} />
-            {!isCollapsed && <span>Settings</span>}
+            <Code size={20} />
+            {!isCollapsed && <span>Developer</span>}
           </div>
         </Link>
       </nav>

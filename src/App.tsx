@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import SignIn from "./components/auth/SignIn";
 import SignUp from "./components/auth/SignUp";
 import NavBar from "./components/nav/NavBar";
+import Developer from "./components/screens/Developer";
 import Home from "./components/screens/Home";
 import SingleStudent from "./components/screens/SingleStudent";
 import SingleTeacher from "./components/screens/SingleTeacher";
@@ -24,6 +25,7 @@ function App() {
           <Route path="/students/:id" element={<SingleStudent />} />
           <Route path="/teachers" element={<Teachers />} />
           <Route path="/teachers/:id" element={<SingleTeacher />} />
+          <Route path="/developer" element={<Developer />} />
         </Routes>
       </div>
     </BrowserRouter>
