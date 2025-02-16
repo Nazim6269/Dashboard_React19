@@ -1,40 +1,42 @@
 import { useParams } from "react-router-dom";
-import { teachers } from "../../data/data";
-
+import { students } from "../../data/data";
+import { TinyBarChart } from "../charts/BarChart";
 import EngageMent from "../charts/EngageMentChart";
 import Expenditure from "../charts/Expenditure";
-import TeacherRatingChart from "../charts/TeacherRatingChart";
 import Education from "../Education";
 import HonorsAwards from "../HonsAwards";
 import NotAvailable from "../NotAvailable";
 import Publications from "../Publications";
 import SubOfInterest from "../SubOfInterest";
 
-interface Teacher {
+interface Student {
   id: string;
   name: string;
   subject: string;
-  bio: string;
+  year: string;
   image: string;
   email: string;
   phone: string;
-  stats: { month: string; students: number };
-  data: {
+  classId: string;
+  stats?: { month: string; students: number };
+  data?: {
     subjectOfInt: string[];
     engagementData: object[];
     publicationsData: object[];
     awardsData: object[];
     teacherRatingData: object[];
     educationData: object[];
+    studentProgressData: object[];
   };
 }
 
-const SingleTeacher = () => {
+const SingleStudent = () => {
   const { id } = useParams();
-
-  const data = teachers;
-  const filteredData: Teacher = teachers.find((teacher) => teacher.id === id);
-
+  const data = students;
+  const filteredData: Student = data.find(
+    (student) => student.id.toString() === id
+  );
+  console.log(filteredData.data?.studentProgressData);
   return (
     <section className="w-full grid grid-cols-1 lg:grid-cols-2 gap-4 2xl:grid-cols-1 px-4 py-4 bg-secondary ">
       {/* Teacher Profile */}
@@ -50,8 +52,8 @@ const SingleTeacher = () => {
             <h2 className="text-2xl font-semibold text-gray-800">
               {filteredData?.name}
             </h2>
-            <p className="text-lg text-primary-500">{filteredData?.subject}</p>
-            <p className="text-gray-600">{filteredData?.bio}</p>
+            <p className="text-lg text-primary-500">{filteredData?.year}</p>
+            <p className="text-gray-600">{filteredData?.classId}</p>
           </div>
         </div>
 
@@ -79,22 +81,19 @@ const SingleTeacher = () => {
         <div className="flex flex-col 2xl:flex-row  gap-4 w-full">
           <div className=" w-full">
             <h3 className="px-4 text-xl font-semibold text-gray-800">
-              Student Engagement
+              Eductional Progress
             </h3>
             <div className="rounded-xl flex items-center px-4 mt-3 bg-white h-[400px]">
               {" "}
-              <EngageMent stats={filteredData?.data?.engagementData} />
+              <TinyBarChart data={filteredData?.data?.studentProgressData} />
             </div>
           </div>
           <div className=" w-full">
             <h3 className="px-4 text-xl font-semibold text-gray-800">
-              Teacher Rating
+              Co-Curricular Engagement
             </h3>
             <div className="rounded-xl flex items-center px-4 mt-3 bg-white h-[400px]">
-              {" "}
-              <TeacherRatingChart
-                teacherRatingData={filteredData?.data?.teacherRatingData}
-              />
+              <EngageMent stats={filteredData?.data?.engagementData} />
             </div>
           </div>
         </div>
@@ -135,7 +134,7 @@ const SingleTeacher = () => {
           )}
         </div>
         <div>
-          <h3 className="px-4 mb-3 text-xl font-semibold text-gray-800>Education">
+          <h3 className="px-4 mb-3 text-xl font-semibold text-gray-800">
             Publications
           </h3>
           {filteredData?.data?.publicationsData ? (
@@ -149,4 +148,4 @@ const SingleTeacher = () => {
   );
 };
 
-export default SingleTeacher;
+export default SingleStudent;

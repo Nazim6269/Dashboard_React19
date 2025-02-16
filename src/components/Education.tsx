@@ -1,4 +1,5 @@
 import React from "react";
+import NotAvailable from "./NotAvailable";
 
 interface EducationItem {
   degree: string;
@@ -11,6 +12,9 @@ interface EducationProps {
 }
 
 const Education: React.FC<EducationProps> = ({ educationList }) => {
+  if (!educationList.length) {
+    return <NotAvailable />;
+  }
   return (
     <div className="space-y-4 max-w-3xl">
       {educationList.map((edu, index) => (

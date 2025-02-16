@@ -166,138 +166,137 @@ export const simpleRadialBarChartData = [
 ];
 
 export const students = [
-  { id: 1, name: "John Doe", session: "2023-2024", email: "johndoe@gmail.com" },
+  {
+    id: 1,
+    name: "Nazim Uddin",
+    session: "2019-2020",
+    email: "nazimuddin102001@gmail.com",
+    image: "/nazim.webp",
+    year: "4th-year",
+    classId: "20601052",
+    data: {
+      awardsData: [],
+      publicationsData: [],
+      engagementData: [
+        { year: "2019", students: 40 },
+        { year: "2019", students: 50 },
+        { year: "2019", students: 45 },
+        { year: "2019", students: 60 },
+      ],
+      subjectOfInt: ["Fisheries", "Aves"],
+      educationData: [
+        {
+          degree: "H.S.C.",
+          institution: "Feni Govt. College",
+          year: "2017 - 2019",
+        },
+        {
+          degree: "S.S.C.",
+          institution: "F.F. Jinnah High School",
+          year: "2015 - 2017",
+        },
+      ],
+      studentProgressData: [
+        {
+          name: "2021y",
+          Progress: 40,
+        },
+        {
+          name: "2022y",
+          Progress: 30,
+        },
+        {
+          name: "2023y",
+          Progress: 90,
+        },
+        {
+          name: "204y",
+          Progress: 28,
+        },
+      ],
+    },
+  },
   {
     id: 2,
-    name: "Jane Smith",
-    session: "2022-2023",
-    email: "janesmith@gmail.com",
+    name: "Saeed Mahmud",
+    session: "2019-2020",
+    email: "saeedmahmud345@gmail.com",
+    image: "/saeed.webp",
+    year: "4th-year",
+    classId: "20601053",
+    data: {
+      awardsData: [],
+      publicationsData: [],
+
+      engagementData: [
+        { year: "2019", students: 40 },
+        { year: "2019", students: 50 },
+        { year: "2019", students: 45 },
+        { year: "2019", students: 60 },
+      ],
+      subjectOfInt: ["Arthropda", "Applied Zoology"],
+      studentProgressData: [
+        {
+          name: "2021y",
+          Progress: 40,
+        },
+        {
+          name: "2022y",
+          Progress: 30,
+        },
+        {
+          name: "2023y",
+          Progress: 90,
+        },
+        {
+          name: "204y",
+          Progress: 28,
+        },
+      ],
+    },
+  },
+  {
+    id: 3,
+    name: "Md. Fahad Shikdar",
+    session: "2018-2019",
+    email: "emilyjohnson@gmail.com",
+    image: "",
+    year: "4th-year",
+    classId: "19601052",
+
+    data: {
+      awardsData: [],
+      publicationsData: [],
+      educationData: [],
+      engagementData: [
+        { year: "2019", students: 40 },
+        { year: "2019", students: 50 },
+        { year: "2019", students: 45 },
+        { year: "2019", students: 60 },
+      ],
+      subjectOfInt: ["Arthropda", "Applied Zoology"],
+    },
   },
   {
     id: 4,
-    name: "Emily Johnson",
-    session: "2021-2022",
+    name: "Jinda Shahid",
+    session: "2019-2020",
     email: "emilyjohnson@gmail.com",
-  },
-  {
-    id: 5,
-    name: "Emily Johnson",
-    session: "2021-2022",
-    email: "emilyjohnson@gmail.com",
-  },
-  {
-    id: 6,
-    name: "Emily Johnson",
-    session: "2021-2022",
-    email: "emilyjohnson@gmail.com",
-  },
-  {
-    id: 7,
-    name: "Emily Johnson",
-    session: "2021-2022",
-    email: "emilyjohnson@gmail.com",
-  },
-  {
-    id: 8,
-    name: "Emily Johnson",
-    session: "2021-2022",
-    email: "emilyjohnson@gmail.com",
-  },
-  {
-    id: 9,
-    name: "Emily Johnson",
-    session: "2021-2022",
-    email: "emilyjohnson@gmail.com",
-  },
-  {
-    id: 10,
-    name: "Emily Johnson",
-    session: "2021-2022",
-    email: "emilyjohnson@gmail.com",
-  },
-  {
-    id: 11,
-    name: "Emily Johnson",
-    session: "2021-2022",
-    email: "emilyjohnson@gmail.com",
-  },
-  {
-    id: 12,
-    name: "Emily Johnson",
-    session: "2021-2022",
-    email: "emilyjohnson@gmail.com",
-  },
-  {
-    id: 13,
-    name: "Emily Johnson",
-    session: "2021-2022",
-    email: "emilyjohnson@gmail.com",
-  },
-  {
-    id: 14,
-    name: "Emily Johnson",
-    session: "2021-2022",
-    email: "emilyjohnson@gmail.com",
-  },
-  {
-    id: 15,
-    name: "Emily Johnson",
-    session: "2021-2022",
-    email: "emilyjohnson@gmail.com",
-  },
-  {
-    id: 16,
-    name: "Emily Johnson",
-    session: "2021-2022",
-    email: "emilyjohnson@gmail.com",
-  },
-  {
-    id: 17,
-    name: "Emily Johnson",
-    session: "2021-2022",
-    email: "emilyjohnson@gmail.com",
-  },
-  {
-    id: 17,
-    name: "Emily Johnson",
-    session: "2021-2022",
-    email: "emilyjohnson@gmail.com",
-  },
-  {
-    id: 18,
-    name: "Emily Johnson",
-    session: "2021-2022",
-    email: "emilyjohnson@gmail.com",
-  },
-  {
-    id: 19,
-    name: "Emily Johnson",
-    session: "2021-2022",
-    email: "emilyjohnson@gmail.com",
-  },
-  {
-    id: 20,
-    name: "Emily Johnson",
-    session: "2021-2022",
-    email: "emilyjohnson@gmail.com",
-  },
-  {
-    id: 21,
-    name: "Emily Johnson",
-    session: "2021-2022",
-    email: "emilyjohnson@gmail.com",
-  },
-  {
-    id: 22,
-    name: "Emily Johnson",
-    session: "2021-2022",
-    email: "emilyjohnson@gmail.com",
-  },
-  {
-    id: 23,
-    name: "Emily Johnson",
-    session: "2021-2022",
-    email: "emilyjohnson@gmail.com",
+    image: "/shahid.webp",
+    year: "4th-year",
+    classId: "20601052",
+    data: {
+      awardsData: [],
+      publicationsData: [],
+      educationData: [],
+      engagementData: [
+        { year: "2019", students: 40 },
+        { year: "2019", students: 50 },
+        { year: "2019", students: 45 },
+        { year: "2019", students: 60 },
+      ],
+      subjectOfInt: ["Arthropda", "Applied Zoology"],
+    },
   },
 ];
 
@@ -427,10 +426,10 @@ export const teachers = [
       ],
 
       engagementData: [
-        { month: "Jan", students: 40 },
-        { month: "Feb", students: 50 },
-        { month: "Mar", students: 45 },
-        { month: "Apr", students: 60 },
+        { year: "2019", students: 40 },
+        { year: "2019", students: 50 },
+        { year: "2019", students: 45 },
+        { year: "2019", students: 60 },
       ],
     },
   },
@@ -532,10 +531,10 @@ export const teachers = [
       ],
 
       engagementData: [
-        { month: "Jan", students: 40 },
-        { month: "Feb", students: 50 },
-        { month: "Mar", students: 45 },
-        { month: "Apr", students: 60 },
+        { year: "2019", students: 40 },
+        { year: "2019", students: 50 },
+        { year: "2019", students: 45 },
+        { year: "2019", students: 60 },
       ],
     },
   },
@@ -666,10 +665,10 @@ export const teachers = [
       ],
 
       engagementData: [
-        { month: "Jan", students: 40 },
-        { month: "Feb", students: 50 },
-        { month: "Mar", students: 45 },
-        { month: "Apr", students: 60 },
+        { year: "2019", students: 40 },
+        { year: "2019", students: 50 },
+        { year: "2019", students: 45 },
+        { year: "2019", students: 60 },
       ],
     },
   },
@@ -831,10 +830,10 @@ export const teachers = [
       ],
 
       engagementData: [
-        { month: "Jan", students: 40 },
-        { month: "Feb", students: 50 },
-        { month: "Mar", students: 45 },
-        { month: "Apr", students: 60 },
+        { year: "2019", students: 40 },
+        { year: "2019", students: 50 },
+        { year: "2019", students: 45 },
+        { year: "2019", students: 60 },
       ],
     },
   },
@@ -968,10 +967,10 @@ export const teachers = [
       ],
 
       engagementData: [
-        { month: "Jan", students: 40 },
-        { month: "Feb", students: 50 },
-        { month: "Mar", students: 45 },
-        { month: "Apr", students: 60 },
+        { year: "2019", students: 40 },
+        { year: "2019", students: 50 },
+        { year: "2019", students: 45 },
+        { year: "2019", students: 60 },
       ],
     },
   },
@@ -1101,10 +1100,10 @@ export const teachers = [
       ],
 
       engagementData: [
-        { month: "Jan", students: 40 },
-        { month: "Feb", students: 50 },
-        { month: "Mar", students: 45 },
-        { month: "Apr", students: 60 },
+        { year: "2019", students: 40 },
+        { year: "2019", students: 50 },
+        { year: "2019", students: 45 },
+        { year: "2019", students: 60 },
       ],
     },
   },
@@ -1228,10 +1227,10 @@ export const teachers = [
       ],
 
       engagementData: [
-        { month: "Jan", students: 40 },
-        { month: "Feb", students: 50 },
-        { month: "Mar", students: 45 },
-        { month: "Apr", students: 60 },
+        { year: "2019", students: 40 },
+        { year: "2019", students: 50 },
+        { year: "2019", students: 45 },
+        { year: "2019", students: 60 },
       ],
     },
   },
@@ -1355,10 +1354,10 @@ export const teachers = [
       ],
 
       engagementData: [
-        { month: "Jan", students: 40 },
-        { month: "Feb", students: 50 },
-        { month: "Mar", students: 45 },
-        { month: "Apr", students: 60 },
+        { year: "2019", students: 40 },
+        { year: "2019", students: 50 },
+        { year: "2019", students: 45 },
+        { year: "2019", students: 60 },
       ],
     },
   },
@@ -1487,10 +1486,10 @@ export const teachers = [
       ],
 
       engagementData: [
-        { month: "Jan", students: 40 },
-        { month: "Feb", students: 50 },
-        { month: "Mar", students: 45 },
-        { month: "Apr", students: 60 },
+        { year: "2019", students: 40 },
+        { year: "2019", students: 50 },
+        { year: "2019", students: 45 },
+        { year: "2019", students: 60 },
       ],
     },
   },
@@ -1614,10 +1613,10 @@ export const teachers = [
       ],
 
       engagementData: [
-        { month: "Jan", students: 40 },
-        { month: "Feb", students: 50 },
-        { month: "Mar", students: 45 },
-        { month: "Apr", students: 60 },
+        { year: "2019", students: 40 },
+        { year: "2019", students: 50 },
+        { year: "2019", students: 45 },
+        { year: "2019", students: 60 },
       ],
     },
   },
@@ -1743,10 +1742,10 @@ export const teachers = [
       ],
 
       engagementData: [
-        { month: "Jan", students: 40 },
-        { month: "Feb", students: 50 },
-        { month: "Mar", students: 45 },
-        { month: "Apr", students: 60 },
+        { year: "2019", students: 40 },
+        { year: "2019", students: 50 },
+        { year: "2019", students: 45 },
+        { year: "2019", students: 60 },
       ],
     },
   },
@@ -1865,10 +1864,10 @@ export const teachers = [
       ],
 
       engagementData: [
-        { month: "Jan", students: 40 },
-        { month: "Feb", students: 50 },
-        { month: "Mar", students: 45 },
-        { month: "Apr", students: 60 },
+        { year: "2019", students: 40 },
+        { year: "2019", students: 50 },
+        { year: "2019", students: 45 },
+        { year: "2019", students: 60 },
       ],
     },
   },
@@ -1987,10 +1986,10 @@ export const teachers = [
       ],
 
       engagementData: [
-        { month: "Jan", students: 40 },
-        { month: "Feb", students: 50 },
-        { month: "Mar", students: 45 },
-        { month: "Apr", students: 60 },
+        { year: "2019", students: 40 },
+        { year: "2019", students: 50 },
+        { year: "2019", students: 45 },
+        { year: "2019", students: 60 },
       ],
     },
   },

@@ -4,7 +4,7 @@ import { Doughnut } from "react-chartjs-2";
 // Register necessary Chart.js components
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const TeacherExpenditure = () => {
+const Expenditure = () => {
   // Chart data
   const data = {
     labels: ["Income", "Cost", "Loan"],
@@ -61,4 +61,4 @@ const TeacherExpenditure = () => {
   );
 };
 
-export default TeacherExpenditure;
+export default Expenditure;

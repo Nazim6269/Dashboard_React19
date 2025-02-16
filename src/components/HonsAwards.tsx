@@ -11,6 +11,13 @@ interface HonorsAwardsProps {
 }
 
 const HonorsAwards: React.FC<HonorsAwardsProps> = ({ awards }) => {
+  if (!awards.length) {
+    return (
+      <div className="bg-white px-5 py-4 max-w-xl text-md font-semibold">
+        Not Available
+      </div>
+    );
+  }
   return (
     <div className="space-y-4 max-w-3xl">
       {awards.map((award, index) => (

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import CustomCard from "../ card/CustomCard";
+import { dataTiny } from "../../data/data";
 import { BarChartWithMinHeight, TinyBarChart } from "../charts/BarChart";
 import { CustomizedPieChart } from "../charts/CustomizedPieChart";
 import SimpleLineChart from "../charts/SimpleLineChart";
@@ -35,7 +36,7 @@ const Home = () => {
                 <BarChartWithMinHeight />
               </div>
               <div className="shadow-lg px-2 w-full h-[400px] xl:h-[300px] bg-white rounded-md flex justify-center items-center">
-                <TinyBarChart />
+                <TinyBarChart data={dataTiny} />
               </div>
             </div>
 

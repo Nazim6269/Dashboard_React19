@@ -1,4 +1,5 @@
 import React from "react";
+import NotAvailable from "./NotAvailable";
 
 interface Publication {
   title: string;
@@ -14,11 +15,7 @@ interface PublicationsProps {
 
 const Publications: React.FC<PublicationsProps> = ({ publications }) => {
   if (!publications.length) {
-    return (
-      <div className="bg-white px-5 py-4 max-w-xl text-2xl font-semibold">
-        Not Available
-      </div>
-    );
+    return <NotAvailable />;
   }
 
   return (

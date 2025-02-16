@@ -10,7 +10,13 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import { dataMin, dataTiny } from "../../data/data";
+import { dataMin } from "../../data/data";
+import NotAvailable from "../NotAvailable";
+
+interface DataProps {
+  name: string;
+  progress: number;
+}
 
 const renderCustomizedLabelMin = (props: any) => {
   const { x, y, width, height, value } = props;
@@ -66,11 +72,12 @@ export const BarChartWithMinHeight = () => {
   );
 };
 
-export const TinyBarChart = () => {
+export const TinyBarChart = ({ data }: { data: DataProps }) => {
+  if (!data) return <NotAvailable />;
   return (
     <div className="w-full h-[75%]">
       <ResponsiveContainer>
-        <BarChart width={150} height={40} data={dataTiny}>
+        <BarChart width={150} height={40} data={data}>
           <CartesianGrid strokeDasharray="2 2" />
           <XAxis dataKey="name">
             <Label value="Years" offset={0} position="insideBottom" />{" "}

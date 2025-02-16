@@ -1,8 +1,13 @@
+import NotAvailable from "./NotAvailable";
+
 interface Props {
   subjectOfInt: string[];
 }
 
 const SubOfInterest: React.FC<Props> = ({ subjectOfInt }) => {
+  if (!subjectOfInt.length) {
+    return <NotAvailable />;
+  }
   return (
     <ul className="mt-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 bg-white rouneded-xl px-4 py-3">
       {subjectOfInt.map((subject: string) => (

@@ -1,14 +1,14 @@
 import {
-  BarChart,
   ChevronLeft,
   ChevronRight,
+  ContactRound,
   FileText,
   Home,
   LogOut,
   Moon,
   Settings,
-  ShoppingCart,
   Sun,
+  Users,
 } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -91,14 +91,14 @@ const LeftSideBar = () => {
 
         <Link to="/teachers">
           <div className="flex items-center space-x-3 p-3 rounded-lg text-gray-800 hover:text-white  hover:bg-primary-500  cursor-pointer">
-            <BarChart size={20} />
+            <ContactRound size={20} />
             {!isCollapsed && <span>Teachers</span>}
           </div>
         </Link>
 
         <Link to="/students">
           <div className="flex items-center space-x-3 p-3 rounded-lg text-gray-800 hover:text-white  hover:bg-primary-500  cursor-pointer">
-            <ShoppingCart size={20} />
+            <Users size={20} />
             {!isCollapsed && <span>Students</span>}
           </div>
         </Link>

@@ -7,12 +7,12 @@ import {
   YAxis,
 } from "recharts";
 
-const TeacherEngageMent = ({ stats }) => {
+const EngageMent = ({ stats }) => {
   return (
     <div className="w-full h-[75%]">
       <ResponsiveContainer>
         <BarChart data={stats}>
-          <XAxis dataKey="month" />
+          <XAxis dataKey="year" />
           <YAxis />
           <Tooltip />
           <Bar dataKey="students" fill="#762bdf" radius={[5, 5, 0, 0]} />
@@ -21,4 +21,4 @@ const TeacherEngageMent = ({ stats }) => {
     </div>
   );
 };
-export default TeacherEngageMent;
+export default EngageMent;
