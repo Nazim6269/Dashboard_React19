@@ -1,4 +1,6 @@
 import React from "react";
+import { useTheme } from "../context/theme-context";
+import NotAvailable from "./NotAvailable";
 
 interface Award {
   title: string;
@@ -11,19 +13,20 @@ interface HonorsAwardsProps {
 }
 
 const HonorsAwards: React.FC<HonorsAwardsProps> = ({ awards }) => {
+  const { theme } = useTheme();
   if (!awards.length) {
-    return (
-      <div className="bg-white px-5 py-4 max-w-xl text-md font-semibold">
-        Not Available
-      </div>
-    );
+    return <NotAvailable />;
   }
   return (
     <div className="space-y-4 max-w-3xl">
       {awards.map((award, index) => (
         <div
           key={index}
-          className="p-4 bg-white shadow-md rounded-lg border-l-4 border-yellow-500"
+          className={`${
+            theme === "dark"
+              ? "bg-dark-secondary"
+              : "bg-white border-l-4 border-yellow-500"
+          } p-4 shadow-md rounded-lg `}
         >
           <h3 className="text-lg font-semibold text-gray-900">{award.title}</h3>
           <p className="text-gray-600">{award.organization}</p>

@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { teachers } from "../../data/data";
 
+import { useTheme } from "../../context/theme-context";
 import EngageMent from "../charts/EngageMentChart";
 import Expenditure from "../charts/Expenditure";
 import TeacherRatingChart from "../charts/TeacherRatingChart";
@@ -34,13 +35,21 @@ const SingleTeacher = () => {
 
   const data = teachers;
   const filteredData: Teacher = teachers.find((teacher) => teacher.id === id);
-
+  const { theme } = useTheme();
   return (
-    <section className="w-full grid grid-cols-1 lg:grid-cols-2 gap-4 2xl:grid-cols-1 px-4 py-4 bg-secondary ">
+    <section
+      className={`${
+        theme === "dark" ? "bg-dark" : "bg-secondary "
+      } w-full grid grid-cols-1 lg:grid-cols-2 gap-4 2xl:grid-cols-1 px-4 py-4 `}
+    >
       {/* Teacher Profile */}
       <section className="grid grid-cols-1 2xl:grid-cols-3 gap-2">
         {/*user  info div  */}
-        <div className="bg-white min-h-[160px] py-3 px-4 flex flex-col sm:flex-row  items-start sm:items-center justify-center gap-3 rounded-xl">
+        <div
+          className={`${
+            theme === "dark" ? "bg-dark-secondary" : "bg-white"
+          } min-h-[160px] py-3 px-4 flex flex-col sm:flex-row  items-start sm:items-center justify-center gap-3 rounded-xl`}
+        >
           <img
             src={filteredData?.image}
             alt={filteredData?.name}
@@ -56,7 +65,11 @@ const SingleTeacher = () => {
         </div>
 
         {/* Contact Information */}
-        <div className=" bg-gray-50 p-4 rounded-lg">
+        <div
+          className={`${
+            theme === "dark" ? "bg-dark-secondary" : "bg-white"
+          } p-4 rounded-lg`}
+        >
           <h3 className="text-lg mb-2 font-semibold text-gray-800">
             Contact Information
           </h3>
@@ -66,7 +79,11 @@ const SingleTeacher = () => {
         </div>
 
         {/* monthly expenditure div */}
-        <div className="  bg-gray-50 p-4 rounded-lg">
+        <div
+          className={`${
+            theme === "dark" ? "bg-dark-secondary" : "bg-white"
+          } p-4 rounded-lg`}
+        >
           <h3 className="text-lg mb-2 text-center font-semibold text-gray-800">
             Monthly Expenditure
           </h3>
@@ -78,19 +95,35 @@ const SingleTeacher = () => {
       <section className="mt-8 flex gap-4 justify-between">
         <div className="flex flex-col 2xl:flex-row  gap-4 w-full">
           <div className=" w-full">
-            <h3 className="px-4 text-xl font-semibold text-gray-800">
+            <h3
+              className={`${
+                theme === "dark" ? "text-gray-400" : "text-gray-800"
+              } px-4 text-xl font-semibold `}
+            >
               Student Engagement
             </h3>
-            <div className="rounded-xl flex items-center px-4 mt-3 bg-white h-[400px]">
+            <div
+              className={`${
+                theme === "dark" ? "bg-dark-secondary" : "bg-white"
+              } rounded-xl flex items-center px-4 mt-3 h-[400px]`}
+            >
               {" "}
               <EngageMent stats={filteredData?.data?.engagementData} />
             </div>
           </div>
           <div className=" w-full">
-            <h3 className="px-4 text-xl font-semibold text-gray-800">
+            <h3
+              className={`${
+                theme === "dark" ? "text-gray-400" : "text-gray-800"
+              } px-4 text-xl font-semibold `}
+            >
               Teacher Rating
             </h3>
-            <div className="rounded-xl flex items-center px-4 mt-3 bg-white h-[400px]">
+            <div
+              className={`${
+                theme === "dark" ? "bg-dark-secondary" : "bg-white"
+              } rounded-xl flex items-center px-4 mt-3 h-[400px]`}
+            >
               {" "}
               <TeacherRatingChart
                 teacherRatingData={filteredData?.data?.teacherRatingData}
@@ -102,7 +135,11 @@ const SingleTeacher = () => {
 
       {/* subject of interest */}
       <section className="w-full mt-8">
-        <h3 className="px-4 text-xl font-semibold text-gray-800">
+        <h3
+          className={`${
+            theme === "dark" ? "text-gray-400" : "text-gray-800"
+          } px-4 text-xl font-semibold `}
+        >
           Subjects of Interest
         </h3>
         {filteredData?.data?.subjectOfInt ? (
@@ -115,7 +152,11 @@ const SingleTeacher = () => {
       {/* Education and awards Section */}
       <section className="grid grid-cols-1 md:grid-cols-2  gap-6 mt-8">
         <div>
-          <h3 className="px-4 mb-3 text-xl font-semibold text-gray-800>Education">
+          <h3
+            className={`${
+              theme === "dark" ? "text-gray-400" : "text-gray-800"
+            } px-4 text-xl font-semibold `}
+          >
             Education{" "}
           </h3>
           {filteredData?.data?.educationData ? (
@@ -125,7 +166,11 @@ const SingleTeacher = () => {
           )}
         </div>
         <div>
-          <h3 className="px-4 mb-3 text-xl font-semibold text-gray-800>Education">
+          <h3
+            className={`${
+              theme === "dark" ? "text-gray-400" : "text-gray-800"
+            } px-4 text-xl font-semibold `}
+          >
             Hon's and Awards{" "}
           </h3>
           {filteredData?.data?.awardsData ? (
@@ -135,7 +180,11 @@ const SingleTeacher = () => {
           )}
         </div>
         <div>
-          <h3 className="px-4 mb-3 text-xl font-semibold text-gray-800>Education">
+          <h3
+            className={`${
+              theme === "dark" ? "text-gray-400" : "text-gray-800"
+            } px-4 text-xl font-semibold `}
+          >
             Publications
           </h3>
           {filteredData?.data?.publicationsData ? (

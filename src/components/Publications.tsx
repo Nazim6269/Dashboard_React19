@@ -1,4 +1,5 @@
 import React from "react";
+import { useTheme } from "../context/theme-context";
 import NotAvailable from "./NotAvailable";
 
 interface Publication {
@@ -14,6 +15,8 @@ interface PublicationsProps {
 }
 
 const Publications: React.FC<PublicationsProps> = ({ publications }) => {
+  const { theme } = useTheme();
+
   if (!publications.length) {
     return <NotAvailable />;
   }
@@ -23,7 +26,11 @@ const Publications: React.FC<PublicationsProps> = ({ publications }) => {
       {publications.map((pub, index) => (
         <div
           key={index}
-          className="p-4 bg-white shadow-md rounded-lg border-l-4 border-green-600"
+          className={`${
+            theme === "dark"
+              ? "bg-dark-secondary"
+              : "bg-white border-l-4 border-green-600"
+          } p-4 shadow-md rounded-lg `}
         >
           <h3 className="text-lg font-semibold text-gray-900">{pub.title}</h3>
           <p className="text-gray-600">

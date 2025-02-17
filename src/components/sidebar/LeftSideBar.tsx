@@ -1,4 +1,5 @@
 import {
+  BellRing,
   ChevronLeft,
   ChevronRight,
   Code,
@@ -11,17 +12,13 @@ import {
   Users,
 } from "lucide-react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useTheme } from "../../context/theme-context";
+import NavItems from "../nav/NavItems";
 
 const LeftSideBar = () => {
+  const { theme, toggleTheme } = useTheme();
   const [isCollapsed, setIsCollapsed] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
   const [openSubMenu, setOpenSubMenu] = useState<string | null>(null);
-
-  const toggleTheme = () => {
-    setIsDarkMode(!isDarkMode);
-    document.body.classList.toggle("dark", !isDarkMode);
-  };
 
   const toggleLeftSideBar = () => {
     setIsCollapsed(!isCollapsed);
@@ -33,7 +30,9 @@ const LeftSideBar = () => {
 
   return (
     <div
-      className={`hidden min-h-screen select-none  p-5 shadow-md sm:flex sm:flex-col transition-all duration-300 ${
+      className={`${
+        theme === "dark" ? "bg-dark" : ""
+      } hidden min-h-screen select-none  p-5 shadow-md sm:flex sm:flex-col transition-all duration-300 ${
         isCollapsed ? "w-20" : "w-64"
       }`}
     >
@@ -52,63 +51,48 @@ const LeftSideBar = () => {
 
       {/* Navigation Links */}
       <nav className="flex flex-col space-y-4 flex-grow">
-        <Link to="/">
-          <div className="flex items-center space-x-3 p-3 rounded-lg text-gray-800 hover:text-white  hover:bg-primary-500  cursor-pointer">
-            <Home size={20} />
-            {!isCollapsed && <span>Home</span>}
-          </div>
-        </Link>
-
-        {/* Submenu Example */}
-        <div>
-          <div
-            onClick={() => toggleSubMenu("reports")}
-            className="flex items-center justify-between p-3 rounded-lg text-gray-800 hover:text-white  hover:bg-primary-500  cursor-pointer"
-          >
-            <div className="flex items-center space-x-3">
-              <FileText size={20} />
-              {!isCollapsed && <span>Results</span>}
-            </div>
-            {!isCollapsed && <ChevronRight size={20} />}
-          </div>
-
-          {/* Submenu */}
-          {openSubMenu === "reports" && !isCollapsed && (
-            <div className="ml-6 space-y-2">
-              <Link to="/reports/sales">
-                <p className="p-2 text-gray-800  hover:text-blue-500 cursor-pointer">
-                  First Year
-                </p>
-              </Link>
-              <Link to="#">
-                <p className="p-2 text-gray-800  hover:text-blue-500 cursor-pointer">
-                  Second Year
-                </p>
-              </Link>
-            </div>
-          )}
-        </div>
-
-        <Link to="/teachers">
-          <div className="flex items-center space-x-3 p-3 rounded-lg text-gray-800 hover:text-white  hover:bg-primary-500  cursor-pointer">
-            <ContactRound size={20} />
-            {!isCollapsed && <span>Teachers</span>}
-          </div>
-        </Link>
-
-        <Link to="/students">
-          <div className="flex items-center space-x-3 p-3 rounded-lg text-gray-800 hover:text-white  hover:bg-primary-500  cursor-pointer">
-            <Users size={20} />
-            {!isCollapsed && <span>Students</span>}
-          </div>
-        </Link>
-
-        <Link to="/developer">
-          <div className="flex items-center space-x-3 p-3 rounded-lg text-gray-800 hover:text-white  hover:bg-primary-500  cursor-pointer">
-            <Code size={20} />
-            {!isCollapsed && <span>Developer</span>}
-          </div>
-        </Link>
+        <NavItems
+          title="Home"
+          theme={theme}
+          isCollapsed={isCollapsed}
+          icon={<Home size={20} />}
+          ref="/"
+        />
+        <NavItems
+          title="Teachers"
+          theme={theme}
+          isCollapsed={isCollapsed}
+          icon={<ContactRound size={20} />}
+          ref="/teachers"
+        />
+        <NavItems
+          title="Students"
+          theme={theme}
+          isCollapsed={isCollapsed}
+          icon={<Users size={20} />}
+          ref="/students"
+        />
+        <NavItems
+          title="Notices"
+          theme={theme}
+          isCollapsed={isCollapsed}
+          icon={<BellRing size={20} />}
+          ref="#"
+        />
+        <NavItems
+          title="Results"
+          theme={theme}
+          isCollapsed={isCollapsed}
+          icon={<FileText size={20} />}
+          ref="/results"
+        />
+        <NavItems
+          title="Developer"
+          theme={theme}
+          isCollapsed={isCollapsed}
+          icon={<Code size={20} />}
+          ref="/developer"
+        />
       </nav>
 
       {/* Bottom Section */}
@@ -116,11 +100,13 @@ const LeftSideBar = () => {
         {/* Theme Toggle */}
         <button
           onClick={toggleTheme}
-          className="w-full flex items-center space-x-3 p-3 rounded-lg bg-gray-200 text-gray-800 "
+          className={`${
+            theme === "dark" ? "bg-dark-secondary text-gray-200" : ""
+          } w-full flex items-center space-x-3 p-3 rounded-lg hover:text-white  hover:bg-primary-500  cursor-pointer`}
         >
-          {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
+          {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
           {!isCollapsed && (
-            <span>{isDarkMode ? "Light Mode" : "Dark Mode"}</span>
+            <span>{theme === "dark" ? "Light Mode" : "Dark Mode"}</span>
           )}
         </button>
 

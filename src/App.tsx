@@ -10,24 +10,27 @@ import SingleTeacher from "./components/screens/SingleTeacher";
 import Students from "./components/screens/Students";
 import Teachers from "./components/screens/Teachers";
 import LeftSideBar from "./components/sidebar/LeftSideBar";
+import ThemeProvider from "./context/theme-context";
 
 function App() {
   return (
     <BrowserRouter>
-      <NavBar />
-      <div className="flex">
-        <LeftSideBar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/sign-up" element={<SignUp />} />
-          <Route path="/sign-in" element={<SignIn />} />
-          <Route path="/students" element={<Students />} />
-          <Route path="/students/:id" element={<SingleStudent />} />
-          <Route path="/teachers" element={<Teachers />} />
-          <Route path="/teachers/:id" element={<SingleTeacher />} />
-          <Route path="/developer" element={<Developer />} />
-        </Routes>
-      </div>
+      <ThemeProvider>
+        <NavBar />
+        <div className="flex">
+          <LeftSideBar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/sign-up" element={<SignUp />} />
+            <Route path="/sign-in" element={<SignIn />} />
+            <Route path="/students" element={<Students />} />
+            <Route path="/students/:id" element={<SingleStudent />} />
+            <Route path="/teachers" element={<Teachers />} />
+            <Route path="/teachers/:id" element={<SingleTeacher />} />
+            <Route path="/developer" element={<Developer />} />
+          </Routes>
+        </div>
+      </ThemeProvider>
     </BrowserRouter>
   );
 }

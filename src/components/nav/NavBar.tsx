@@ -1,9 +1,13 @@
 import { MenuIcon } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useTheme } from "../../context/theme-context";
 
 const NavBar = () => {
+  const { theme } = useTheme();
   return (
-    <nav className="bg-white p-4 shadow-md">
+    <nav
+      className={`${theme === "dark" ? "bg-dark" : "bg-white"} p-4 shadow-md`}
+    >
       <div className="flex items-center justify-between">
         {/* Logo div */}
         <div className="font-bold text-gray-800 ">
@@ -15,15 +19,6 @@ const NavBar = () => {
           </Link>
         </div>
 
-        {/* search div */}
-        <form className="hidden sm:flex sm:items-center sm:space-x-2">
-          <input
-            type="text"
-            placeholder="Search..."
-            className="px-3 py-1.5 md:px-4 md:py-2 rounded-md border focus:border-primary-400 bg-gray-100 "
-          />
-        </form>
-
         {/* Menu icon div */}
         <div className="flex sm:hidden">
           <MenuIcon />
@@ -33,15 +28,15 @@ const NavBar = () => {
         <div className="hidden sm:flex sm:items-center sm:space-x-4">
           <Link
             to="/sign-in"
-            className="text-gray-800 border-1 border-primary-500 rounded-sm px-2 py-1 "
+            className="text-white border-0 font-medium bg-primary-500 rounded-md px-5 py-2 "
           >
             Login
           </Link>
           <Link
             to="/sign-up"
-            className="text-gray-800 border-1 border-primary-500 rounded-sm px-2 py-1 "
+            className="text-white border-0 font-medium bg-primary-500 rounded-md px-5 py-2"
           >
-            Sign Up
+            Register
           </Link>
         </div>
       </div>

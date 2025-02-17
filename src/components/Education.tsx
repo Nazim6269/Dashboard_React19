@@ -1,4 +1,5 @@
 import React from "react";
+import { useTheme } from "../context/theme-context";
 import NotAvailable from "./NotAvailable";
 
 interface EducationItem {
@@ -12,6 +13,7 @@ interface EducationProps {
 }
 
 const Education: React.FC<EducationProps> = ({ educationList }) => {
+  const { theme } = useTheme();
   if (!educationList.length) {
     return <NotAvailable />;
   }
@@ -20,7 +22,11 @@ const Education: React.FC<EducationProps> = ({ educationList }) => {
       {educationList.map((edu, index) => (
         <div
           key={index}
-          className="p-4 bg-white shadow-md rounded-lg border-l-4 border-primary-500"
+          className={`${
+            theme === "dark"
+              ? "bg-dark-secondary"
+              : "bg-white border-l-4 border-primary-500"
+          } p-4 shadow-md rounded-lg `}
         >
           <h3 className="text-lg font-semibold text-gray-900">{edu.degree}</h3>
           <p className="text-gray-600">{edu.institution}</p>

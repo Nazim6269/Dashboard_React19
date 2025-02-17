@@ -4,6 +4,8 @@
   --color-primary-400: #762bdf;
   --color-primary-500: #762bff;
   --color-secondary: #eceefd;
+  --color-dark: #101010;
+  --color-dark-secondary: #171b24;
 }
 
 @theme {

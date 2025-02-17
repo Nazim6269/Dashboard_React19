@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import CustomCard from "../ card/CustomCard";
+import { useTheme } from "../../context/theme-context";
 import { dataTiny } from "../../data/data";
 import { BarChartWithMinHeight, TinyBarChart } from "../charts/BarChart";
 import { CustomizedPieChart } from "../charts/CustomizedPieChart";
@@ -7,8 +8,14 @@ import SimpleLineChart from "../charts/SimpleLineChart";
 import RightBar from "../sidebar/ RightBar";
 
 const Home = () => {
+  const { theme } = useTheme();
+
   return (
-    <div className="flex flex-col 2xl:flex 2xl:flex-row 2xl:justify-between w-full select-none bg-secondary">
+    <div
+      className={`${
+        theme === "dark" ? "bg-dark" : "bg-secondary"
+      } flex flex-col 2xl:flex 2xl:flex-row 2xl:justify-between w-full select-none `}
+    >
       {/* Data Portinon */}
       <div className="flex w-full 2xl:w-[80%] 2xl:flex">
         <div className="px-4 py-6 w-full">
@@ -24,7 +31,11 @@ const Home = () => {
               </Link>
             </div>
 
-            <div className="shadow-lg w-full h-[400px] bg-white rounded-md flex justify-center items-center">
+            <div
+              className={`${
+                theme === "dark" ? "bg-dark-secondary" : "bg-white"
+              } shadow-lg w-full h-[400px]  rounded-md flex justify-center items-center`}
+            >
               <SimpleLineChart />
             </div>
           </div>
@@ -32,17 +43,29 @@ const Home = () => {
           {/* mid bar cards */}
           <div className="flex flex-col space-y-3 py-2">
             <div className="flex flex-col xl:flex xl:flex-row gap-2">
-              <div className="py-4 shadow-lg w-full h-[400px] xl:h-[300px] bg-white rounded-md flex justify-center items-center">
+              <div
+                className={`${
+                  theme === "dark" ? "bg-dark-secondary" : "bg-white"
+                } py-4 shadow-lg w-full h-[400px] xl:h-[300px]  rounded-md flex justify-center items-center`}
+              >
                 <BarChartWithMinHeight />
               </div>
-              <div className="shadow-lg px-2 w-full h-[400px] xl:h-[300px] bg-white rounded-md flex justify-center items-center">
+              <div
+                className={`${
+                  theme === "dark" ? "bg-dark-secondary" : "bg-white"
+                } shadow-lg px-2 w-full h-[400px] xl:h-[300px]  rounded-md flex justify-center items-center`}
+              >
                 <TinyBarChart data={dataTiny} />
               </div>
             </div>
 
             {/* Bottom Pie chart */}
             <div className="flex gap-2">
-              <div className="shadow-lg w-full h-[300px] bg-white rounded-md flex justify-center items-center">
+              <div
+                className={`${
+                  theme === "dark" ? "bg-dark-secondary" : "bg-white"
+                } shadow-lg w-full h-[300px] rounded-md flex justify-center items-center`}
+              >
                 <CustomizedPieChart />
               </div>
             </div>
