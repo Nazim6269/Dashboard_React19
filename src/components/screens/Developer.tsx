@@ -11,7 +11,7 @@ const Developer = () => {
       <div
         className={`${
           theme === "dark"
-            ? "bg-dark-secondary text-gray-300"
+            ? "bg-dark-secondary text-gray-300 "
             : "bg-white border-x-4 border-red-500"
         } p-6 rounded-xl shadow-md flex flex-col items-center mb-4`}
       >
@@ -28,9 +28,9 @@ const Developer = () => {
       <div
         className={`${
           theme === "dark"
-            ? "bg-dark-secondary text-gray-300"
-            : "bg-white border-x-4 border-gray-500"
-        } p-6 rounded-xl shadow-md flex flex-col items-center mb-4`}
+            ? "bg-dark-secondary text-gray-300 "
+            : "bg-white border-x-4 shadow-md border-gray-500"
+        } p-6 rounded-xl  flex flex-col items-center mb-4`}
       >
         <h3 className="text-lg font-semibold mb-4">Bio</h3>
         <p className="text-gray-400 ">
@@ -43,9 +43,9 @@ const Developer = () => {
       <div
         className={`${
           theme === "dark"
-            ? "bg-dark-secondary text-gray-300"
-            : "bg-white border-x-4 border-pink-500"
-        } p-6 rounded-xl shadow-md flex flex-col items-center mb-4`}
+            ? "bg-dark-secondary text-gray-300 "
+            : "bg-white border-x-4 shadow-md border-pink-500"
+        } p-6 rounded-xl  flex flex-col items-center mb-4`}
       >
         <h3 className="text-lg font-semibold mb-4">Skills</h3>
         <ul className="grid grid-cols-2 gap-2 text-gray-400 ">
@@ -62,9 +62,9 @@ const Developer = () => {
       <div
         className={`${
           theme === "dark"
-            ? "bg-dark-secondary text-gray-300"
-            : "bg-white border-x-4 border-blue-500"
-        } p-6 rounded-xl shadow-md flex flex-col items-center mb-4`}
+            ? "bg-dark-secondary text-gray-300 "
+            : "bg-white border-x-4 shadow-md border-blue-500"
+        } p-6 rounded-xl  flex flex-col items-center mb-4`}
       >
         <h3 className="text-lg font-semibold mb-4">Contact</h3>
         <p className="text-gray-400 ">📧 nazimdev10022001@gmail.com</p>
@@ -75,9 +75,9 @@ const Developer = () => {
       <div
         className={`${
           theme === "dark"
-            ? "bg-dark-secondary text-gray-300"
-            : "bg-white border-x-4 border-yellow-500"
-        } p-6 rounded-xl shadow-md flex flex-col items-center mb-4`}
+            ? "bg-dark-secondary text-gray-300 "
+            : "bg-white border-x-4 shadow-md border-yellow-500"
+        } p-6 rounded-xl  flex flex-col items-center mb-4`}
       >
         <h3 className="text-lg font-semibold mb-4">Social Media</h3>
         <div className="flex gap-4 text-gray-400 ">

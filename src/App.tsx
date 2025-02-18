@@ -1,4 +1,3 @@
-import "react-calendar/dist/Calendar.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import SignIn from "./components/auth/SignIn";
 import SignUp from "./components/auth/SignUp";

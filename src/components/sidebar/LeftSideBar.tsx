@@ -84,7 +84,7 @@ const LeftSideBar = () => {
           theme={theme}
           isCollapsed={isCollapsed}
           icon={<FileText size={20} />}
-          ref="/results"
+          ref="#"
         />
         <NavItems
           title="Developer"
@@ -101,7 +101,9 @@ const LeftSideBar = () => {
         <button
           onClick={toggleTheme}
           className={`${
-            theme === "dark" ? "bg-dark-secondary text-gray-200" : ""
+            theme === "dark"
+              ? "bg-dark-secondary text-gray-200"
+              : "bg-gray-200 text-gray-800"
           } w-full flex items-center space-x-3 p-3 rounded-lg hover:text-white  hover:bg-primary-500  cursor-pointer`}
         >
           {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
