@@ -214,6 +214,16 @@ export const students = [
           Progress: 28,
         },
       ],
+      expenditureData: {
+        labels: ["Income", "Cost", "Loan"],
+        datasets: [
+          {
+            data: [30000, 5000, 2000],
+            backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+            hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+          },
+        ],
+      },
     },
   },
   {
@@ -253,6 +263,16 @@ export const students = [
           Progress: 28,
         },
       ],
+      expenditureData: {
+        labels: ["Income", "Cost", "Loan"],
+        datasets: [
+          {
+            data: [30000, 5000, 2000],
+            backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+            hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+          },
+        ],
+      },
     },
   },
   {
@@ -275,6 +295,16 @@ export const students = [
         { year: "2019", students: 60 },
       ],
       subjectOfInt: ["Arthropda", "Applied Zoology"],
+      expenditureData: {
+        labels: ["Income", "Cost", "Loan"],
+        datasets: [
+          {
+            data: [30000, 5000, 2000],
+            backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+            hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+          },
+        ],
+      },
     },
   },
   {
@@ -296,6 +326,16 @@ export const students = [
         { year: "2019", students: 60 },
       ],
       subjectOfInt: ["Arthropda", "Applied Zoology"],
+      expenditureData: {
+        labels: ["Income", "Cost", "Loan"],
+        datasets: [
+          {
+            data: [30000, 5000, 2000],
+            backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+            hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+          },
+        ],
+      },
     },
   },
 ];
@@ -368,6 +408,16 @@ export const teachers = [
           year: "2010",
         },
       ],
+      expenditureData: {
+        labels: ["Income", "Cost", "Loan"],
+        datasets: [
+          {
+            data: [30000, 5000, 2000],
+            backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+            hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+          },
+        ],
+      },
 
       publicationsData: [
         {
@@ -473,6 +523,16 @@ export const teachers = [
       ],
 
       awardsData: [],
+      expenditureData: {
+        labels: ["Income", "Cost", "Loan"],
+        datasets: [
+          {
+            data: [30000, 5000, 2000],
+            backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+            hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+          },
+        ],
+      },
 
       publicationsData: [
         {
@@ -560,6 +620,16 @@ export const teachers = [
         "Limnology",
         "Fish Biology",
       ],
+      expenditureData: {
+        labels: ["Income", "Cost", "Loan"],
+        datasets: [
+          {
+            data: [30000, 5000, 2000],
+            backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+            hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+          },
+        ],
+      },
 
       educationData: [
         {
@@ -694,7 +764,16 @@ export const teachers = [
         "Ornithology",
         "Lepidopterology",
       ],
-
+      expenditureData: {
+        labels: ["Income", "Cost", "Loan"],
+        datasets: [
+          {
+            data: [30000, 5000, 2000],
+            backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+            hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+          },
+        ],
+      },
       educationData: [
         {
           degree: "M.S. (WildLife and Conservation Biology)",
@@ -883,7 +962,16 @@ export const teachers = [
           year: "1994 - 1996",
         },
       ],
-
+      expenditureData: {
+        labels: ["Income", "Cost", "Loan"],
+        datasets: [
+          {
+            data: [30000, 5000, 2000],
+            backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+            hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+          },
+        ],
+      },
       awardsData: [
         {
           title: "Outstanding Acdemic Achievements",
@@ -997,7 +1085,16 @@ export const teachers = [
         "Small Mammal Ecology",
         "Variation",
       ],
-
+      expenditureData: {
+        labels: ["Income", "Cost", "Loan"],
+        datasets: [
+          {
+            data: [30000, 5000, 2000],
+            backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+            hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+          },
+        ],
+      },
       educationData: [
         {
           degree: "M.S.",
@@ -1124,7 +1221,16 @@ export const teachers = [
         "Ichthyoprotozoology",
         "Ganges River Dolphin Conservation",
       ],
-
+      expenditureData: {
+        labels: ["Income", "Cost", "Loan"],
+        datasets: [
+          {
+            data: [30000, 5000, 2000],
+            backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+            hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+          },
+        ],
+      },
       educationData: [
         {
           degree: "M.S.",
@@ -1251,7 +1357,16 @@ export const teachers = [
         "Snake Genomics and Venomics",
         "Snakebite Management",
       ],
-
+      expenditureData: {
+        labels: ["Income", "Cost", "Loan"],
+        datasets: [
+          {
+            data: [30000, 5000, 2000],
+            backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+            hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+          },
+        ],
+      },
       educationData: [
         {
           degree: "M.S.",
@@ -1383,7 +1498,16 @@ export const teachers = [
         "Insect Embryology",
         "Integrated Pest Management",
       ],
-
+      expenditureData: {
+        labels: ["Income", "Cost", "Loan"],
+        datasets: [
+          {
+            data: [30000, 5000, 2000],
+            backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+            hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+          },
+        ],
+      },
       educationData: [
         {
           degree: "M.S.",
@@ -1510,7 +1634,16 @@ export const teachers = [
         "Medical Entomology",
         "Women Development",
       ],
-
+      expenditureData: {
+        labels: ["Income", "Cost", "Loan"],
+        datasets: [
+          {
+            data: [30000, 5000, 2000],
+            backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+            hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+          },
+        ],
+      },
       educationData: [
         {
           degree: "M.S.",
@@ -1639,7 +1772,16 @@ export const teachers = [
         "Epidemiology",
         "Histopathology",
       ],
-
+      expenditureData: {
+        labels: ["Income", "Cost", "Loan"],
+        datasets: [
+          {
+            data: [30000, 5000, 2000],
+            backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+            hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+          },
+        ],
+      },
       educationData: [
         {
           degree: "M.S.",
@@ -1788,7 +1930,16 @@ export const teachers = [
           year: "2006 - 2008",
         },
       ],
-
+      expenditureData: {
+        labels: ["Income", "Cost", "Loan"],
+        datasets: [
+          {
+            data: [30000, 5000, 2000],
+            backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+            hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+          },
+        ],
+      },
       awardsData: [
         {
           title: "Best Research Paper Award",
@@ -1910,7 +2061,16 @@ export const teachers = [
           year: "2006 - 2008",
         },
       ],
-
+      expenditureData: {
+        labels: ["Income", "Cost", "Loan"],
+        datasets: [
+          {
+            data: [30000, 5000, 2000],
+            backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+            hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+          },
+        ],
+      },
       awardsData: [
         {
           title: "Best Research Paper Award",

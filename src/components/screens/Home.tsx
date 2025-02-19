@@ -64,7 +64,7 @@ const Home = () => {
               <div
                 className={`${
                   theme === "dark" ? "bg-dark-secondary" : "bg-white"
-                } shadow-lg w-full h-[300px] rounded-md flex justify-center items-center`}
+                } shadow-lg w-full h-[600px] sm:h-[300px] rounded-md flex justify-center items-center`}
               >
                 <CustomizedPieChart />
               </div>

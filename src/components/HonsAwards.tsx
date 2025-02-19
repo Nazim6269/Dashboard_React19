@@ -28,9 +28,27 @@ const HonorsAwards: React.FC<HonorsAwardsProps> = ({ awards }) => {
               : "bg-white border-l-4 border-yellow-500"
           } p-4 shadow-md rounded-lg `}
         >
-          <h3 className="text-lg font-semibold text-gray-900">{award.title}</h3>
-          <p className="text-gray-600">{award.organization}</p>
-          <span className="text-gray-500 text-sm">{award.year}</span>
+          <h3
+            className={`${
+              theme === "dark" ? "text-gray-200" : "text-gray-900"
+            } text-lg font-semibold`}
+          >
+            {award.title}
+          </h3>
+          <p
+            className={`${
+              theme === "dark" ? "text-gray-300" : "text-gray-900"
+            }`}
+          >
+            {award.organization}
+          </p>
+          <span
+            className={`${
+              theme === "dark" ? "text-gray-400" : "text-gray-900"
+            } text-sm`}
+          >
+            {award.year}
+          </span>
         </div>
       ))}
     </div>

@@ -22,35 +22,40 @@ const renderCenteredText = (props) => {
 
 export const CustomizedPieChart = () => {
   return (
-    <div className="w-full h-[75%]">
+    <div className="w-full h-[90%] flex flex-col sm:flex sm:flex-row justify-center items-center">
       <ResponsiveContainer>
         <PieChart width={400} height={400}>
           <Pie
             dataKey="value"
             data={pieChartMale}
-            cx="16%"
+            cx="50%"
             cy="50%"
             label
             innerRadius={50}
             outerRadius={90}
-            fill="#4F46E5"
+            fill="#762bff"
             stroke="#ffffff"
-            strokeWidth={3}
+            strokeWidth={1}
             isAnimationActive={true}
             animationDuration={800}
             animationBegin={100}
           >
             <Label value="Male" offset={0} position="center" />
           </Pie>
+          <Tooltip />
+        </PieChart>
+      </ResponsiveContainer>
+      <ResponsiveContainer>
+        <PieChart width={400} height={400}>
           <Pie
             dataKey="value"
             data={pieChartFemale}
-            cx="40%"
+            cx="50%"
             cy="50%"
-            strokeWidth={3}
+            strokeWidth={1}
             innerRadius={50}
             outerRadius={90}
-            fill="#F43F5E"
+            fill="#34eb5e"
             label
             name="Female"
           >

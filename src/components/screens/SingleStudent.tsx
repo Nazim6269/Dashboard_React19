@@ -28,13 +28,14 @@ interface Student {
     teacherRatingData: object[];
     educationData: object[];
     studentProgressData: object[];
+    expenditureData: object;
   };
 }
 
 const SingleStudent = () => {
   const { id } = useParams();
-  const data = students;
-  const filteredData: Student = data.find(
+
+  const filteredData: Student = students.find(
     (student) => student.id.toString() === id
   );
   const { theme } = useTheme();
@@ -44,9 +45,9 @@ const SingleStudent = () => {
         theme === "dark" ? "bg-dark" : "bg-secondary"
       } w-full grid grid-cols-1 lg:grid-cols-2 gap-4 2xl:grid-cols-1 px-4 py-4 `}
     >
-      {/* Teacher Profile */}
+      {/* Student Profile */}
       <section className="grid grid-cols-1 2xl:grid-cols-3 gap-2">
-        {/*user  info div  */}
+        {/*==========================user  info div ========================= */}
         <div
           className={`${
             theme === "dark" ? "bg-dark-secondary" : "bg-white"
@@ -76,7 +77,7 @@ const SingleStudent = () => {
           </div>
         </div>
 
-        {/* Contact Information */}
+        {/* ==========================Contact Information ============================*/}
         <div
           className={`${
             theme === "dark" ? "bg-dark-secondary" : "bg-white"
@@ -113,7 +114,7 @@ const SingleStudent = () => {
           </p>
         </div>
 
-        {/* monthly expenditure div */}
+        {/*===================== monthly expenditure div =========================*/}
         <div
           className={`${
             theme === "dark" ? "bg-dark-secondary" : "bg-white"
@@ -126,11 +127,11 @@ const SingleStudent = () => {
           >
             Monthly Expenditure
           </h3>
-          <Expenditure />
+          <Expenditure data={filteredData?.data?.expenditureData} />
         </div>
       </section>
 
-      {/* Performance Chart */}
+      {/*======================= Performance Chart =========================*/}
       <section className="mt-8 flex gap-4 justify-between">
         <div className="flex flex-col 2xl:flex-row  gap-4 w-full">
           <div className=" w-full">
@@ -169,7 +170,7 @@ const SingleStudent = () => {
         </div>
       </section>
 
-      {/* subject of interest */}
+      {/*======================= subject of interest ======================*/}
       <section className="w-full mt-8">
         <h3
           className={`${
@@ -185,7 +186,7 @@ const SingleStudent = () => {
         )}
       </section>
 
-      {/* Education and awards Section */}
+      {/*======================== Education and awards Section =====================*/}
       <section className="grid grid-cols-1 md:grid-cols-2  gap-6 mt-8">
         <div>
           <h3

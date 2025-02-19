@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useTheme } from "../context/theme-context";
 import NotAvailable from "./NotAvailable";
 
@@ -32,23 +33,37 @@ const Publications: React.FC<PublicationsProps> = ({ publications }) => {
               : "bg-white border-l-4 border-green-600"
           } p-4 shadow-md rounded-lg `}
         >
-          <h3 className="text-lg font-semibold text-gray-900">{pub.title}</h3>
-          <p className="text-gray-600">
+          <h3
+            className={`${
+              theme === "dark" ? "text-gray-200" : "text-gray-900"
+            } text-lg font-semibold`}
+          >
+            {pub.title}
+          </h3>
+          <p
+            className={`${
+              theme === "dark" ? "text-gray-300" : "text-gray-900"
+            }`}
+          >
             <span className="font-medium">Authors:</span> {pub.authors}
           </p>
-          <p className="text-gray-500">
+          <p
+            className={`${
+              theme === "dark" ? "text-gray-300" : "text-gray-900"
+            }`}
+          >
             <span className="font-medium">Journal:</span> {pub.journal} |{" "}
             {pub.year}
           </p>
           {pub.link && (
-            <a
-              href={pub.link}
+            <Link
+              to={pub.link}
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-600 hover:underline"
             >
               View Publication
-            </a>
+            </Link>
           )}
         </div>
       ))}

@@ -27,13 +27,13 @@ interface Teacher {
     awardsData: object[];
     teacherRatingData: object[];
     educationData: object[];
+    expenditureData: object;
   };
 }
 
 const SingleTeacher = () => {
   const { id } = useParams();
 
-  const data = teachers;
   const filteredData: Teacher = teachers.find((teacher) => teacher.id === id);
   const { theme } = useTheme();
   return (
@@ -44,7 +44,7 @@ const SingleTeacher = () => {
     >
       {/* Teacher Profile */}
       <section className="grid grid-cols-1 2xl:grid-cols-3 gap-2">
-        {/*user  info div  */}
+        {/*====================user  info div ================== */}
         <div
           className={`${
             theme === "dark" ? "bg-dark-secondary" : "bg-white"
@@ -56,42 +56,79 @@ const SingleTeacher = () => {
             className="w-28 h-28 rounded-full shadow-md"
           />
           <div className="flex flex-col justify-start">
-            <h2 className="text-2xl font-semibold text-gray-800">
+            <h2
+              className={`${
+                theme === "dark" ? "text-gray-200" : "text-gray-800"
+              } text-2xl font-semibold `}
+            >
               {filteredData?.name}
             </h2>
             <p className="text-lg text-primary-500">{filteredData?.subject}</p>
-            <p className="text-gray-600">{filteredData?.bio}</p>
+            <p
+              className={`${
+                theme === "dark" ? "text-gray-200" : "text-gray-600"
+              }`}
+            >
+              {filteredData?.bio}
+            </p>
           </div>
         </div>
 
-        {/* Contact Information */}
+        {/*================= Contact Information================ */}
         <div
           className={`${
             theme === "dark" ? "bg-dark-secondary" : "bg-white"
           } p-4 rounded-lg`}
         >
-          <h3 className="text-lg mb-2 font-semibold text-gray-800">
+          <h3
+            className={`${
+              theme === "dark" ? "text-gray-200" : "text-gray-800"
+            } text-lg mb-2 font-semibold`}
+          >
             Contact Information
           </h3>
-          <p className="text-gray-600">{filteredData?.email}</p>
-          <p className="text-gray-600"> {filteredData?.phone}</p>
-          <p className="text-gray-600">{filteredData?.email || ""}</p>
+          <p
+            className={`${
+              theme === "dark" ? "text-gray-200" : "text-gray-600"
+            }`}
+          >
+            {filteredData?.email}
+          </p>
+          <p
+            className={`${
+              theme === "dark" ? "text-gray-200" : "text-gray-600"
+            }`}
+          >
+            {" "}
+            {filteredData?.phone}
+          </p>
+          <p
+            className={`${
+              theme === "dark" ? "text-gray-200" : "text-gray-600"
+            }`}
+          >
+            {filteredData?.email || ""}
+          </p>
         </div>
 
-        {/* monthly expenditure div */}
+        {/*==================== monthly expenditure div ========================*/}
         <div
           className={`${
             theme === "dark" ? "bg-dark-secondary" : "bg-white"
           } p-4 rounded-lg`}
         >
-          <h3 className="text-lg mb-2 text-center font-semibold text-gray-800">
+          <h3
+            className={`${
+              theme === "dark" ? "text-gray-200" : "text-gray-800"
+            } text-lg mb-2 text-center font-semibold`}
+          >
             Monthly Expenditure
           </h3>
-          <Expenditure />
+          <Expenditure data={filteredData?.data?.expenditureData} />
         </div>
       </section>
 
-      {/* Performance Chart */}
+      {/* =====================Performance Chart===================== */}
       <section className="mt-8 flex gap-4 justify-between">
         <div className="flex flex-col 2xl:flex-row  gap-4 w-full">
           <div className=" w-full">
@@ -133,7 +170,7 @@ const SingleTeacher = () => {
         </div>
       </section>
 
-      {/* subject of interest */}
+      {/*======================= subject of interest======================= */}
       <section className="w-full mt-8">
         <h3
           className={`${
@@ -149,7 +186,7 @@ const SingleTeacher = () => {
         )}
       </section>
 
-      {/* Education and awards Section */}
+      {/*=========================== Education and awards Section================= */}
       <section className="grid grid-cols-1 md:grid-cols-2  gap-6 mt-8">
         <div>
           <h3

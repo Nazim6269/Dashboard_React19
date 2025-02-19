@@ -1,21 +1,17 @@
 import { ArcElement, Chart as ChartJS, Legend, Tooltip } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
+import { useTheme } from "../../context/theme-context";
 
 // Register necessary Chart.js components
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const Expenditure = () => {
-  // Chart data
-  const data = {
-    labels: ["Income", "Cost", "Loan"],
-    datasets: [
-      {
-        data: [30000, 5000, 2000],
-        backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
-        hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
-      },
-    ],
-  };
+interface ExpenditureProps {
+  labels: string[];
+  dataset: object[];
+}
+
+const Expenditure = ({ data }: { data: ExpenditureProps }) => {
+  const { theme } = useTheme();
 
   // Chart options
   const options = {
@@ -53,7 +49,13 @@ const Expenditure = () => {
                 backgroundColor: label.color,
               }}
             ></span>
-            <span className="text-xl">{label.name}</span>
+            <span
+              className={`${
+                theme === "dark" ? "text-gray-200" : "text-gray-600"
+              }`}
+            >
+              {label.name}
+            </span>
           </div>
         ))}
       </div>

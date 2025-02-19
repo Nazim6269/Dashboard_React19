@@ -24,13 +24,31 @@ const Education: React.FC<EducationProps> = ({ educationList }) => {
           key={index}
           className={`${
             theme === "dark"
-              ? "bg-dark-secondary"
+              ? "bg-dark-secondary "
               : "bg-white border-l-4 border-primary-500"
           } p-4 shadow-md rounded-lg `}
         >
-          <h3 className="text-lg font-semibold text-gray-900">{edu.degree}</h3>
-          <p className="text-gray-600">{edu.institution}</p>
-          <span className="text-gray-500 text-sm">{edu.year}</span>
+          <h3
+            className={`${
+              theme === "dark" ? "text-gray-200" : "text-gray-900"
+            } text-lg font-semibold`}
+          >
+            {edu.degree}
+          </h3>
+          <p
+            className={`${
+              theme === "dark" ? "text-gray-300" : "text-gray-900"
+            }`}
+          >
+            {edu.institution}
+          </p>
+          <span
+            className={`${
+              theme === "dark" ? "text-gray-400" : "text-gray-900"
+            } text-sm`}
+          >
+            {edu.year}
+          </span>
         </div>
       ))}
     </div>
