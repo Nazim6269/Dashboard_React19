@@ -1,9 +1,10 @@
+import { ChartData } from "chart.js";
 import { useParams } from "react-router-dom";
 import { useTheme } from "../../context/theme-context";
 import { students } from "../../data/data";
 import { DataProps, TinyBarChart } from "../charts/BarChart";
 import EngageMent, { StatsProps } from "../charts/EngageMentChart";
-import Expenditure, { ExpenditureProps } from "../charts/Expenditure";
+import Expenditure from "../charts/Expenditure";
 import { TeacherRatingProps } from "../charts/TeacherRatingChart";
 import Education, { EducationItem } from "../Education";
 import HonorsAwards, { Award } from "../HonsAwards";
@@ -29,7 +30,7 @@ interface Student {
     teacherRatingData: TeacherRatingProps[] | undefined;
     educationData: EducationItem[] | undefined;
     studentProgressData: DataProps[] | undefined;
-    expenditureData: ExpenditureProps | undefined;
+    expenditureData: ChartData<"doughnut", number[], unknown> | undefined;
   };
 }
 
@@ -128,7 +129,16 @@ const SingleStudent = () => {
           >
             Monthly Expenditure
           </h3>
-          <Expenditure data={filteredData?.data?.expenditureData} />
+          <Expenditure
+            data={
+              filteredData?.data?.expenditureData ?? {
+                labels: [],
+                datasets: [
+                  { data: [], backgroundColor: [], hoverBackgroundColor: [] },
+                ],
+              }
+            }
+          />
         </div>
       </section>
 
@@ -149,7 +159,9 @@ const SingleStudent = () => {
               } rounded-xl flex items-center px-4 mt-3  h-[400px]`}
             >
               {" "}
-              <TinyBarChart data={filteredData?.data?.studentProgressData} />
+              <TinyBarChart
+                data={filteredData?.data?.studentProgressData ?? []}
+              />
             </div>
           </div>
           <div className=" w-full">
@@ -165,7 +177,7 @@ const SingleStudent = () => {
                 theme === "dark" ? "bg-dark-secondary" : "bg-white"
               } rounded-xl flex items-center px-4 mt-3 h-[400px]`}
             >
-              <EngageMent stats={filteredData?.data?.engagementData} />
+              <EngageMent stats={filteredData?.data?.engagementData ?? []} />
             </div>
           </div>
         </div>

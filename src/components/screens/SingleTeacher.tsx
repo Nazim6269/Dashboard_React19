@@ -1,9 +1,10 @@
 import { useParams } from "react-router-dom";
 import { teachers } from "../../data/data";
 
+import { ChartData } from "chart.js";
 import { useTheme } from "../../context/theme-context";
 import EngageMent, { StatsProps } from "../charts/EngageMentChart";
-import Expenditure, { ExpenditureProps } from "../charts/Expenditure";
+import Expenditure from "../charts/Expenditure";
 import TeacherRatingChart, {
   TeacherRatingProps,
 } from "../charts/TeacherRatingChart";
@@ -29,7 +30,7 @@ interface Teacher {
     awardsData: Award[];
     teacherRatingData: TeacherRatingProps[] | undefined;
     educationData: EducationItem[] | undefined;
-    expenditureData: ExpenditureProps | undefined;
+    expenditureData: ChartData<"doughnut">;
   };
 }
 
@@ -129,7 +130,16 @@ const SingleTeacher = () => {
           >
             Monthly Expenditure
           </h3>
-          <Expenditure data={filteredData?.data?.expenditureData} />
+          <Expenditure
+            data={
+              filteredData?.data?.expenditureData ?? {
+                labels: [],
+                datasets: [
+                  { data: [], backgroundColor: [], hoverBackgroundColor: [] },
+                ],
+              }
+            }
+          />
         </div>
       </section>
 
@@ -150,7 +160,7 @@ const SingleTeacher = () => {
               } rounded-xl flex items-center px-4 mt-3 h-[400px]`}
             >
               {" "}
-              <EngageMent stats={filteredData?.data?.engagementData} />
+              <EngageMent stats={filteredData?.data?.engagementData ?? []} />
             </div>
           </div>
           <div className=" w-full">
@@ -168,7 +178,7 @@ const SingleTeacher = () => {
             >
               {" "}
               <TeacherRatingChart
-                teacherRatingData={filteredData?.data?.teacherRatingData}
+                teacherRatingData={filteredData?.data?.teacherRatingData ?? []}
               />
             </div>
           </div>

@@ -12,7 +12,7 @@ export interface StatsProps {
   students: number;
 }
 
-const EngageMent = ({ stats }: { stats: StatsProps }) => {
+const EngageMent = ({ stats }: { stats: StatsProps[] }) => {
   return (
     <div className="w-full h-[75%]">
       <ResponsiveContainer>

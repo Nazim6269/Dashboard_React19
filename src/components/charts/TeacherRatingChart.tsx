@@ -18,7 +18,7 @@ export interface TeacherRatingProps {
 const TeacherRatingChart = ({
   teacherRatingData,
 }: {
-  teacherRatingData: TeacherRatingProps;
+  teacherRatingData: TeacherRatingProps[];
 }) => {
   return (
     <div className="w-full h-[75%]">

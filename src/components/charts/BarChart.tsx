@@ -1,4 +1,4 @@
-import {
+import Recharts, {
   Bar,
   BarChart,
   CartesianGrid,
@@ -15,24 +15,24 @@ import NotAvailable from "../NotAvailable";
 
 export interface DataProps {
   name: string;
-  progress: number;
+  Progress: number;
 }
 
-interface ChartProps {
-  x?: number;
-  y?: number;
-  width?: number;
-  value?: string;
-}
+// interface ChartProps {
+//   x?: number;
+//   y?: number;
+//   width?: number;
+//   value?: string;
+// }
 
-const renderCustomizedLabelMin = (props: ChartProps) => {
+const renderCustomizedLabelMin = (props: Recharts.LabelProps) => {
   const { x, y, width, value } = props;
   const radius = 10;
 
   if (
-    x === undefined ||
-    y === undefined ||
-    width === undefined ||
+    typeof x !== "number" ||
+    typeof y !== "number" ||
+    typeof width !== "number" ||
     value === undefined
   ) {
     return null;
@@ -48,7 +48,7 @@ const renderCustomizedLabelMin = (props: ChartProps) => {
         textAnchor="middle"
         dominantBaseline="middle"
       >
-        {value?.split(" ")[1]}
+        {typeof value === "string" ? value.split(" ")[1] : value}
       </text>
     </g>
   );
@@ -88,7 +88,7 @@ export const BarChartWithMinHeight = () => {
   );
 };
 
-export const TinyBarChart = ({ data }: { data: DataProps }) => {
+export const TinyBarChart = ({ data }: { data: DataProps[] }) => {
   if (!data) return <NotAvailable />;
   return (
     <div className="w-full h-[75%]">

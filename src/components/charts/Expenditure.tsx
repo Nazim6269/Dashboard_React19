@@ -1,20 +1,17 @@
-import { ArcElement, Chart as ChartJS, Legend, Tooltip } from "chart.js";
+import {
+  ArcElement,
+  ChartData,
+  Chart as ChartJS,
+  Legend,
+  Tooltip,
+} from "chart.js";
 import { Doughnut } from "react-chartjs-2";
 import { useTheme } from "../../context/theme-context";
 
 // Register necessary Chart.js components
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-export interface ExpenditureProps {
-  labels: string[];
-  dataset: {
-    data: number[];
-    backgroundColor: string[];
-    hoverBackgroundColor: string[];
-  };
-}
-
-const Expenditure = ({ data }: { data: ExpenditureProps }) => {
+const Expenditure = ({ data }: { data: ChartData<"doughnut"> }) => {
   const { theme } = useTheme();
 
   // Chart options
