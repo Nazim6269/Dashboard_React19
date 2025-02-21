@@ -8,7 +8,18 @@ import {
   YAxis,
 } from "recharts";
 
-const TeacherRatingChart = ({ teacherRatingData }) => {
+export interface TeacherRatingProps {
+  name: string;
+  uv: number;
+  pv: number;
+  amt: number;
+}
+
+const TeacherRatingChart = ({
+  teacherRatingData,
+}: {
+  teacherRatingData: TeacherRatingProps;
+}) => {
   return (
     <div className="w-full h-[75%]">
       <ResponsiveContainer width="100%" height={300}>

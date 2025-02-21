@@ -7,7 +7,12 @@ import {
   YAxis,
 } from "recharts";
 
-const EngageMent = ({ stats }) => {
+export interface StatsProps {
+  year: string;
+  students: number;
+}
+
+const EngageMent = ({ stats }: { stats: StatsProps }) => {
   return (
     <div className="w-full h-[75%]">
       <ResponsiveContainer>

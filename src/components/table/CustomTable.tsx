@@ -36,6 +36,7 @@ const CustomTable = ({ data }: { data: Data[] }) => {
                     .slice(0, 5)
                     .map((item: string) => (
                       <th
+                        key={item}
                         className={`${
                           theme === "dark"
                             ? "border border-primary-500"
@@ -115,6 +116,7 @@ const CustomTable = ({ data }: { data: Data[] }) => {
                     .slice(0, 4)
                     .map((item: string) => (
                       <th
+                        key={item}
                         className={`${
                           theme === "dark"
                             ? "border bg-primary-400 border-primary-500"

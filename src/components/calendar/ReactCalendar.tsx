@@ -3,13 +3,13 @@ import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import styled from "styled-components";
 import { useTheme } from "../../context/theme-context";
-const CalendarContainer = styled.div<{ themeMode: string }>`
+const CalendarContainer = styled.div<{ thememode: string }>`
   /* ~~~ container styles ~~~ */
   max-width: 600px;
   margin: auto;
   margin: 20px 0 20px 0;
-  background-color: ${({ themeMode }) =>
-    themeMode === "dark" ? "#171b24" : "#fff"};
+  background-color: ${({ thememode }) =>
+    thememode === "dark" ? "#171b24" : "#fff"};
   padding: 16px;
   border-radius: 3px;
   display: flex;
@@ -19,9 +19,9 @@ const CalendarContainer = styled.div<{ themeMode: string }>`
 
   .react-calendar {
     width: auto;
-    background-color: ${({ themeMode }) =>
-      themeMode === "dark" ? "#171b24" : "#fff"};
-    color: ${({ themeMode }) => (themeMode === "dark" ? "#e0e0e0" : "#222")};
+    background-color: ${({ thememode }) =>
+      thememode === "dark" ? "#171b24" : "#fff"};
+    color: ${({ thememode }) => (thememode === "dark" ? "#e0e0e0" : "#222")};
     border-radius: 8px;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.125em;
@@ -117,7 +117,7 @@ const ReactCalendar = () => {
   const { theme } = useTheme();
 
   return (
-    <CalendarContainer themeMode={theme}>
+    <CalendarContainer thememode={theme}>
       <Calendar onChange={(val) => setValue(val as Value)} value={value} />
     </CalendarContainer>
   );

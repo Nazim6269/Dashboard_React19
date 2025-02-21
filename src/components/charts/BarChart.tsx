@@ -13,7 +13,7 @@ import {
 import { dataMin } from "../../data/data";
 import NotAvailable from "../NotAvailable";
 
-interface DataProps {
+export interface DataProps {
   name: string;
   progress: number;
 }

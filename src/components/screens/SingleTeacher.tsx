@@ -2,9 +2,11 @@ import { useParams } from "react-router-dom";
 import { teachers } from "../../data/data";
 
 import { useTheme } from "../../context/theme-context";
-import EngageMent from "../charts/EngageMentChart";
+import EngageMent, { StatsProps } from "../charts/EngageMentChart";
 import Expenditure, { ExpenditureProps } from "../charts/Expenditure";
-import TeacherRatingChart from "../charts/TeacherRatingChart";
+import TeacherRatingChart, {
+  TeacherRatingProps,
+} from "../charts/TeacherRatingChart";
 import Education, { EducationItem } from "../Education";
 import HonorsAwards, { Award } from "../HonsAwards";
 import NotAvailable from "../NotAvailable";
@@ -19,22 +21,24 @@ interface Teacher {
   image: string;
   email: string;
   phone: string;
-  stats: { year: string; students: number };
+  stats: StatsProps;
   data: {
     subjectOfInt: string[];
-    engagementData: object[];
-    publicationsData: Publication[];
+    engagementData: StatsProps[] | undefined;
+    publicationsData: Publication[] | undefined;
     awardsData: Award[];
-    teacherRatingData: object[];
-    educationData: EducationItem[];
-    expenditureData: ExpenditureProps;
+    teacherRatingData: TeacherRatingProps[] | undefined;
+    educationData: EducationItem[] | undefined;
+    expenditureData: ExpenditureProps | undefined;
   };
 }
 
 const SingleTeacher = () => {
   const { id } = useParams();
 
-  const filteredData = teachers.find((teacher) => teacher.id === id) as Teacher;
+  const filteredData = teachers.find((teacher) => teacher.id === id) as
+    | Teacher
+    | undefined;
   const { theme } = useTheme();
 
   return (

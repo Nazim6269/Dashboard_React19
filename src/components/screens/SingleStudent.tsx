@@ -1,9 +1,10 @@
 import { useParams } from "react-router-dom";
 import { useTheme } from "../../context/theme-context";
 import { students } from "../../data/data";
-import { TinyBarChart } from "../charts/BarChart";
-import EngageMent from "../charts/EngageMentChart";
+import { DataProps, TinyBarChart } from "../charts/BarChart";
+import EngageMent, { StatsProps } from "../charts/EngageMentChart";
 import Expenditure, { ExpenditureProps } from "../charts/Expenditure";
+import { TeacherRatingProps } from "../charts/TeacherRatingChart";
 import Education, { EducationItem } from "../Education";
 import HonorsAwards, { Award } from "../HonsAwards";
 import NotAvailable from "../NotAvailable";
@@ -19,25 +20,25 @@ interface Student {
   email: string;
   phone: string;
   classId: string;
-  stats?: { year: string; students: number };
+  stats?: StatsProps;
   data?: {
     subjectOfInt: string[];
-    engagementData: object[];
-    publicationsData: Publication[];
+    engagementData: StatsProps[] | undefined;
+    publicationsData: Publication[] | undefined;
     awardsData: Award[];
-    teacherRatingData: object[];
-    educationData: EducationItem[];
-    studentProgressData: object[];
-    expenditureData: ExpenditureProps;
+    teacherRatingData: TeacherRatingProps[] | undefined;
+    educationData: EducationItem[] | undefined;
+    studentProgressData: DataProps[] | undefined;
+    expenditureData: ExpenditureProps | undefined;
   };
 }
 
 const SingleStudent = () => {
   const { id } = useParams();
 
-  const filteredData: Student = students.find(
+  const filteredData = students.find(
     (student) => student.id.toString() === id
-  );
+  ) as Student | undefined;
   const { theme } = useTheme();
   return (
     <section
