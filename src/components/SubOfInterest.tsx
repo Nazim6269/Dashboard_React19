@@ -1,11 +1,11 @@
 import { useTheme } from "../context/theme-context";
 import NotAvailable from "./NotAvailable";
 
-interface Props {
+export interface Interest {
   subjectOfInt: string[];
 }
 
-const SubOfInterest: React.FC<Props> = ({ subjectOfInt }) => {
+const SubOfInterest: React.FC<Interest> = ({ subjectOfInt }) => {
   const { theme } = useTheme();
   if (!subjectOfInt.length) {
     return <NotAvailable />;

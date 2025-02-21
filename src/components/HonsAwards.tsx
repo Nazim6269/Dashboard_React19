@@ -2,13 +2,13 @@ import React from "react";
 import { useTheme } from "../context/theme-context";
 import NotAvailable from "./NotAvailable";
 
-interface Award {
+export interface Award {
   title: string;
   organization: string;
   year: string;
 }
 
-interface HonorsAwardsProps {
+export interface HonorsAwardsProps {
   awards: Award[];
 }
 

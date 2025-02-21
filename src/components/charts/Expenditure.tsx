@@ -5,9 +5,13 @@ import { useTheme } from "../../context/theme-context";
 // Register necessary Chart.js components
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-interface ExpenditureProps {
+export interface ExpenditureProps {
   labels: string[];
-  dataset: object[];
+  dataset: {
+    data: number[];
+    backgroundColor: string[];
+    hoverBackgroundColor: string[];
+  };
 }
 
 const Expenditure = ({ data }: { data: ExpenditureProps }) => {

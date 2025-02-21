@@ -18,21 +18,37 @@ interface DataProps {
   progress: number;
 }
 
-const renderCustomizedLabelMin = (props: any) => {
-  const { x, y, width, height, value } = props;
+interface ChartProps {
+  x?: number;
+  y?: number;
+  width?: number;
+  value?: string;
+}
+
+const renderCustomizedLabelMin = (props: ChartProps) => {
+  const { x, y, width, value } = props;
   const radius = 10;
+
+  if (
+    x === undefined ||
+    y === undefined ||
+    width === undefined ||
+    value === undefined
+  ) {
+    return null;
+  }
 
   return (
     <g>
       <circle cx={x + width / 2} cy={y - radius} r={radius} fill="#8884d8" />
       <text
-        x={x + width / 2}
+        x={x + width! / 2}
         y={y - radius}
         fill="#fff"
         textAnchor="middle"
         dominantBaseline="middle"
       >
-        {value.split(" ")[1]}
+        {value?.split(" ")[1]}
       </text>
     </g>
   );

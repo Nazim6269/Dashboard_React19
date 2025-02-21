@@ -2,13 +2,13 @@ import React from "react";
 import { useTheme } from "../context/theme-context";
 import NotAvailable from "./NotAvailable";
 
-interface EducationItem {
+export interface EducationItem {
   degree: string;
   institution: string;
   year: string;
 }
 
-interface EducationProps {
+export interface EducationProps {
   educationList: EducationItem[];
 }
 

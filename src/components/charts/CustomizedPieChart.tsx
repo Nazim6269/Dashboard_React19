@@ -3,22 +3,22 @@ import { pieChartFemale, pieChartMale } from "../../data/data";
 
 //=========== customized pie chart ===========//
 
-const renderCenteredText = (props) => {
-  const { cx, cy } = props;
-  return (
-    <text
-      x={cx}
-      y={cy}
-      fill="black"
-      textAnchor="middle"
-      dominantBaseline="central"
-      fontSize="16"
-      fontWeight="bold"
-    >
-      {props.text}
-    </text>
-  );
-};
+// const renderCenteredText = (props) => {
+//   const { cx, cy } = props;
+//   return (
+//     <text
+//       x={cx}
+//       y={cy}
+//       fill="black"
+//       textAnchor="middle"
+//       dominantBaseline="central"
+//       fontSize="16"
+//       fontWeight="bold"
+//     >
+//       {props.text}
+//     </text>
+//   );
+// };
 
 export const CustomizedPieChart = () => {
   return (

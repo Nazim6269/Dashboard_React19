@@ -3,15 +3,15 @@ import { Link } from "react-router-dom";
 import { useTheme } from "../context/theme-context";
 import NotAvailable from "./NotAvailable";
 
-interface Publication {
-  title: string;
+export interface Publication {
+  title: string | null;
   authors: string;
   journal: string;
   year: string;
   link?: string;
 }
 
-interface PublicationsProps {
+export interface PublicationsProps {
   publications: Publication[];
 }
 

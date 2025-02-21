@@ -3,11 +3,11 @@ import { useTheme } from "../../context/theme-context";
 import { students } from "../../data/data";
 import { TinyBarChart } from "../charts/BarChart";
 import EngageMent from "../charts/EngageMentChart";
-import Expenditure from "../charts/Expenditure";
-import Education from "../Education";
-import HonorsAwards from "../HonsAwards";
+import Expenditure, { ExpenditureProps } from "../charts/Expenditure";
+import Education, { EducationItem } from "../Education";
+import HonorsAwards, { Award } from "../HonsAwards";
 import NotAvailable from "../NotAvailable";
-import Publications from "../Publications";
+import Publications, { Publication } from "../Publications";
 import SubOfInterest from "../SubOfInterest";
 
 interface Student {
@@ -19,16 +19,16 @@ interface Student {
   email: string;
   phone: string;
   classId: string;
-  stats?: { month: string; students: number };
+  stats?: { year: string; students: number };
   data?: {
     subjectOfInt: string[];
     engagementData: object[];
-    publicationsData: object[];
-    awardsData: object[];
+    publicationsData: Publication[];
+    awardsData: Award[];
     teacherRatingData: object[];
-    educationData: object[];
+    educationData: EducationItem[];
     studentProgressData: object[];
-    expenditureData: object;
+    expenditureData: ExpenditureProps;
   };
 }
 

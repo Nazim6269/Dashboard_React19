@@ -1,10 +1,13 @@
 import { useActionState } from "react";
 import { Link } from "react-router-dom";
 
-const actionHandler = async (prevState, formData: FormData) => {
+const actionHandler = async (
+  _prevState: unknown,
+  formData: FormData
+): Promise<string | null> => {
   const value = formData.get("email");
   await new Promise((resolve) => setTimeout(resolve, 2000));
-  return value;
+  return value as string | null;
 };
 
 const SignIn = () => {

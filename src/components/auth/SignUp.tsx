@@ -2,13 +2,15 @@ import { Link } from "react-router-dom";
 
 import { useActionState } from "react";
 
-const actionHandler = async (prevState, formData: FormData) => {
+const actionHandler = async (
+  _prevState: unknown,
+  formData: FormData
+): Promise<string | null> => {
   const value = formData.get("email");
-  console.log(value, "value");
   await new Promise((resolve) => {
     setTimeout(resolve, 2000);
   });
-  return null;
+  return value as string | null;
 };
 
 const SignUp = () => {
@@ -31,6 +33,7 @@ const SignUp = () => {
               required
               className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-primary-500"
             />
+            {error && <p>{error}</p>}
           </div>
 
           <div>

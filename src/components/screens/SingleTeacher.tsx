@@ -3,12 +3,12 @@ import { teachers } from "../../data/data";
 
 import { useTheme } from "../../context/theme-context";
 import EngageMent from "../charts/EngageMentChart";
-import Expenditure from "../charts/Expenditure";
+import Expenditure, { ExpenditureProps } from "../charts/Expenditure";
 import TeacherRatingChart from "../charts/TeacherRatingChart";
-import Education from "../Education";
-import HonorsAwards from "../HonsAwards";
+import Education, { EducationItem } from "../Education";
+import HonorsAwards, { Award } from "../HonsAwards";
 import NotAvailable from "../NotAvailable";
-import Publications from "../Publications";
+import Publications, { Publication } from "../Publications";
 import SubOfInterest from "../SubOfInterest";
 
 interface Teacher {
@@ -19,23 +19,24 @@ interface Teacher {
   image: string;
   email: string;
   phone: string;
-  stats: { month: string; students: number };
+  stats: { year: string; students: number };
   data: {
     subjectOfInt: string[];
     engagementData: object[];
-    publicationsData: object[];
-    awardsData: object[];
+    publicationsData: Publication[];
+    awardsData: Award[];
     teacherRatingData: object[];
-    educationData: object[];
-    expenditureData: object;
+    educationData: EducationItem[];
+    expenditureData: ExpenditureProps;
   };
 }
 
 const SingleTeacher = () => {
   const { id } = useParams();
 
-  const filteredData: Teacher = teachers.find((teacher) => teacher.id === id);
+  const filteredData = teachers.find((teacher) => teacher.id === id) as Teacher;
   const { theme } = useTheme();
+
   return (
     <section
       className={`${

@@ -18,14 +18,9 @@ import NavItems from "../nav/NavItems";
 const LeftSideBar = () => {
   const { theme, toggleTheme } = useTheme();
   const [isCollapsed, setIsCollapsed] = useState(false);
-  const [openSubMenu, setOpenSubMenu] = useState<string | null>(null);
 
   const toggleLeftSideBar = () => {
     setIsCollapsed(!isCollapsed);
-  };
-
-  const toggleSubMenu = (menu: string) => {
-    setOpenSubMenu(openSubMenu === menu ? null : menu);
   };
 
   return (
