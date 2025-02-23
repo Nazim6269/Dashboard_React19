@@ -1,5 +1,6 @@
 import { useActionState } from "react";
 import { Link } from "react-router-dom";
+import { useTheme } from "../../context/theme-context";
 
 const actionHandler = async (
   _prevState: unknown,
@@ -11,36 +12,57 @@ const actionHandler = async (
 };
 
 const SignIn = () => {
+  const { theme } = useTheme();
   const [error, submitAction, isPending] = useActionState(actionHandler, null);
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
-      <div className="w-full max-w-md p-8 bg-white shadow-lg rounded-lg">
-        <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
+    <div
+      className={`${
+        theme === "dark" ? "bg-dark" : "bg-gray-100"
+      } flex w-full justify-center items-center min-h-screen`}
+    >
+      <div
+        className={`${
+          theme === "dark" ? "bg-dark-secondary" : "bg-white"
+        } w-full max-w-md p-8  shadow-lg rounded-lg`}
+      >
+        <h2
+          className={`${
+            theme === "dark" ? "text-gray-200" : "text-gray-800"
+          } text-2xl font-bold text-center  mb-6`}
+        >
           Sign In
         </h2>
         <form action={submitAction} className="space-y-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700">
+            <label
+              className={`${
+                theme === "dark" ? "text-gray-200" : "text-gray-700"
+              } block text-sm font-medium `}
+            >
               Email
             </label>
             <input
               type="email"
               name="email"
               required
-              className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-primary-500 "
+              className="mt-1 block w-full px-4 py-2 border border-slate-700  rounded-md focus:outline-none focus:border-primary-500"
             />
             {error && <p>{error}</p>}
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700">
+            <label
+              className={`${
+                theme === "dark" ? "text-gray-200" : "text-gray-700"
+              } block text-sm font-medium `}
+            >
               Password
             </label>
             <input
               type="password"
               name="password"
               required
-              className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-primary-500"
+              className="mt-1 block w-full px-4 py-2 border border-slate-700  rounded-md focus:outline-none focus:border-primary-500"
             />
           </div>
 
@@ -55,7 +77,11 @@ const SignIn = () => {
           </button>
         </form>
 
-        <p className="text-center mt-1.5">
+        <p
+          className={`${
+            theme === "dark" ? "text-gray-300" : "text-gray-700"
+          } block text-center font-medium `}
+        >
           Don't have an account?
           <Link to={"/sign-up"} className="hover:underline text-primary-500">
             sign up

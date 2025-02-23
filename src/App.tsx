@@ -9,15 +9,17 @@ import SingleTeacher from "./components/screens/SingleTeacher";
 import Students from "./components/screens/Students";
 import Teachers from "./components/screens/Teachers";
 import LeftSideBar from "./components/sidebar/LeftSideBar";
+import { useAuth } from "./context/auth-context";
 import ThemeProvider from "./context/theme-context";
 
 function App() {
+  const auth = useAuth();
   return (
     <BrowserRouter>
       <ThemeProvider>
         <NavBar />
         <div className="flex">
-          <LeftSideBar />
+          {auth.user && <LeftSideBar />}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/sign-up" element={<SignUp />} />

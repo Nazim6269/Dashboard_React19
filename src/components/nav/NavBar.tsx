@@ -1,12 +1,16 @@
-import { MenuIcon } from "lucide-react";
+import { MenuIcon, Moon, Sun } from "lucide-react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useTheme } from "../../context/theme-context";
 
 const NavBar = () => {
-  const { theme } = useTheme();
+  const { theme, toggleTheme } = useTheme();
+  const [isCollapsed, setIsCollapsed] = useState(false);
   return (
     <nav
-      className={`${theme === "dark" ? "bg-dark" : "bg-white"} p-4 shadow-md`}
+      className={`${
+        theme === "dark" ? "bg-dark-secondary" : "bg-white"
+      } p-4 shadow-md`}
     >
       <div className="flex items-center justify-between">
         {/* Logo div */}
@@ -18,6 +22,7 @@ const NavBar = () => {
             </p>
           </Link>
         </div>
+        {/* Theme Toggle */}
 
         {/* Menu icon div */}
         <div className="flex sm:hidden">
@@ -26,6 +31,21 @@ const NavBar = () => {
 
         {/* auth div */}
         <div className="hidden sm:flex sm:items-center sm:space-x-4">
+          <div>
+            <button
+              onClick={toggleTheme}
+              className={`${
+                theme === "dark"
+                  ? "bg-dark-secondary text-gray-200"
+                  : "bg-gray-200 text-gray-800"
+              } w-full flex items-center space-x-3 p-3 rounded-lg hover:text-white  hover:bg-primary-500  cursor-pointer`}
+            >
+              {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+              {!isCollapsed && (
+                <span>{theme === "dark" ? "Light Mode" : "Dark Mode"}</span>
+              )}
+            </button>
+          </div>
           <Link
             to="/sign-in"
             className="text-white border-0 font-medium bg-primary-500 rounded-md px-5 py-2 "

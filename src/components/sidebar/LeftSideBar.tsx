@@ -7,8 +7,6 @@ import {
   FileText,
   Home,
   LogOut,
-  Moon,
-  Sun,
   Users,
 } from "lucide-react";
 import { useState } from "react";
@@ -26,7 +24,7 @@ const LeftSideBar = () => {
   return (
     <div
       className={`${
-        theme === "dark" ? "bg-dark" : ""
+        theme === "dark" ? "bg-dark-secondary " : ""
       } hidden min-h-screen select-none  p-5 shadow-md sm:flex sm:flex-col transition-all duration-300 ${
         isCollapsed ? "w-20" : "w-64"
       }`}
@@ -92,21 +90,6 @@ const LeftSideBar = () => {
 
       {/* Bottom Section */}
       <div className="mt-auto">
-        {/* Theme Toggle */}
-        <button
-          onClick={toggleTheme}
-          className={`${
-            theme === "dark"
-              ? "bg-dark-secondary text-gray-200"
-              : "bg-gray-200 text-gray-800"
-          } w-full flex items-center space-x-3 p-3 rounded-lg hover:text-white  hover:bg-primary-500  cursor-pointer`}
-        >
-          {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
-          {!isCollapsed && (
-            <span>{theme === "dark" ? "Light Mode" : "Dark Mode"}</span>
-          )}
-        </button>
-
         {/* Logout Button */}
         <button className="w-full flex items-center space-x-3 p-3 rounded-lg mt-4 bg-primary-500 text-white ">
           <LogOut size={20} />
