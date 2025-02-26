@@ -8,7 +8,7 @@ const Students = () => {
     <div
       className={`${
         theme === "dark" ? "bg-dark" : "bg-secondary"
-      } w-full px-3 py-5`}
+      } w-full min-h-screen px-3 py-5`}
     >
       <CustomTable data={students} />
     </div>

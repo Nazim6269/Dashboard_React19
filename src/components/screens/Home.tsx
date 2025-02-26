@@ -6,6 +6,7 @@ import { BarChartWithMinHeight, TinyBarChart } from "../charts/BarChart";
 import { CustomizedPieChart } from "../charts/CustomizedPieChart";
 import SimpleLineChart from "../charts/SimpleLineChart";
 import RightBar from "../sidebar/ RightBar";
+import LeftSideBar from "../sidebar/LeftSideBar";
 
 const Home = () => {
   const { theme } = useTheme();
@@ -16,8 +17,9 @@ const Home = () => {
         theme === "dark" ? "bg-dark" : "bg-secondary"
       } flex flex-col 2xl:flex 2xl:flex-row 2xl:justify-between w-full select-none `}
     >
-      {/* Data Portinon */}
+      {/* Data Portion */}
       <div className="flex w-full 2xl:w-[80%] 2xl:flex">
+        <LeftSideBar />
         <div className="px-4 py-6 w-full">
           {/* top bar cards */}
           <div className="flex flex-col xl:flex xl:flex-row  xl:justify-between gap-3">
