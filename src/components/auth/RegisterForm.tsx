@@ -1,7 +1,12 @@
 import { Button } from "@/components/ui/button";
-import { Form } from "@/components/ui/form";
+import { Form, FormControl } from "@/components/ui/form";
+import { useTheme } from "@/context/theme-context";
 import { useForm } from "react-hook-form";
+import { Label } from "../ui/label";
+import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
+import { SelectItem } from "../ui/select";
 import CustomFormField from "./CustomFormField";
+import Dropzone from "./Dropzone";
 
 export enum FormFieldType {
   INPUT = "input",
@@ -14,6 +19,7 @@ export enum FormFieldType {
 }
 
 export const RegisterForm = () => {
+  const { theme } = useTheme();
   const form = useForm();
   const onSubmit = () => {};
   return (
@@ -52,12 +58,95 @@ export const RegisterForm = () => {
         />
 
         <CustomFormField
-          label="Name"
+          label="Date of Birth"
+          name="birthdate"
           control={form.control}
-          name="name"
-          fieldType={FormFieldType.CHECKBOX}
+          fieldType={FormFieldType.DATE_PICKER}
         />
-        <Button type="submit">Submit</Button>
+
+        <CustomFormField
+          label="Gender"
+          name="gender"
+          control={form.control}
+          fieldType={FormFieldType.SKELETON}
+          renderSkeleton={(field) => (
+            <FormControl>
+              <RadioGroup
+                className="flex h-11 gap-6 xl:justify-between"
+                onValueChange={field.onChange}
+                defaultValue={field.value}
+              >
+                {["Male", "Female", "Other"].map((option, i) => (
+                  <div key={option + i} className="radio-group">
+                    <RadioGroupItem
+                      className={`${
+                        theme === "dark" ? "text-gray-400 border-slate-700" : ""
+                      }`}
+                      value={option}
+                      id={option}
+                    />
+                    <Label
+                      htmlFor={option}
+                      className={`${
+                        theme === "dark" ? "text-gray-400" : ""
+                      } ml-2`}
+                    >
+                      {option}
+                    </Label>
+                  </div>
+                ))}
+              </RadioGroup>
+            </FormControl>
+          )}
+        />
+        <CustomFormField
+          fieldType={FormFieldType.SELECT}
+          control={form.control}
+          label="Session"
+          name="session"
+          placeholder="Select session"
+        >
+          {["2019-2020", "2020-2021", "2021-2022", "2022-2023"].map(
+            (session: string, i: number) => {
+              return (
+                <SelectItem key={session + i} value={session}>
+                  {session}
+                </SelectItem>
+              );
+            }
+          )}
+        </CustomFormField>
+
+        <CustomFormField
+          label="Upload your Image"
+          control={form.control}
+          fieldType={FormFieldType.SKELETON}
+          name="upload"
+          renderSkeleton={() => <Dropzone />}
+        />
+
+        <CustomFormField
+          fieldType={FormFieldType.TEXT_AREA}
+          control={form.control}
+          name="about your self"
+          label="About Yourself"
+          placeholder="I'm a student of ..."
+        />
+        <CustomFormField
+          fieldType={FormFieldType.CHECKBOX}
+          control={form.control}
+          name="agreement"
+          label="I agree to these data"
+        />
+
+        <div className="flex justify-center">
+          <Button
+            type="submit"
+            className="bg-primary-500 text-gray-300 cursor-pointer font-semibold w-md mb-3"
+          >
+            Submit
+          </Button>
+        </div>
       </form>
     </Form>
   );

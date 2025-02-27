@@ -11,7 +11,6 @@ const baseStyle = {
   borderRadius: 2,
   borderColor: "#314158",
   borderStyle: "dashed",
-  backgroundColor: "#171b24",
   color: "#314158",
   outline: "none",
   transition: "border .24s ease-in-out",
@@ -29,7 +28,7 @@ const rejectStyle = {
   borderColor: "#ff1744",
 };
 
-const Dropzone = (props) => {
+const Dropzone = () => {
   const { getRootProps, getInputProps, isFocused, isDragAccept, isDragReject } =
     useDropzone({ accept: { "image/*": [] } });
 

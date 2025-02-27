@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import "react-phone-input-2/lib/style.css";
 import { Link } from "react-router-dom";
 import { useTheme } from "../../context/theme-context";
-import { RegisterForm } from "./RegisterForm";
+import { RegisterForm } from "../auth/RegisterForm";
 
 enum Status {
   teacher = "teacher",
@@ -48,12 +48,12 @@ const SignUp = () => {
     <div
       className={`${
         theme === "dark" ? "bg-dark" : "bg-gray-100"
-      } flex w-full justify-center items-center min-h-screen`}
+      } flex w-full py-5 justify-center items-center min-h-screen`}
     >
       <div
         className={`${
           theme === "dark" ? "bg-dark-secondary" : "bg-white"
-        } w-full max-w-md p-8  shadow-lg rounded-lg`}
+        } w-full max-w-2xl p-8  shadow-lg rounded-lg`}
       >
         <h2
           className={`${

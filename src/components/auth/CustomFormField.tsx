@@ -6,10 +6,19 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { useTheme } from "@/context/theme-context";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import { Control } from "react-hook-form";
 import PhoneInput from "react-phone-input-2";
 import { Checkbox } from "../ui/checkbox";
 import { Input } from "../ui/input";
+import {
+  Select,
+  SelectContent,
+  SelectTrigger,
+  SelectValue,
+} from "../ui/select";
+import { Textarea } from "../ui/textarea";
 import { FormFieldType } from "./RegisterForm";
 
 //custom props are defined here
@@ -38,20 +47,13 @@ const RenderedItem = ({ field, props }: { field: any; props: CustomProps }) => {
           <FormControl>
             <Input
               {...field}
-              className="shad-input border-1 "
+              className={`${
+                theme === "dark" ? "text-gray-400 border-slate-700" : ""
+              } border-1 focus:border-1 focus:border-primary-500 focus-visible:ring-0 `}
               placeholder={props.placeholder}
             />
           </FormControl>
         </div>
-      );
-    case FormFieldType.CHECKBOX:
-      return (
-        <FormControl>
-          <div>
-            <Checkbox checked={field.value} />{" "}
-            <label className="checkbox-label">{props.label}</label>
-          </div>
-        </FormControl>
       );
 
     case FormFieldType.PHONE_INPUT:
@@ -80,6 +82,78 @@ const RenderedItem = ({ field, props }: { field: any; props: CustomProps }) => {
           />
         </FormControl>
       );
+
+    case FormFieldType.SELECT:
+      return (
+        <FormControl>
+          <Select onValueChange={field.onChange} defaultValue={field.value}>
+            <FormControl>
+              <SelectTrigger
+                className={`${
+                  theme === "dark" ? "text-gray-400 border-slate-700" : ""
+                } border-1 shad-select-trigger`}
+              >
+                <SelectValue placeholder={props.placeholder} />
+              </SelectTrigger>
+            </FormControl>
+            <SelectContent
+              className={`${theme === "dark" ? "text-gray-400" : ""} border-1`}
+            >
+              {props.children}
+            </SelectContent>
+          </Select>
+        </FormControl>
+      );
+
+    case FormFieldType.DATE_PICKER:
+      return (
+        <div className={""}>
+          <FormControl>
+            <DatePicker
+              selected={field.value}
+              onChange={(date) => field.onChange(date)}
+              wrapperClassName="date-picker"
+              className={`${
+                theme === "dark" ? "text-gray-400" : ""
+              }  border-1  py-1.5 px-4 rounded-md w-[100%] `}
+            />
+          </FormControl>
+        </div>
+      );
+
+    case FormFieldType.SKELETON:
+      return props.renderSkeleton ? props.renderSkeleton(field) : null;
+
+    case FormFieldType.TEXT_AREA:
+      return (
+        <FormControl>
+          <Textarea
+            placeholder={props.placeholder}
+            {...field}
+            className={`${
+              theme === "dark" ? "text-gray-400 border-slate-700" : ""
+            } border-1 shad-text-area focus-visible:ring-0 `}
+            disabled={props.disabled}
+          />
+        </FormControl>
+      );
+
+    case FormFieldType.CHECKBOX:
+      return (
+        <FormControl>
+          <div>
+            <Checkbox
+              className={`${
+                theme === "dark" ? "text-gray-400 border-slate-700" : ""
+              }`}
+              checked={field.value}
+            />{" "}
+            <label className={`${theme === "dark" ? "text-gray-400 " : ""}`}>
+              {props.label}
+            </label>
+          </div>
+        </FormControl>
+      );
     default:
       break;
   }
@@ -89,6 +163,7 @@ const RenderedItem = ({ field, props }: { field: any; props: CustomProps }) => {
 
 const CustomFormField = (props: CustomProps) => {
   const { label, control, name, fieldType } = props;
+  const { theme } = useTheme();
 
   return (
     <FormField
@@ -97,7 +172,9 @@ const CustomFormField = (props: CustomProps) => {
       render={({ field }) => (
         <FormItem>
           {fieldType !== FormFieldType.CHECKBOX && label && (
-            <FormLabel>{label}</FormLabel>
+            <FormLabel className={`${theme === "dark" ? "text-gray-400" : ""}`}>
+              {label}
+            </FormLabel>
           )}
           {/* Custom Input */}
           <RenderedItem field={field} props={props} />

@@ -1,9 +1,9 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import SignIn from "./components/auth/SignIn";
-import SignUp from "./components/auth/SignUp";
 import NavBar from "./components/nav/NavBar";
 import Developer from "./components/screens/Developer";
 import Home from "./components/screens/Home";
+import SignIn from "./components/screens/SignIn";
+import SignUp from "./components/screens/SignUp";
 import SingleStudent from "./components/screens/SingleStudent";
 import SingleTeacher from "./components/screens/SingleTeacher";
 import Students from "./components/screens/Students";
