@@ -14,7 +14,7 @@ import { useTheme } from "../../context/theme-context";
 import NavItems from "../nav/NavItems";
 
 const LeftSideBar = () => {
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
   const [isCollapsed, setIsCollapsed] = useState(false);
 
   const toggleLeftSideBar = () => {
