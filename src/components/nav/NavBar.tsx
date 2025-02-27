@@ -5,7 +5,7 @@ import { useTheme } from "../../context/theme-context";
 
 const NavBar = () => {
   const { theme, toggleTheme } = useTheme();
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isCollapsed] = useState(false);
   return (
     <nav
       className={`${
@@ -26,7 +26,7 @@ const NavBar = () => {
 
         {/* Menu icon div */}
         <div className="flex sm:hidden">
-          <MenuIcon />
+          <MenuIcon className="text-primary-500" />
         </div>
 
         {/* auth div */}

@@ -1,54 +1,40 @@
-import { useActionState, useState } from "react";
-import { useForm } from "react-hook-form";
 import "react-phone-input-2/lib/style.css";
 import { Link } from "react-router-dom";
 import { useTheme } from "../../context/theme-context";
 import { RegisterForm } from "../auth/RegisterForm";
 
-enum Status {
-  teacher = "teacher",
-  student = "student",
-  stuff = "stuff",
-}
+// enum Status {
+//   teacher = "teacher",
+//   student = "student",
+//   stuff = "stuff",
+// }
 
-interface InputTypes {
-  name: string;
-  status: Status;
-}
+// interface InputTypes {
+//   name: string;
+//   status: Status;
+// }
 
-const actionHandler = async (
-  _prevState: unknown,
-  formData: FormData
-): Promise<string | null> => {
-  const value = formData.get("email");
-  await new Promise((resolve) => {
-    setTimeout(resolve, 2000);
-  });
-  return value as string | null;
-};
+// const actionHandler = async (
+//   _prevState: unknown,
+//   formData: FormData
+// ): Promise<string | null> => {
+//   const value = formData.get("email");
+//   await new Promise((resolve) => {
+//     setTimeout(resolve, 2000);
+//   });
+//   return value as string | null;
+// };
 
 const SignUp = () => {
   const { theme } = useTheme();
-  const { register, reset, handleSubmit, control } = useForm<InputTypes>({
-    mode: "onSubmit",
-  });
-  const [error, submitAction, isPending] = useActionState(actionHandler, null);
-  const [phone, setPhone] = useState("");
 
-  const onValid = (data) => {
-    console.log("valid", data);
-    reset();
-  };
-
-  const onInvalid = (data) => {
-    console.log("invalid:", data);
-  };
+  // const [] = useActionState(actionHandler, null);
 
   return (
     <div
       className={`${
         theme === "dark" ? "bg-dark" : "bg-gray-100"
-      } flex w-full py-5 justify-center items-center min-h-screen`}
+      } flex w-full py-5 justify-center items-center min-h-screen px-4 md:px-0`}
     >
       <div
         className={`${

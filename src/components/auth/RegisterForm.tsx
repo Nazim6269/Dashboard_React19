@@ -72,12 +72,12 @@ export const RegisterForm = () => {
           renderSkeleton={(field) => (
             <FormControl>
               <RadioGroup
-                className="flex h-11 gap-6 xl:justify-between"
+                className="flex flex-col sm:flex sm:flex-row  sm:justify-between"
                 onValueChange={field.onChange}
                 defaultValue={field.value}
               >
                 {["Male", "Female", "Other"].map((option, i) => (
-                  <div key={option + i} className="radio-group">
+                  <div key={option + i} className="radio-group ">
                     <RadioGroupItem
                       className={`${
                         theme === "dark" ? "text-gray-400 border-slate-700" : ""
