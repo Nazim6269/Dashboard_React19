@@ -6,9 +6,10 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { useTheme } from "@/context/theme-context";
+import { cn } from "@/lib/utils";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { Control } from "react-hook-form";
+import { Control, FieldError } from "react-hook-form";
 import PhoneInput from "react-phone-input-2";
 import { Checkbox } from "../ui/checkbox";
 import { Input } from "../ui/input";
@@ -35,6 +36,7 @@ interface CustomProps {
   showTimeSelect?: string;
   children?: React.ReactNode;
   renderSkeleton?: (field: any) => React.ReactNode;
+  errorMessage: FieldError | undefined;
 }
 
 // custom renedred field component
@@ -162,7 +164,7 @@ const RenderedItem = ({ field, props }: { field: any; props: CustomProps }) => {
 // Custom Form Field
 
 const CustomFormField = (props: CustomProps) => {
-  const { label, control, name, fieldType } = props;
+  const { label, control, name, fieldType, errorMessage } = props;
   const { theme } = useTheme();
 
   return (
@@ -180,7 +182,7 @@ const CustomFormField = (props: CustomProps) => {
           <RenderedItem field={field} props={props} />
 
           {/* message */}
-          <FormMessage className="shad-error" />
+          <FormMessage className={cn(errorMessage && "text-red-500")} />
         </FormItem>
       )}
     />

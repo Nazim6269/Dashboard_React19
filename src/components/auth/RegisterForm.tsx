@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Form, FormControl } from "@/components/ui/form";
 import { useTheme } from "@/context/theme-context";
+import { UserFormValidation } from "@/lib/validation";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
+import { z } from "zod";
 import { Label } from "../ui/label";
 import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
 import { SelectItem } from "../ui/select";
@@ -20,17 +23,36 @@ export enum FormFieldType {
 
 export const RegisterForm = () => {
   const { theme } = useTheme();
-  const form = useForm();
-  const onSubmit = () => {};
+  const form = useForm<z.infer<typeof UserFormValidation>>({
+    resolver: zodResolver(UserFormValidation),
+    mode: "onBlur",
+    defaultValues: {
+      name: "",
+      email: "",
+      password: "",
+      phone: "",
+      birthdate: "",
+      about: "",
+      gender: "male",
+      agreement: "",
+      session: "",
+      image: "",
+    },
+  });
+
+  const onSubmit = (data: z.infer<typeof UserFormValidation>) => {
+    console.log(data);
+  };
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
         <CustomFormField
           label="Name"
           control={form.control}
           name="name"
           fieldType={FormFieldType.INPUT}
           placeholder="Nazim"
+          errorMessage={form.formState.errors.name}
         />
 
         <CustomFormField
@@ -39,6 +61,7 @@ export const RegisterForm = () => {
           name="email"
           fieldType={FormFieldType.INPUT}
           placeholder="test@gmail.com"
+          errorMessage={form.formState.errors.email}
         />
 
         <CustomFormField
@@ -47,6 +70,7 @@ export const RegisterForm = () => {
           name="password"
           fieldType={FormFieldType.INPUT}
           placeholder="12345"
+          errorMessage={form.formState.errors.password}
         />
 
         <CustomFormField
@@ -55,6 +79,7 @@ export const RegisterForm = () => {
           name="phone"
           fieldType={FormFieldType.PHONE_INPUT}
           placeholder="(+880) xxxx-xxxxxx"
+          errorMessage={form.formState.errors.phone}
         />
 
         <CustomFormField
@@ -62,6 +87,7 @@ export const RegisterForm = () => {
           name="birthdate"
           control={form.control}
           fieldType={FormFieldType.DATE_PICKER}
+          errorMessage={form.formState.errors.birthdate}
         />
 
         <CustomFormField
@@ -69,6 +95,7 @@ export const RegisterForm = () => {
           name="gender"
           control={form.control}
           fieldType={FormFieldType.SKELETON}
+          errorMessage={form.formState.errors.gender}
           renderSkeleton={(field) => (
             <FormControl>
               <RadioGroup
@@ -105,6 +132,7 @@ export const RegisterForm = () => {
           label="Session"
           name="session"
           placeholder="Select session"
+          errorMessage={form.formState.errors.session}
         >
           {["2019-2020", "2020-2021", "2021-2022", "2022-2023"].map(
             (session: string, i: number) => {
@@ -121,22 +149,25 @@ export const RegisterForm = () => {
           label="Upload your Image"
           control={form.control}
           fieldType={FormFieldType.SKELETON}
-          name="upload"
+          name="image"
           renderSkeleton={() => <Dropzone />}
+          errorMessage={form.formState.errors.image}
         />
 
         <CustomFormField
           fieldType={FormFieldType.TEXT_AREA}
           control={form.control}
-          name="about your self"
+          name="about"
           label="About Yourself"
           placeholder="I'm a student of ..."
+          errorMessage={form.formState.errors.about}
         />
         <CustomFormField
           fieldType={FormFieldType.CHECKBOX}
           control={form.control}
           name="agreement"
           label="I agree to these data"
+          errorMessage={form.formState.errors.agreement}
         />
 
         <div className="flex justify-center">
