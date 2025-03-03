@@ -2,10 +2,13 @@ import { MenuIcon, Moon, Sun } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useTheme } from "../../context/theme-context";
+import Modal from "../modal/Modal";
 
 const NavBar = () => {
   const { theme, toggleTheme } = useTheme();
   const [isCollapsed] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <nav
       className={`${
@@ -26,8 +29,12 @@ const NavBar = () => {
 
         {/* Menu icon div */}
         <div className="flex sm:hidden">
-          <MenuIcon className="text-primary-500" />
+          <MenuIcon
+            className="text-primary-500"
+            onClick={() => setIsOpen((prev) => !prev)}
+          />
         </div>
+        {isOpen && <Modal isCollapsed={isCollapsed} setOpen={setIsOpen} />}
 
         {/* auth div */}
         <div className="hidden sm:flex sm:items-center sm:space-x-4">

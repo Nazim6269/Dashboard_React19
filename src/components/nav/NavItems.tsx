@@ -5,16 +5,16 @@ const NavItems = ({
   theme,
   isCollapsed,
   icon,
-  ref,
+  to,
 }: {
   title: string;
   theme: string;
-  isCollapsed: boolean;
-  icon: React.ReactNode;
-  ref: string;
+  isCollapsed?: boolean;
+  icon?: React.ReactNode;
+  to: string;
 }) => {
   return (
-    <Link to={ref}>
+    <Link to={to}>
       <div
         className={`${
           theme === "dark" ? "bg-dark-secondary text-gray-200" : ""

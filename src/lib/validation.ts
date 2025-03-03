@@ -17,11 +17,11 @@ export const UserFormValidation = z.object({
     }),
   phone: z
     .string()
-    .refine((phone) => /^\+\d{10,15}$/.test(phone), "Invalid phone number"),
-  birthdate: z.string().refine((date) => !isNaN(Date.parse(date)), {
+    .refine((phone) => /^\d{10,15}$/.test(phone), "Invalid phone number"),
+  birthdate: z.date().refine((date: any) => !isNaN(Date.parse(date)), {
     message: "Invalid birthdate format",
   }),
-  gender: z.enum(["male", "female", "other"], {
+  gender: z.enum(["Male", "Female", "Other"], {
     message: "Gender must be either 'male', 'female', or 'other'",
   }),
   session: z.string().min(1, { message: "Session cannot be empty" }),
@@ -29,5 +29,7 @@ export const UserFormValidation = z.object({
   about: z
     .string()
     .max(500, { message: "About section cannot exceed 500 characters" }),
-  agreement: z.string().optional(),
+  agreement: z.boolean().refine((val) => val === true, {
+    message: "You must agree to the terms.",
+  }),
 });

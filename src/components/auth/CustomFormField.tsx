@@ -145,10 +145,11 @@ const RenderedItem = ({ field, props }: { field: any; props: CustomProps }) => {
         <FormControl>
           <div>
             <Checkbox
+              checked={field.value ?? false}
+              onCheckedChange={(checked) => field.onChange(checked)}
               className={`${
                 theme === "dark" ? "text-gray-400 border-slate-700" : ""
               }`}
-              checked={field.value}
             />{" "}
             <label className={`${theme === "dark" ? "text-gray-400 " : ""}`}>
               {props.label}

@@ -49,42 +49,42 @@ const LeftSideBar = () => {
           theme={theme}
           isCollapsed={isCollapsed}
           icon={<Home size={20} />}
-          ref="/"
+          to="/"
         />
         <NavItems
           title="Teachers"
           theme={theme}
           isCollapsed={isCollapsed}
           icon={<ContactRound size={20} />}
-          ref="/teachers"
+          to="/teachers"
         />
         <NavItems
           title="Students"
           theme={theme}
           isCollapsed={isCollapsed}
           icon={<Users size={20} />}
-          ref="/students"
+          to="/students"
         />
         <NavItems
           title="Notices"
           theme={theme}
           isCollapsed={isCollapsed}
           icon={<BellRing size={20} />}
-          ref="#"
+          to="#"
         />
         <NavItems
           title="Results"
           theme={theme}
           isCollapsed={isCollapsed}
           icon={<FileText size={20} />}
-          ref="#"
+          to="#"
         />
         <NavItems
           title="Developer"
           theme={theme}
           isCollapsed={isCollapsed}
           icon={<Code size={20} />}
-          ref="/developer"
+          to="/developer"
         />
       </nav>
 

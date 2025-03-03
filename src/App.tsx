@@ -14,6 +14,7 @@ import ThemeProvider from "./context/theme-context";
 
 function App() {
   const auth = useAuth();
+
   return (
     <BrowserRouter>
       <ThemeProvider>
