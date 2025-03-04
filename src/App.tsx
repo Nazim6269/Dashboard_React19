@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import NavBar from "./components/nav/NavBar";
 import Developer from "./components/screens/Developer";
+import { EditorTipTap } from "./components/screens/EditorTipTap";
 import Home from "./components/screens/Home";
 import SignIn from "./components/screens/SignIn";
 import SignUp from "./components/screens/SignUp";
@@ -30,6 +31,7 @@ function App() {
             <Route path="/teachers" element={<Teachers />} />
             <Route path="/teachers/:id" element={<SingleTeacher />} />
             <Route path="/developer" element={<Developer />} />
+            <Route path="/editor" element={<EditorTipTap />} />
           </Routes>
         </div>
       </ThemeProvider>

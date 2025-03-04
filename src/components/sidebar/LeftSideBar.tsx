@@ -4,6 +4,7 @@ import {
   ChevronRight,
   Code,
   ContactRound,
+  EditIcon,
   FileText,
   Home,
   LogOut,
@@ -85,6 +86,13 @@ const LeftSideBar = () => {
           isCollapsed={isCollapsed}
           icon={<Code size={20} />}
           to="/developer"
+        />
+        <NavItems
+          title="Editor"
+          theme={theme}
+          isCollapsed={isCollapsed}
+          icon={<EditIcon size={20} />}
+          to="/editor"
         />
       </nav>
 

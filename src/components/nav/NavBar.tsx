@@ -38,7 +38,7 @@ const NavBar = () => {
 
         {/* auth div */}
         <div className="hidden sm:flex sm:items-center sm:space-x-4">
-          <div>
+          <div className="">
             <button
               onClick={toggleTheme}
               className={`${

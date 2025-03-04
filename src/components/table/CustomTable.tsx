@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useTheme } from "../../context/theme-context";
 
-interface Data {
+export interface Data {
   id: number | string;
   name: string;
   email: string;

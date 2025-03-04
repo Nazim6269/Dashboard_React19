@@ -9,7 +9,7 @@ const AuthContext = createContext<AuthContextType>({ user: "", email: "" });
 
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const [value] = useState<AuthContextType>({
-    user: "",
+    user: "nazim",
     email: "",
   });
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
