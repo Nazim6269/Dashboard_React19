@@ -6,7 +6,7 @@ import Text from "@tiptap/extension-text";
 import TextStyle from "@tiptap/extension-text-style";
 import { EditorContent, useEditor } from "@tiptap/react";
 
-export const lightTheme = {
+const lightTheme = {
   editorBg: "bg-secondary",
   editorBorder: "border-gray-300",
   textColor: "text-black",
@@ -15,7 +15,7 @@ export const lightTheme = {
   buttonHover: "hover:bg-indigo-600",
 };
 
-export const darkTheme = {
+const darkTheme = {
   editorBg: "bg-gray-800",
   editorBorder: "border-gray-600",
   textColor: "text-white",
@@ -50,7 +50,11 @@ export const EditorTipTap = () => {
         <input
           type="color"
           onInput={(event) =>
-            editor.chain().focus().setColor(event.target.value).run()
+            editor
+              .chain()
+              .focus()
+              .setColor((event.target as HTMLInputElement).value)
+              .run()
           }
           value={editor.getAttributes("textStyle").color}
           className="w-10 h-10 rounded-md border cursor-pointer"

@@ -106,7 +106,7 @@ const CustomTable = ({ data }: { data: Data[] }) => {
         ) : (
           <>
             {/* table heading data */}
-            <thead>
+            <thead className="hidden lg:table-header-group">
               <tr
                 className={`${
                   theme === "dark"
