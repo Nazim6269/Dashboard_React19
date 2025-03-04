@@ -10,7 +10,7 @@ const Teachers = () => {
 
   const handleSearch = useCallback((searchTerm: string) => {
     const lowercasedTerm = searchTerm.toLowerCase().trim();
-    console.log(lowercasedTerm, "term");
+
     const filtered = teachers.filter((teacher) =>
       teacher.name.toLowerCase().includes(lowercasedTerm)
     );

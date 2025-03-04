@@ -21,9 +21,10 @@ const CustomTable = ({ data }: { data: Data[] }) => {
             : "bg-white  border border-gray-300"
         } min-w-full  rounded-lg shadow-md`}
       >
-        {data[0].experience ? (
+        {data[0]?.experience ? (
           <>
-            <thead>
+            {/* table heading data */}
+            <thead className="hidden lg:table-header-group">
               <tr
                 className={`${
                   theme === "dark"
@@ -48,6 +49,7 @@ const CustomTable = ({ data }: { data: Data[] }) => {
                     ))}
               </tr>
             </thead>
+            {/* table body data */}
             <tbody>
               {data.map((item) => (
                 <tr
@@ -56,7 +58,7 @@ const CustomTable = ({ data }: { data: Data[] }) => {
                     theme === "dark"
                       ? "hover:bg-primary-500"
                       : "hover:bg-gray-100"
-                  }`}
+                  } flex flex-col lg:table-row`}
                 >
                   <td
                     className={`${
@@ -86,14 +88,14 @@ const CustomTable = ({ data }: { data: Data[] }) => {
                   <td
                     className={`${
                       theme === "dark" ? "border border-primary-500 " : "border"
-                    } px-4 py-2  text-center`}
+                    } px-4 py-2 hidden lg:table-cell text-center`}
                   >
                     {item.subject}
                   </td>
                   <td
                     className={`${
                       theme === "dark" ? "border border-primary-500 " : "border"
-                    } px-4 py-2  text-center`}
+                    } px-4 py-2 hidden lg:table-cell text-center`}
                   >
                     {item.experience}
                   </td>
@@ -103,6 +105,7 @@ const CustomTable = ({ data }: { data: Data[] }) => {
           </>
         ) : (
           <>
+            {/* table heading data */}
             <thead>
               <tr
                 className={`${
@@ -111,7 +114,7 @@ const CustomTable = ({ data }: { data: Data[] }) => {
                     : "hover:bg-gray-100"
                 }`}
               >
-                {data.length > 0 &&
+                {data?.length > 0 &&
                   Object.keys(data[0])
                     .slice(0, 4)
                     .map((item: string) => (
@@ -128,15 +131,16 @@ const CustomTable = ({ data }: { data: Data[] }) => {
                     ))}
               </tr>
             </thead>
+            {/* table body data */}
             <tbody>
-              {data.map((item) => (
+              {data?.map((item) => (
                 <tr
                   key={item.id}
                   className={`${
                     theme === "dark"
                       ? "hover:bg-primary-500"
                       : "hover:bg-gray-100"
-                  }`}
+                  }  flex flex-col lg:table-row`}
                 >
                   <td
                     className={`${
@@ -155,7 +159,7 @@ const CustomTable = ({ data }: { data: Data[] }) => {
                   <td
                     className={`${
                       theme === "dark" ? "border border-primary-500 " : "border"
-                    } px-4 py-2  text-center`}
+                    } px-4 py-2 hidden lg:table-cell text-center`}
                   >
                     {item.session}
                   </td>
@@ -164,7 +168,7 @@ const CustomTable = ({ data }: { data: Data[] }) => {
                       theme === "dark"
                         ? "border border-primary-500 "
                         : "border border-black"
-                    } px-4 py-2  text-center text-blue-500 underline`}
+                    } px-4 py-2 hidden lg:table-cell text-center text-blue-500 underline`}
                   >
                     {item.email}
                   </td>
