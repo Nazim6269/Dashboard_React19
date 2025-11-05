@@ -1,50 +1,43 @@
-# React + TypeScript + Vite
+# 📊 React Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive and interactive **Admin Dashboard** built using **React**, **Tailwind CSS**, and **React Router**.  
+This project provides an intuitive interface for analytics, user management, and customizable settings — perfect for learning or showcasing modern front-end architecture.
 
-Currently, two official plugins are available:
+![Dashboard Preview](https://dashboard-react19.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- 📈 **Interactive Charts** – Visualize data with dynamic charts  
+- 🧭 **Sidebar Navigation** – Collapsible, responsive sidebar with icons  
+- 🌙 **Dark/Light Mode** – Theme switcher with context-based state  
+- 👥 **User Management** – View, edit, and manage users dynamically  
+- ⚙️ **Settings Panel** – Customize preferences and layout  
+- 📱 **Fully Responsive** – Optimized for all screen sizes  
+- ♻️ **Reusable Components** – Built with a modular component structure  
+- 🧩 **React Router Integration** – Smooth page navigation  
+- 💾 **Local Storage** – Saves user preferences persistently  
 
-- Configure the top-level `parserOptions` property like this:
+---
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 🧰 Tech Stack
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+| Category | Technologies |
+|-----------|--------------|
+| **Framework** | React 19 |
+| **Language** | TypeScript (optional) |
+| **Styling** | Tailwind CSS |
+| **Routing** | React Router |
+| **Charts** | Chart.js / Recharts |
+| **State Management** | Context API |
+| **Hosting** | Vercel / Netlify |
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+---
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## ⚙️ Installation
+
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/<your-username>/<your-dashboard-repo>.git
+cd <your-dashboard-repo>
