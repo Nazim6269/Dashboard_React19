@@ -124,3 +124,7 @@ Deployed on Vercel for instant previews and serverless hosting.
 ## 👨‍💻 Author
 Nazim Uddin
 Front-End Developer | React & Next.js Enthusiast
+
+- 🌐 [Portfolio](https://portfolio-nextjs-one-tau.vercel.app/)
+- 💼 [LinkedIn](https://www.linkedin.com/in/nazim-uddin-23a93a216/)
+- 🐙 [GitHub](https://github.com/Nazim6269)
